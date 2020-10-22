@@ -2708,7 +2708,6 @@
 
                                 <!-- Media -->
                                 <a href="javascript:void(0)" class="media">
-
                                     <!-- Avatar -->
                                     <img class="dt-avatar mr-3" src="https://via.placeholder.com/150x150"
                                          alt="User">
@@ -2734,9 +2733,7 @@
                                 <!-- /media -->
                             </div>
                             <!-- /messages -->
-
                         </div>
-
                     </div>
                     <!-- /drawer content area -->
 
@@ -2744,10 +2741,12 @@
                 <!-- /actionable drawer -->
 
             </div>
-            <!-- /drawer -->                    </div>
+            <!-- /drawer -->
+        </div>
     </div>
     <!-- /root -->
 
 <?php
 $this->load->view('layout/foot');
 ?>
+

@@ -9,10 +9,10 @@ class MY_Controller extends CI_Controller {
 	function __construct()
 	{
 		parent::__construct();
-        $settings = $this->settings_model->get_all();
-        foreach($settings as $setting){
-            $this->settings[$setting->name] = $setting->value;
-        }
+//        $settings = $this->settings_model->get_all();
+////        foreach($settings as $setting){
+////            $this->settings[$setting->name] = $setting->value;
+////        }
         
         
         //date_default_timezone_set($this->config->item('time_reference'));
@@ -26,15 +26,12 @@ class MY_Controller extends CI_Controller {
         define('CONTROLLER', $this->router->fetch_class());
         define('METHOD', $this->router->fetch_method());
         
-        $this->data['settings'] = (object) $this->settings;
-        
-        if(isset($_SESSION['user'])){
-            $data =  $_SESSION['user'];
-            $id = $data->email;
-            $this->data['users'] = $this->users->get_details($id);
-        }
-        
-        
-		
+//        $this->data['settings'] = (object) $this->settings;
+//
+//        if(isset($_SESSION['user'])){
+//            $data =  $_SESSION['user'];
+//            $id = $data->email;
+//            $this->data['users'] = $this->users->get_details($id);
+//        }
 	}
 }

@@ -53,7 +53,7 @@ $route['default_controller'] = 'welcome';
 
 $route['members'] = 'members/home/index';
 
-$route['admin/home'] = 'admin/home/index';
+$route['admin'] = 'admin/dashboard/index';
 $route['admin/offerwall'] = 'admin/offerwall/index';
 $route['admin/offers'] = 'admin/offers/index';
 $route['admin/users'] = 'admin/users/index';
