@@ -1,1 +1,0 @@
-<?php $this->load->view($this->router->fetch_directory() . $this->router->fetch_class() .'/'. $this->router->fetch_method()); ?>

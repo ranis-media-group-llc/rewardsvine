@@ -10,8 +10,8 @@ class Welcome extends CI_Controller {
 
 	public function index()
 	{
-        $this->data['users'] = $this->home->get_all();
-		$this->load->view('members/home/index',$this->data);
+        $this->data['title'] = 'RewardsVine';
+		$this->load->view('welcome_message',$this->data);
 
 	}
 }
