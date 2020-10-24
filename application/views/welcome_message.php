@@ -736,13 +736,10 @@
 
                                 <!-- Grid Item -->
                                 <div class="col-xl-3 col-sm-6">
-
                                     <!-- Card -->
                                     <div class="dt-card">
-
                                         <!-- Card Header -->
                                         <div class="dt-card__header px-5 pt-4 mb-4">
-
                                             <!-- Card Heading -->
                                             <div class="dt-card__heading">
                                                 <h3 class="dt-card__title f-12 font-weight-400">
@@ -751,7 +748,6 @@
                                                 </h3>
                                             </div>
                                             <!-- /card heading -->
-
                                         </div>
                                         <!-- /card header -->
 
