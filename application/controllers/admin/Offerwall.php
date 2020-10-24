@@ -11,7 +11,8 @@ class Offerwall extends MY_Controller {
 
 	public function index()
 	{
-        $this->data['offerwalls'] = $this->offerwall->get_all();
+        //$this->data['offerwalls'] = $this->offerwall->get_all();
+        $this->data['title'] = 'Offerwall';
         $this->load->view('layout/admin/master', $this->data);
 	}
     public function download($id=null)
@@ -34,7 +35,6 @@ class Offerwall extends MY_Controller {
     public function retrieve_offers()
 	{
         $id = $_POST['id'];
-        
         $offerwall_details= $this->offerwall->get_details($id);
         $host = $offerwall_details->api_host;
         $username = $offerwall_details->publisher_id;
@@ -43,8 +43,7 @@ class Offerwall extends MY_Controller {
         curl_setopt($process, CURLOPT_USERPWD, $username . ":" . $password);
         curl_setopt($process, CURLOPT_RETURNTRANSFER, TRUE);
         $return = curl_exec($process);
-        curl_close($process); 
-        
+        curl_close($process);
         $all_offers = json_decode($return,true);
        //echo count($all_offers['offers']);
         eval($offerwall_details->api_naming); 
@@ -65,7 +64,6 @@ class Offerwall extends MY_Controller {
             $config['allowed_types'] = '*';
             
             $this->upload->initialize($config);
-                
             if (!$this->upload->do_upload('image_path')){
                 //$this->data['file'] = $this->upload->display_errors();
                 $this->data['error'] = $this->upload->display_errors();
@@ -75,7 +73,6 @@ class Offerwall extends MY_Controller {
                 //$this->files->upload($upload_data);
                 $input['image_path'] = '/uploads/'.$upload_data['file_name'];
             }
-            
             $this->offerwall->add($input);
             redirect(base_url('/admin/offerwall'));
         }
@@ -90,16 +87,13 @@ class Offerwall extends MY_Controller {
         if($input){
             
             $this->load->library('upload');
-            
             $config['upload_path'] = FCPATH . 'uploads';
             $config['overwrite'] = true;
             $config['encrypt_name'] = FALSE;
             $config['allowed_types'] = '*';
             
             $this->upload->initialize($config);
-                
             if (!$this->upload->do_upload('image_path')){
-                //$this->data['file'] = $this->upload->display_errors();
                 $this->data['error'] = $this->upload->display_errors();
             }
             else{
@@ -107,7 +101,6 @@ class Offerwall extends MY_Controller {
                 //$this->files->upload($upload_data);
                 $input['image_path'] = '/uploads/'.$upload_data['file_name'];
             }
-            
             $input['api_naming'] = html_entity_decode($input['api_naming']);
             $this->offerwall->update($input, $id);
             redirect(base_url('/admin/offerwall'));

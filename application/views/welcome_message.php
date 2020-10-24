@@ -558,37 +558,37 @@
 
                                 <!-- Menu Item -->
                                 <li class="dt-side-nav__item">
-                                    <a href="page-metrics.html" class="dt-side-nav__link">
+                                    <a href="#" class="dt-side-nav__link">
                                         <i class="icon icon-metrics icon-fw icon-lg"></i>
                                         <span class="dt-side-nav__text">OfferWall</span>
                                     </a>
                                 </li>
                                 <li class="dt-side-nav__item">
-                                    <a href="page-metrics.html" class="dt-side-nav__link">
+                                    <a href="#" class="dt-side-nav__link">
                                         <i class="icon icon-metrics icon-fw icon-lg"></i>
                                         <span class="dt-side-nav__text">Surveys</span>
                                     </a>
                                 </li>
                                 <li class="dt-side-nav__item">
-                                    <a href="page-layouts.html" class="dt-side-nav__link" title="Layouts">
+                                    <a href="#" class="dt-side-nav__link" title="Layouts">
                                         <i class="icon icon-layout icon-fw icon-lg"></i>
                                         <span class="dt-side-nav__text">Videos</span>
                                     </a>
                                 </li>
                                 <li class="dt-side-nav__item">
-                                    <a href="page-layouts.html" class="dt-side-nav__link" title="Layouts">
+                                    <a href="#" class="dt-side-nav__link" title="Layouts">
                                         <i class="icon icon-layout icon-fw icon-lg"></i>
                                         <span class="dt-side-nav__text">Complete Offers</span>
                                     </a>
                                 </li>
                                 <li class="dt-side-nav__item">
-                                    <a href="page-layouts.html" class="dt-side-nav__link" title="Layouts">
+                                    <a href="#" class="dt-side-nav__link" title="Layouts">
                                         <i class="icon icon-layout icon-fw icon-lg"></i>
                                         <span class="dt-side-nav__text">Download Apps</span>
                                     </a>
                                 </li>
                                 <li class="dt-side-nav__item">
-                                    <a href="page-layouts.html" class="dt-side-nav__link" title="Layouts">
+                                    <a href="#" class="dt-side-nav__link" title="Layouts">
                                         <i class="icon icon-layout icon-fw icon-lg"></i>
                                         <span class="dt-side-nav__text">Referral</span>
                                     </a>
@@ -602,7 +602,7 @@
 
                                 <!-- Menu Item -->
                                 <li class="dt-side-nav__item">
-                                    <a href="app-task-manager.html" class="dt-side-nav__link">
+                                    <a href="#" class="dt-side-nav__link">
                                         <i class="icon icon-task-manager icon-fw icon-lg"></i>
                                         <span class="dt-side-nav__text">Gift Cards</span>
                                     </a>
