@@ -1,0 +1,11 @@
+.dt-header {
+  background-color: #000000 !important;
+}
+
+ .dt-side-nav__item .active {
+   background-color: #f2f2f2;
+   color: #FF4081 !important;
+   border-top-right-radius: 50px;
+   border-bottom-right-radius: 50px;
+   padding-right: 28px;
+ }

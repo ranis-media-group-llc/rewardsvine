@@ -18,14 +18,13 @@
 		<link rel="stylesheet" href="/assets/fonts/noir-pro/styles.css">
 		<link rel="stylesheet" href="/assets/plugins/flag-icon-css/css/flag-icon.min.css">
 		<link rel="stylesheet" href="/assets/vendor/gaxon-icon/styles.css">
+		<link rel="stylesheet" href="/assets/css/custom.css">
 		<!-- /font icon Styles -->
 
 		<!-- Perfect Scrollbar stylesheet -->
 		<link rel="stylesheet" href="/assets/plugins/perfect-scrollbar/css/perfect-scrollbar.css">
 		<!-- /perfect scrollbar stylesheet -->
-
-		<link rel="stylesheet" type="text/css" href="/assets/plugins/chartist/css/chartist.min.css" media="all" />
-		<link rel="stylesheet" href="/assets/css/intranet/theme.min.css">
+		<link rel="stylesheet" href="/assets/css/intranet/theme.css">
 
 		<script>
 			var rtlEnable = '';

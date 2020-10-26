@@ -11395,14 +11395,8 @@ a.text-light-cyan:hover, a.text-light-cyan:focus {
     position: relative;
     min-height: 100%; }
     @media (min-width: 576px) {
-      .dt-root__intra:before {
-        content: '';
-        height: 27rem;
-        width: 100%;
-        position: absolute;
-        left: 0;
-        top: 0;
-        background-color: #512DA8; } }
+
+    }
 
 .dt-main {
   display: -ms-flexbox;
@@ -11429,11 +11423,8 @@ a.text-light-cyan:hover, a.text-light-cyan:focus {
       width: calc(100% - 260px); } }
 
 .dt-content {
-  padding: 4.4rem 3.2rem; }
+  padding: 0.4rem 3.2rem; }
 
-.dt-page__header {
-  position: relative;
-  margin-bottom: 4.4rem; }
 
 .dt-page__title {
   font-weight: 400; }
@@ -12258,7 +12249,7 @@ a.text-light-cyan:hover, a.text-light-cyan:focus {
       width: calc(260px); } }
   .dt-sidebar__container {
     width: 100%;
-    padding-top: 3.4rem;
+    padding-top: 1.4rem;
     padding-bottom: 3rem; }
   .dt-sidebar__notification {
     padding-top: 100px;

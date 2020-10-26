@@ -12,6 +12,5 @@ class Welcome extends CI_Controller {
 	{
         $this->data['title'] = 'RewardsVine';
 		$this->load->view('welcome_message',$this->data);
-
 	}
 }

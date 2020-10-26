@@ -2176,14 +2176,12 @@
                                     </li>
                                 </ul>
                                 <!-- /list -->
-
                             </section>
                             <!-- /section -->
 
                             <!-- Section -->
                             <section>
                                 <h4>Nav Style</h4>
-
                                 <!-- List -->
                                 <ul class="dt-list">
                                     <li class="dt-list__item">

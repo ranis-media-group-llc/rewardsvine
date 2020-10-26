@@ -26,8 +26,8 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 $config['base_url'] = '';
 if($_SERVER['SERVER_NAME'] == 'rewardsvine.local'){
 	$config['base_url'] = '//rewardsvine.local/';
-} else if ($_SERVER['SERVER_NAME'] == 'rewardsvine') {
-	$config['base_url'] = '//rewardsvine/';
+} else if ($_SERVER['SERVER_NAME'] == 'members.rewardsvine.com') {
+	$config['base_url'] = '//https://members.rewardsvine.com//';
 } else {
     $config['base_url'] = '//rewardsvine/';
 }
