@@ -14,37 +14,37 @@
 
             <!-- Menu Item -->
             <li class="dt-side-nav__item">
-                <a href="#" class="dt-side-nav__link active">
+                <a href="/offerwall" class="dt-side-nav__link <?= $this->uri->segment(1) == "offerwall" ? 'active' : '' ?>">
                     <i class="icon icon-metrics icon-fw icon-lg"></i>
-                    <span class="dt-side-nav__text">OfferWall</span>
+                    <span class="dt-side-nav__text">OfferWall </span>
                 </a>
             </li>
             <li class="dt-side-nav__item">
-                <a href="#" class="dt-side-nav__link">
+                <a href="/surveys" class="dt-side-nav__link <?= $this->uri->segment(1) == "surveys" ? 'active' : '' ?>">
                     <i class="icon icon-metrics icon-fw icon-lg"></i>
                     <span class="dt-side-nav__text">Surveys</span>
                 </a>
             </li>
             <li class="dt-side-nav__item">
-                <a href="#" class="dt-side-nav__link" title="Layouts">
+                <a href="/videos" class="dt-side-nav__link <?= $this->uri->segment(1) == "videos" ? 'active' : '' ?>" >
                     <i class="icon icon-layout icon-fw icon-lg"></i>
                     <span class="dt-side-nav__text">Videos</span>
                 </a>
             </li>
             <li class="dt-side-nav__item">
-                <a href="#" class="dt-side-nav__link" title="Layouts">
+                <a href="/offers" class="dt-side-nav__link <?= $this->uri->segment(1) == "offers" ? 'active' : '' ?>">
                     <i class="icon icon-layout icon-fw icon-lg"></i>
                     <span class="dt-side-nav__text">Complete Offers</span>
                 </a>
             </li>
             <li class="dt-side-nav__item">
-                <a href="#" class="dt-side-nav__link" title="Layouts">
+                <a href="/apps" class="dt-side-nav__link <?= $this->uri->segment(1) == "apps" ? 'active' : '' ?>" >
                     <i class="icon icon-layout icon-fw icon-lg"></i>
                     <span class="dt-side-nav__text">Download Apps</span>
                 </a>
             </li>
             <li class="dt-side-nav__item">
-                <a href="#" class="dt-side-nav__link" title="Layouts">
+                <a href="/referral" class="dt-side-nav__link <?= $this->uri->segment(1) == "referral" ? 'active' : '' ?>" >
                     <i class="icon icon-layout icon-fw icon-lg"></i>
                     <span class="dt-side-nav__text">Referral</span>
                 </a>
@@ -58,13 +58,13 @@
 
             <!-- Menu Item -->
             <li class="dt-side-nav__item">
-                <a href="#" class="dt-side-nav__link">
+                <a href="/gifts" class="dt-side-nav__link <?= $this->uri->segment(1) == "gifts" ? 'active' : '' ?>">
                     <i class="icon icon-task-manager icon-fw icon-lg"></i>
                     <span class="dt-side-nav__text">Gift Cards</span>
                 </a>
             </li>
             <li class="dt-side-nav__item">
-                <a href="app-mail.html" class="dt-side-nav__link">
+                <a href="/crypto" class="dt-side-nav__link <?= $this->uri->segment(1) == "crypto" ? 'active' : '' ?>">
                     <i class="icon icon-mail icon-fw icon-lg"></i>
                     <span class="dt-side-nav__text">Cryptocurrency</span>
                 </a>
@@ -79,31 +79,31 @@
 
             <!-- Menu Item -->
             <li class="dt-side-nav__item">
-                <a href="app-task-manager.html" class="dt-side-nav__link">
+                <a href="/profile" class="dt-side-nav__link <?= $this->uri->segment(1) == "profile" ? 'active' : '' ?>">
                     <i class="icon icon-task-manager icon-fw icon-lg"></i>
                     <span class="dt-side-nav__text">Profile</span>
                 </a>
             </li>
             <li class="dt-side-nav__item">
-                <a href="app-task-manager.html" class="dt-side-nav__link">
+                <a href="/settings" class="dt-side-nav__link <?= $this->uri->segment(1) == "settings" ? 'active' : '' ?>">
                     <i class="icon icon-task-manager icon-fw icon-lg"></i>
                     <span class="dt-side-nav__text">Settings</span>
                 </a>
             </li>
             <li class="dt-side-nav__item">
-                <a href="app-task-manager.html" class="dt-side-nav__link">
+                <a href="/history" class="dt-side-nav__link <?= $this->uri->segment(1) == "history" ? 'active' : '' ?>">
                     <i class="icon icon-task-manager icon-fw icon-lg"></i>
                     <span class="dt-side-nav__text">History</span>
                 </a>
             </li>
             <li class="dt-side-nav__item">
-                <a href="app-task-manager.html" class="dt-side-nav__link">
+                <a href="/faq" class="dt-side-nav__link <?= $this->uri->segment(1) == "faq" ? 'active' : '' ?>">
                     <i class="icon icon-task-manager icon-fw icon-lg"></i>
                     <span class="dt-side-nav__text">FAQ</span>
                 </a>
             </li>
             <li class="dt-side-nav__item">
-                <a href="app-task-manager.html" class="dt-side-nav__link">
+                <a href="/support" class="dt-side-nav__link <?= $this->uri->segment(1) == "support" ? 'active' : '' ?>">
                     <i class="icon icon-task-manager icon-fw icon-lg"></i>
                     <span class="dt-side-nav__text">Contact Support</span>
                 </a>

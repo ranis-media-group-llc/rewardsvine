@@ -60,8 +60,7 @@ $route['admin/users'] = 'admin/users/index';
 $route['admin/settings'] = 'admin/settings/index';
 $route['admin/history'] = 'admin/history/index';
 
-$route['history'] = 'members/history/index';
-$route['offerwall'] = 'members/offerwall/index';
+
 $route['offerwall_view/(:any)'] = 'members/offerwall/view/$1';
 
 $route['login'] = 'auth/login';
@@ -71,16 +70,3 @@ $route['signup'] = 'auth/signup';
 
 $route['404_override'] = '';
 $route['translate_uri_dashes'] = FALSE;
-
-
-
-
-
-
-
-
-
-
-
-
-
