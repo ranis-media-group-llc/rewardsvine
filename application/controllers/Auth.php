@@ -24,7 +24,6 @@ class Auth extends MY_Controller {
     public function login($error = FALSE)
 	{
         $ip = $_SERVER['REMOTE_ADDR'];
-        
         $input = $this->input->post();
         if($input){
             $secretKey = "6LcZ0pMUAAAAAJd_SqRMYon1lRXMkCCCwQfpZ1v4";
@@ -62,7 +61,7 @@ class Auth extends MY_Controller {
                 } 
                 
          }
-        $this->load->view('auth/login', $this->data);
+        $this->load->view('auth/index', $this->data);
         
 	}
     public function signup($error = FALSE)

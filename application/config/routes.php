@@ -51,7 +51,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 */
 $route['default_controller'] = 'offerwall';
 
-$route['members'] = 'members/home/index';
+$route['members'] = 'offerwall/index';
 
 $route['admin'] = 'admin/dashboard/index';
 $route['admin/offerwall'] = 'admin/offerwall/index';

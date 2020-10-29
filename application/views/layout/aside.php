@@ -14,7 +14,7 @@
 
             <!-- Menu Item -->
             <li class="dt-side-nav__item">
-                <a href="/offerwall" class="dt-side-nav__link <?= $this->uri->segment(1) == "offerwall" ? 'active' : '' ?>">
+                <a href="/offerwall" class="dt-side-nav__link <?= $this->uri->segment(1) == "offerwall" || $this->uri->segment(1) == "" ? 'active' : '' ?>">
                     <i class="icon icon-metrics icon-fw icon-lg"></i>
                     <span class="dt-side-nav__text">OfferWall </span>
                 </a>
