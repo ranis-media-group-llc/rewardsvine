@@ -48,26 +48,37 @@
                             </div>
                         </div>
                         <div class="dt-login__content">
+                            <?php if(isset($error)) {
+                                ?>
+                                    <div class="alert alert-danger alert-dismissible" role="alert">
+                                        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                                            <span aria-hidden="true">&times;</span>
+                                        </button>
+                                        <strong>Error!</strong> <?php echo $error; ?>
+                                    </div>
+                                <?php
+                                }
+                            ?>
                             <div class="dt-login__content-inner">
-                                <form action="#">
+                                <form method="post">
                                     <div class="form-group">
                                         <label class="" for="user-name">Full Name</label>
-                                        <input type="text" class="form-control" id="user-name" aria-describedby="user-name" name="fullname">
+                                        <input type="text" class="form-control" id="user-name" aria-describedby="user-name" name="fullname" required>
                                     </div>
                                     <div class="form-group">
                                         <label class="" for="email-1">Email Address</label>
-                                        <input type="email" class="form-control" id="email-1" aria-describedby="email-1" name="email_address">
+                                        <input type="email" class="form-control" id="email-1" aria-describedby="email-1" name="email_address" required>
                                     </div>
                                     <div class="form-group">
                                         <label class="" for="password-1">Password</label>
-                                        <input type="password" class="form-control" id="password-1" name="password">
+                                        <input type="password" class="form-control" id="password-1" name="password" required>
                                     </div>
                                     <div class="form-group">
                                         <label class="" for="password-1">Confirm Password</label>
-                                        <input type="password" class="form-control" id="password-1" name="re_password">
+                                        <input type="password" class="form-control" id="password-1" name="re_password" required>
                                     </div>
                                     <div class="dt-checkbox d-block mb-6">
-                                        <input type="checkbox" id="checkbox-1">
+                                        <input type="checkbox" id="checkbox-1" required>
                                         <label class="dt-checkbox-content" for="checkbox-1"> by signing up, I accept
                                             <a href="javascript:void(0)">Term &amp; Condition</a>
                                         </label>

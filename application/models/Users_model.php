@@ -2,7 +2,7 @@
 
 class Users_model extends CI_Model {
 
-    protected $table = "users";
+    protected $table = "rv_users";
 
     public function get_all()
     {
@@ -13,7 +13,7 @@ class Users_model extends CI_Model {
     public function get_details($key)
     {
         //$query = $this->db->get($this->table);    
-        $query = $this->db->get_where($this->table, array('email' => $key), 1);
+        $query = $this->db->get_where($this->table, array('email_address' => $key), 1);
         return $query->row();
     }
     
@@ -21,7 +21,6 @@ class Users_model extends CI_Model {
     {
         if($this->db->insert($this->table,$input)) {
            return true;
-            
         } else {
             return false;
         }

@@ -48,8 +48,19 @@
                             </div>
                         </div>
                         <div class="dt-login__content">
+                            <?php if(isset($error)) {
+                                ?>
+                                <div class="alert alert-danger alert-dismissible" role="alert">
+                                    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                                        <span aria-hidden="true">&times;</span>
+                                    </button>
+                                    <strong>Error!</strong> <?php echo $error; ?>
+                                </div>
+                                <?php
+                            }
+                            ?>
                             <div class="dt-login__content-inner">
-                                <form action="#">
+                                <form method="post">
                                     <div class="form-group">
                                         <label class="" for="email-1">Email Address</label>
                                         <input type="email" class="form-control" id="email-1" aria-describedby="email-1" name="email_address">

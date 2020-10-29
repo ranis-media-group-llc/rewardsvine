@@ -31,7 +31,6 @@
                 <span class="search-icon"><i class="icon icon-search icon-lg"></i></span>
             </form>
             /search box -->
-
             <!-- Header Menu Wrapper -->
             <div class="dt-nav-wrapper">
                 <!-- Header Menu -->
