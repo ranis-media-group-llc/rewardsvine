@@ -12,4 +12,10 @@ class Offerwall extends CI_Controller {
         $this->data['title'] = 'RewardsVine - Offerwall';
 		$this->load->view('members/offerwall/index',$this->data);
 	}
+
+    public function view()
+    {
+        $this->data['title'] = 'RewardsVine - Offerwall';
+        $this->load->view('members/offerwall/view',$this->data);
+    }
 }

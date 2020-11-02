@@ -41,7 +41,6 @@
                                         <div class="tab-content">
                                             <div class="col-md-12">
                                                 <div class="row">
-
                                                     <div class="col-md-3">
                                                         <div class="dt-card overflow-auto">
                                                             <div class="dt-card__header">
@@ -49,10 +48,7 @@
                                                                     <h3 class="dt-card__title"></h3>
                                                                 </div>
                                                                 <div class="dt-card__tools">
-                                                                    <a class="text-light-gray" href="javascript:void(0)" data-container="body"
-                                                                       data-toggle="popover"
-                                                                       data-placement="top"
-                                                                       data-content="Vivamus sagittis lacus vel augue laoreet rutrum faucibus.">
+                                                                    <a class="text-light-gray" href="javascript:void(0)" data-container="body" data-toggle="popover" data-placement="top" data-content="Vivamus sagittis lacus vel augue laoreet rutrum faucibus.">
                                                                         <i class="icon icon-info icon-lg"></i>
                                                                     </a>
                                                                 </div>
@@ -74,7 +70,7 @@
                                                                 </div>
                                                             </div>
                                                             <a href="javascript:void(0)" class="btn btn-dark btn-sm btn-block rounded-0">
-                                                                View More
+                                                                PLAY
                                                             </a>
                                                         </div>
                                                     </div>
