@@ -10,7 +10,7 @@
         $points = $row['points'];
         //echo $row['points'].'<br>';
 
-        $add_points = $_GET['rate'];
+        $add_points = $_GET['rate'] * 100;
         $points = $points + $add_points;
       //  echo $points;
     }
