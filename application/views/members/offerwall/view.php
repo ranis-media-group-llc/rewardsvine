@@ -21,7 +21,7 @@ $this->load->view('layout/head');
             <!-- Site Main -->
             <main class="dt-main">
                 <?php
-                $this->load->view('layout/aside');
+                    $this->load->view('layout/aside');
                 ?>
                 <div class="dt-content-wrapper">
                     <div class="dt-content">

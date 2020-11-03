@@ -31,7 +31,7 @@ class MY_Controller extends CI_Controller {
         $this->data['users_data'] = $this->users->get_details(1,'id');
         if(isset($_SESSION['user'])){
             $data =  $_SESSION['user'];
-            $id = $data->email;
+            $id = $data->email_address;
         }
 	}
 }

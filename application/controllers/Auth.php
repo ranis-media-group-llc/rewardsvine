@@ -30,10 +30,10 @@ class Auth extends MY_Controller {
 //                $responseKeys = json_decode($response,true);
 //                // should return JSON with success as true
 //                if(!$responseKeys["success"]) {
-                    $user = $this->users->get_details($input['email_address']);
-                
+                    $user = $this->users->get_details($input['email_address'],'email_address');
                     if($user){
-                        if ($this->bcrypt->check_password($input['password'], $user->password))
+                       if ($this->bcrypt->check_password($input['password'], $user->password))
+                        //if ($input['password']== $user->password)
                         {
                             unset($user->password);
                             $this->session->set_userdata('user',$user);
@@ -49,9 +49,8 @@ class Auth extends MY_Controller {
                             $this->data['error'] = "Invalid Username and/or Password.";
                         }
                     }else{
-                         $this->data['error'] = "Invalid Username and/or Password.";
+                         $this->data['error'] = "Email Address don't exist.";
                     }
-                    
 //                } else {
 //                    $this->data['error'] = "Captcha Invalid.";
 //                }
@@ -86,7 +85,7 @@ class Auth extends MY_Controller {
                    $this->data['error'] = "Password didn't match."; 
                 }else{
                     if($this->users->register($input)){
-                        $user = $this->users->get_details($input['email_address']);
+                        $user = $this->users->get_details($input['email_address'],'email_address');
                         $this->session->set_userdata('user',$user);
                         redirect(base_url($this->config->item('auth_login')));
                     }
