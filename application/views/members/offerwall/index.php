@@ -69,7 +69,7 @@
                                                                     </div>
                                                                 </div>
                                                             </div>
-                                                            <a href="javascript:void(0)" class="btn btn-dark btn-sm btn-block rounded-0">
+                                                            <a href="/offerwall/view/adscend" class="btn btn-dark btn-sm btn-block rounded-0">
                                                                 PLAY
                                                             </a>
                                                         </div>

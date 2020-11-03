@@ -33,14 +33,16 @@ $this->load->view('layout/head');
                                 <div class="card">
                                     <div class="card-header card-nav border-bottom-0">
                                         <div class="d-flex align-items-center justify-content-between mb-4">
-                                            <h3 class="dt-card__title">Offerwalls</h3>
+                                            <h3 class="dt-card__title"><?= isset($header_title) ? $header_title : ''; ?></h3>
                                         </div>
                                     </div>
                                     <br><br>
                                     <div class="tab-content">
                                         <div class="col-md-12">
                                             <div class="row">
-                                                <iframe width="100%" height="650px" src="https://asmwall.com/adwall/publisher/112515/profile/13016?subid1=1" frameborder="0" allowfullscreen></iframe>
+                                                <?php if(isset($frame)): ?>
+                                                    <iframe width="100%" height="650px" src="<?= $frame; ?>" frameborder="0" allowfullscreen></iframe>
+                                                <?php endif; ?>
                                             </div>
                                         </div>
                                     </div>

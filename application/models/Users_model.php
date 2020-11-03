@@ -10,10 +10,10 @@ class Users_model extends CI_Model {
         return $query->result();
     }
     
-    public function get_details($key)
+    public function get_details($key,$field)
     {
         //$query = $this->db->get($this->table);    
-        $query = $this->db->get_where($this->table, array('email_address' => $key), 1);
+        $query = $this->db->get_where($this->table, array($field => $key), 1);
         return $query->row();
     }
     

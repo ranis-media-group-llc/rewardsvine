@@ -4,7 +4,7 @@ class MY_Controller extends CI_Controller {
 	
 	protected $data = array();
 	protected $settings = array();
-	protected $user_info = array();
+    protected $user_info = array();
     
 	function __construct()
 	{
@@ -27,11 +27,11 @@ class MY_Controller extends CI_Controller {
         define('METHOD', $this->router->fetch_method());
         
 //        $this->data['settings'] = (object) $this->settings;
-//
-//        if(isset($_SESSION['user'])){
-//            $data =  $_SESSION['user'];
-//            $id = $data->email;
-//            $this->data['users'] = $this->users->get_details($id);
-//        }
+
+        $this->data['users_data'] = $this->users->get_details(1,'id');
+        if(isset($_SESSION['user'])){
+            $data =  $_SESSION['user'];
+            $id = $data->email;
+        }
 	}
 }

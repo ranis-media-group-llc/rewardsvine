@@ -33,6 +33,13 @@
             /search box -->
             <!-- Header Menu Wrapper -->
             <div class="dt-nav-wrapper">
+                <ul class="dt-nav">
+                    <li class="dt-nav__item dt-notification dropdown">
+                        <!-- Dropdown Link -->
+                        <a href="#" class="dt-nav__link dropdown-toggle no-arrow" aria-haspopup="true" aria-expanded="false"><b><?= isset($users_data->points) ? $users_data->points : '0';  ?> P</b></a>
+                        <!-- /dropdown link -->
+                    </li>
+                </ul>
                 <!-- Header Menu -->
                 <ul class="dt-nav">
                     <li class="dt-nav__item dt-notification dropdown">
