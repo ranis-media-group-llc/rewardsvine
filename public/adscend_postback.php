@@ -8,16 +8,16 @@
         $result = $mysqli -> query($sql);
         $row = $result -> fetch_array(MYSQLI_ASSOC);
         $points = $row['points'];
-        echo $row['points'].'<br>';
+        //echo $row['points'].'<br>';
 
         $add_points = $_GET['rate'];
         $points = $points + $add_points;
-        echo $points;
+      //  echo $points;
     }
 
     // record the points
     if(isset($points)){
-        $update_points_sql = "UPDATE rv_users SET points='$points' WHERE id='$user_id'";
+        $update_points_sql = "UPDATE rv_users SET points='$points' WHERE user_id='$user_id'";
         if ($mysqli->query($update_points_sql) === TRUE) {
             echo "0";
         } else {
