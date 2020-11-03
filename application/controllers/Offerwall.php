@@ -19,7 +19,7 @@ class Offerwall extends MY_Controller {
         if(isset($offerwall)){
             if($offerwall == 'adscend'){
                 $header_title = 'Adscend Media';
-                $offerwall_frame = "https://asmwall.com/adwall/publisher/112515/profile/13016?subid1=1";
+                $offerwall_frame = "https://asmwall.com/adwall/publisher/112515/profile/13016?subid1=439056";
             }
         }else{
             redirect(base_url('offerwall/'));

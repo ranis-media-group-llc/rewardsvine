@@ -28,7 +28,7 @@ class MY_Controller extends CI_Controller {
         
 //        $this->data['settings'] = (object) $this->settings;
 
-        $this->data['users_data'] = $this->users->get_details(1,'id');
+        $this->data['users_data'] = $this->users->get_details(439056,'user_id');
         if(isset($_SESSION['user'])){
             $data =  $_SESSION['user'];
             $id = $data->email_address;

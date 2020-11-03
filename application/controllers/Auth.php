@@ -80,6 +80,7 @@ class Auth extends MY_Controller {
                 $input['date_created'] = date("d-m-Y h:i A");
                 $input['role'] = "Member";
                 $input['points']=0;
+                $input['user_id'] = random_string('numeric',6);
                     
                 if($pass1 != $pass2){
                    $this->data['error'] = "Password didn't match."; 
