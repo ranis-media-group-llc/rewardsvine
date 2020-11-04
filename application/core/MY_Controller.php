@@ -22,7 +22,7 @@ class MY_Controller extends CI_Controller {
             $data =  $_SESSION['user'];
             $id = $data->email_address;
         }else{
-            redirect(base_url('auth/index'));
+            redirect(base_url('auth/login'));
         }
 
 	}
