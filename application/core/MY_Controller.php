@@ -21,6 +21,9 @@ class MY_Controller extends CI_Controller {
         if(isset($_SESSION['user'])){
             $data =  $_SESSION['user'];
             $id = $data->email_address;
+        }else{
+            redirect(base_url('auth/index'));
         }
+
 	}
 }
