@@ -1,7 +1,7 @@
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
 
-class Auth extends CI_Controller {
+class Auth extends MY_Controller {
     
     public function __construct()
     {
@@ -56,7 +56,6 @@ class Auth extends CI_Controller {
 //                }
                 
          }
-        $this->data['title'] = "RewardsVine - Login";
         $this->load->view('auth/index', $this->data);
         
 	}
@@ -97,7 +96,6 @@ class Auth extends CI_Controller {
 //            }
 
         }
-        $this->data['title'] = "RewardsVine - SignUp";
         $this->load->view('auth/signup', $this->data);
         
 	}

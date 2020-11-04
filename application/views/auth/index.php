@@ -8,7 +8,7 @@
         <meta name="description" content="Drift - A fully responsive, HTML5 based admin template">
         <meta name="keywords" content="Responsive, HTML5, admin theme, business, professional, jQuery, web design, CSS3, sass">
         <!-- /meta tags -->
-        <title> <?= $title ?> </title>
+        <title> RewardsVine </title>
 
         <!-- Site favicon -->
         <link rel="shortcut icon" href="/assets/images/mini_logo.png" type="image/x-icon">
@@ -63,11 +63,11 @@
                                 <form method="post">
                                     <div class="form-group">
                                         <label class="" for="email-1">Email Address</label>
-                                        <input type="email" class="form-control" id="email-1" aria-describedby="email-1" name="email_address" required>
+                                        <input type="email" class="form-control" id="email-1" aria-describedby="email-1" name="email_address">
                                     </div>
                                     <div class="form-group">
                                         <label class="" for="password-1">Password</label>
-                                        <input type="password" class="form-control" id="password-1" name="password" required>
+                                        <input type="password" class="form-control" id="password-1" name="password">
                                     </div>
                                     <div class="form-group">
                                         <button type="submit" class="btn btn-primary text-uppercase">LOGIN</button>

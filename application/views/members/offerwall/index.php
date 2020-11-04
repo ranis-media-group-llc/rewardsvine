@@ -41,123 +41,192 @@
                                         <div class="tab-content">
                                             <div class="col-md-12">
                                                 <div class="row">
-                                                    <div class="col-xl-6">
-                                                        <div class="col-xl-12">
-                                                            <a href="/offerwall/view/adscend" >
-                                                                <div class="dt-card dt-social-card animate-slide border border-w-2 border-dark">
-                                                                    <div class="dt-social__circle bg-dark">
-                                                                    </div>
-                                                                    <div class="dt-card__body">
-                                                                        <div class="row">
-                                                                            <div class="col-xl-9">
-                                                                                <h3 class="font-weight-500 mb-1">Adscend Media</h3>
-                                                                                <ul class="dt-list dt-list-bordered dt-list-cm-0 flex-nowrap">
-                                                                                    <li class="dt-list__item text-truncate">
-                                                                                        <p class="dt-indicator-title text-muted f-12">Watch Videos, Complete Offers, Download Apps & More!</p>
-                                                                                     </li>>
-                                                                                </ul>
-                                                                            </div>
-                                                                            <img class="img-fluid dt-card__tools responsive" width="60" src="/assets/images/members/adscend.jpg" alt="Adscend Media">
+                                                    <div class="col-md-3">
+                                                        <div class="dt-card overflow-auto">
+                                                            <div class="dt-card__header">
+                                                                <div class="dt-card__heading">
+                                                                    <h3 class="dt-card__title"></h3>
+                                                                </div>
+                                                                <div class="dt-card__tools">
+                                                                    <a class="text-light-gray" href="javascript:void(0)" data-container="body" data-toggle="popover" data-placement="top" data-content="Vivamus sagittis lacus vel augue laoreet rutrum faucibus.">
+                                                                        <i class="icon icon-info icon-lg"></i>
+                                                                    </a>
+                                                                </div>
+                                                            </div>
+                                                            <div class="dt-card__body">
+                                                                <div class="text-center">
+                                                                    <img class="img-fluid mb-4" src="/assets/images/members/adscend.jpg" alt="Adscend Media">
+                                                                    <h2>Adscend Media</h2>
+                                                                    <div class="dt-indicator-item__info flex-column mb-5" data-fill="100"
+                                                                         data-max="100"
+                                                                         data-percent="true">
+                                                                        <div class="dt-indicator-item__bar mb-2">
+                                                                            <div class="dt-indicator-item__fill bg-secondary"></div>
+                                                                        </div>
+                                                                        <div class="d-flex justify-content-between">
+                                                                            <p class="dt-indicator-title text-muted f-12">Watch Videos, Complete Offers, Download Apps & More!</p>
                                                                         </div>
                                                                     </div>
                                                                 </div>
+                                                            </div>
+                                                            <a href="/offerwall/view/adscend" class="btn btn-dark btn-sm btn-block rounded-0">
+                                                                PLAY
                                                             </a>
                                                         </div>
-                                                        <div class="col-xl-12">
-                                                            <a href="/offerwall/view/cpa_lead" >
-                                                                <div class="dt-card dt-social-card animate-slide border border-w-2 border-dark">
-                                                                    <div class="dt-social__circle bg-dark">
-                                                                    </div>
-                                                                    <div class="dt-card__body">
-                                                                        <div class="row">
-                                                                            <div class="col-xl-9">
-                                                                                <h3 class="font-weight-500 mb-1">CPA Lead</h3>
-                                                                                <ul class="dt-list dt-list-bordered dt-list-cm-0 flex-nowrap">
-                                                                                    <li class="dt-list__item text-truncate">
-                                                                                        <p class="dt-indicator-title text-muted f-12"> Sign Up, Complete Offers, Download Apps and Surveys</p>
-                                                                                    </li>>
-                                                                                </ul>
-                                                                            </div>
-                                                                            <img class="img-fluid dt-card__tools responsive" width="60" src="/assets/images/members/cpalead.jpg" alt="CPA Lead">
+                                                    </div>
+
+                                                    <div class="col-md-3">
+                                                        <div class="dt-card overflow-auto">
+                                                            <div class="dt-card__header">
+                                                                <div class="dt-card__heading">
+                                                                    <h3 class="dt-card__title"></h3>
+                                                                </div>
+                                                                <div class="dt-card__tools">
+                                                                    <a class="text-light-gray" href="javascript:void(0)" data-container="body"
+                                                                       data-toggle="popover"
+                                                                       data-placement="top"
+                                                                       data-content="Vivamus sagittis lacus vel augue laoreet rutrum faucibus.">
+                                                                        <i class="icon icon-info icon-lg"></i>
+                                                                    </a>
+                                                                </div>
+                                                            </div>
+                                                            <div class="dt-card__body">
+                                                                <div class="text-center">
+                                                                    <img class="img-fluid mb-4" src="/assets/images/members/cpalead.jpg" alt="Adscend Media">
+                                                                    <h2>CPA Lead</h2>
+                                                                    <div class="dt-indicator-item__info flex-column mb-5" data-fill="100"
+                                                                         data-max="100"
+                                                                         data-percent="true">
+                                                                        <div class="dt-indicator-item__bar mb-2">
+                                                                            <div class="dt-indicator-item__fill bg-secondary"></div>
+                                                                        </div>
+                                                                        <div class="d-flex justify-content-between">
+                                                                            <p class="dt-indicator-title text-muted f-12">
+                                                                                Sign Up, Complete Offers, Download Apps and Surveys
+                                                                            </p>
                                                                         </div>
                                                                     </div>
                                                                 </div>
-                                                            </a>
-                                                        </div>
-                                                        <div class="col-xl-12">
-                                                            <a href="/offerwall/view/adscend" >
-                                                                <div class="dt-card dt-social-card animate-slide border border-w-2 border-dark">
-                                                                    <div class="dt-social__circle bg-dark">
-                                                                    </div>
-                                                                    <div class="dt-card__body">
-                                                                        <div class="row">
-                                                                            <div class="col-xl-9">
-                                                                                <h3 class="font-weight-500 mb-1">Offertoro</h3>
-                                                                                <ul class="dt-list dt-list-bordered dt-list-cm-0 flex-nowrap">
-                                                                                    <li class="dt-list__item text-truncate">
-                                                                                        <p class="dt-indicator-title text-muted f-12">
-                                                                                            Earn points by Watching Videos,Completing Offers and More!
-                                                                                        </p>
-                                                                                    </li>>
-                                                                                </ul>
-                                                                            </div>
-                                                                            <img class="img-fluid dt-card__tools responsive" width="60" src="/assets/images/members/offertoro.jpg" alt="CPA Lead">
-                                                                        </div>
-                                                                    </div>
-                                                                </div>
-                                                            </a>
-                                                        </div>
-                                                        <div class="col-xl-12">
-                                                            <a href="/offerwall/view/adscend" >
-                                                                <div class="dt-card dt-social-card animate-slide border border-w-2 border-dark">
-                                                                    <div class="dt-social__circle bg-dark">
-                                                                    </div>
-                                                                    <div class="dt-card__body">
-                                                                        <div class="row">
-                                                                            <div class="col-xl-9">
-                                                                                <h3 class="font-weight-500 mb-1">AdGem</h3>
-                                                                                <ul class="dt-list dt-list-bordered dt-list-cm-0 flex-nowrap">
-                                                                                    <li class="dt-list__item text-truncate">
-                                                                                        <p class="dt-indicator-title text-muted f-12">
-                                                                                            Earn points by Watching Videos,Completing Offers and More!
-                                                                                        </p>
-                                                                                    </li>>
-                                                                                </ul>
-                                                                            </div>
-                                                                            <img class="img-fluid dt-card__tools responsive" width="60" src="/assets/images/members/adgem.jpg" alt="CPA Lead">
-                                                                        </div>
-                                                                    </div>
-                                                                </div>
-                                                            </a>
-                                                        </div>
-                                                        <div class="col-xl-12">
-                                                            <a href="/offerwall/view/adscend" >
-                                                                <div class="dt-card dt-social-card animate-slide border border-w-2 border-dark">
-                                                                    <div class="dt-social__circle bg-dark">
-                                                                    </div>
-                                                                    <div class="dt-card__body">
-                                                                        <div class="row">
-                                                                            <div class="col-xl-9">
-                                                                                <h3 class="font-weight-500 mb-1">OfferWall</h3>
-                                                                                <ul class="dt-list dt-list-bordered dt-list-cm-0 flex-nowrap">
-                                                                                    <li class="dt-list__item text-truncate">
-                                                                                        <p class="dt-indicator-title text-muted f-12">
-                                                                                            Earn points by Watching Videos,Completing Offers and More!
-                                                                                        </p>
-                                                                                    </li>>
-                                                                                </ul>
-                                                                            </div>
-                                                                            <img class="img-fluid dt-card__tools responsive" width="60" src="/assets/images/members/offerwall.jpg" alt="CPA Lead">
-                                                                        </div>
-                                                                    </div>
-                                                                </div>
+                                                            </div>
+                                                            <a href="javascript:void(0)" class="btn btn-dark btn-sm btn-block rounded-0">
+                                                                View More
                                                             </a>
                                                         </div>
                                                     </div>
                                                     <div class="col-md-3">
-
+                                                        <div class="dt-card overflow-auto">
+                                                            <div class="dt-card__header">
+                                                                <div class="dt-card__heading">
+                                                                    <h3 class="dt-card__title"></h3>
+                                                                </div>
+                                                                <div class="dt-card__tools">
+                                                                    <a class="text-light-gray" href="javascript:void(0)" data-container="body"
+                                                                       data-toggle="popover"
+                                                                       data-placement="top"
+                                                                       data-content="Vivamus sagittis lacus vel augue laoreet rutrum faucibus.">
+                                                                        <i class="icon icon-info icon-lg"></i>
+                                                                    </a>
+                                                                </div>
+                                                            </div>
+                                                            <div class="dt-card__body">
+                                                                <div class="text-center">
+                                                                    <img class="img-fluid mb-4" src="/assets/images/members/offertoro.jpg" alt="Offertoro">
+                                                                    <h2>Offertoro</h2>
+                                                                    <div class="dt-indicator-item__info flex-column mb-5" data-fill="100"
+                                                                         data-max="100"
+                                                                         data-percent="true">
+                                                                        <div class="dt-indicator-item__bar mb-2">
+                                                                            <div class="dt-indicator-item__fill bg-secondary"></div>
+                                                                        </div>
+                                                                        <div class="d-flex justify-content-between">
+                                                                            <p class="dt-indicator-title text-muted f-12">
+                                                                                Earn points by Watching Videos,Completing Offers and More!
+                                                                            </p>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            <a href="javascript:void(0)" class="btn btn-dark btn-sm btn-block rounded-0">
+                                                                View More
+                                                            </a>
+                                                        </div>
                                                     </div>
-
+                                                    <div class="col-md-3">
+                                                        <div class="dt-card overflow-auto">
+                                                            <div class="dt-card__header">
+                                                                <div class="dt-card__heading">
+                                                                    <h3 class="dt-card__title"></h3>
+                                                                </div>
+                                                                <div class="dt-card__tools">
+                                                                    <a class="text-light-gray" href="javascript:void(0)" data-container="body"
+                                                                       data-toggle="popover"
+                                                                       data-placement="top"
+                                                                       data-content="Vivamus sagittis lacus vel augue laoreet rutrum faucibus.">
+                                                                        <i class="icon icon-info icon-lg"></i>
+                                                                    </a>
+                                                                </div>
+                                                            </div>
+                                                            <div class="dt-card__body">
+                                                                <div class="text-center">
+                                                                    <img class="img-fluid mb-4" src="/assets/images/members/adgem.jpg" alt="AdGem">
+                                                                    <h2>AdGem</h2>
+                                                                    <div class="dt-indicator-item__info flex-column mb-5" data-fill="100"
+                                                                         data-max="100"
+                                                                         data-percent="true">
+                                                                        <div class="dt-indicator-item__bar mb-2">
+                                                                            <div class="dt-indicator-item__fill bg-secondary"></div>
+                                                                        </div>
+                                                                        <div class="d-flex justify-content-between">
+                                                                            <p class="dt-indicator-title text-muted f-12">
+                                                                                Earn points by Watching Videos,Completing Offers and More!
+                                                                            </p>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            <a href="javascript:void(0)" class="btn btn-dark btn-sm btn-block rounded-0">
+                                                                View More
+                                                            </a>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-md-3">
+                                                        <div class="dt-card overflow-auto">
+                                                            <div class="dt-card__header">
+                                                                <div class="dt-card__heading">
+                                                                    <h3 class="dt-card__title"></h3>
+                                                                </div>
+                                                                <div class="dt-card__tools">
+                                                                    <a class="text-light-gray" href="javascript:void(0)" data-container="body"
+                                                                       data-toggle="popover"
+                                                                       data-placement="top"
+                                                                       data-content="Vivamus sagittis lacus vel augue laoreet rutrum faucibus.">
+                                                                        <i class="icon icon-info icon-lg"></i>
+                                                                    </a>
+                                                                </div>
+                                                            </div>
+                                                            <div class="dt-card__body">
+                                                                <div class="text-center">
+                                                                    <img class="img-fluid mb-4" src="/assets/images/members/adgem.jpg" alt="OfferWall">
+                                                                    <h2>OfferWall</h2>
+                                                                    <div class="dt-indicator-item__info flex-column mb-5" data-fill="100"
+                                                                         data-max="100"
+                                                                         data-percent="true">
+                                                                        <div class="dt-indicator-item__bar mb-2">
+                                                                            <div class="dt-indicator-item__fill bg-secondary"></div>
+                                                                        </div>
+                                                                        <div class="d-flex justify-content-between">
+                                                                            <p class="dt-indicator-title text-muted f-12">
+                                                                                Earn points by Watching Videos,Completing Offers and More!
+                                                                            </p>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            <a href="javascript:void(0)" class="btn btn-dark btn-sm btn-block rounded-0">
+                                                                View More
+                                                            </a>
+                                                        </div>
+                                                    </div>
                                                 </div>
                                             </div>
                                         </div>
