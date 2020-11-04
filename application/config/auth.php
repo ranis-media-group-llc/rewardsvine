@@ -2,7 +2,7 @@
 
 // Redirects
 
-$config['auth_login_success'] = "members";
+$config['auth_login_success'] = "offerwall";
 
 $config['auth_login_admin'] = "admin/home";
 

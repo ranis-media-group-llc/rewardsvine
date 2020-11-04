@@ -174,7 +174,7 @@
                             <img class="dt-avatar size-50" src="/assets/images/avatar1.png" alt="Domnic Harris">
                             <span class="dt-avatar-info d-none d-sm-block">
                                 <span class="d-block text-light-primary f-10 mb-1">Welcome back!</span>
-                                <span class="dt-avatar-name">RewardsVine User</span>
+                                <span class="dt-avatar-name"><?= $_SESSION['user']->fullname ?></span>
                             </span>
                         </a>
                         <!-- /dropdown link -->
@@ -184,8 +184,8 @@
                             <div class="dt-avatar-wrapper flex-nowrap p-6 mt-n2 bg-gradient-purple text-white rounded-top">
                                 <img class="dt-avatar" src="https://via.placeholder.com/150x150" alt="Domnic Harris">
                                 <span class="dt-avatar-info">
-                                    <span class="dt-avatar-name">Bob Hyden</span>
-                                    <span class="f-12">Administrator</span>
+                                    <span class="dt-avatar-name"><?= $_SESSION['user']->fullname ?></span>
+                                    <span class="f-12">Member</span>
                                 </span>
                             </div>
                             <a class="dropdown-item" href="javascript:void(0)"> <i class="icon icon-user icon-fw mr-2 mr-sm-1"></i>Account
@@ -194,7 +194,7 @@
                                 <i class="icon icon-settings icon-fw mr-2 mr-sm-1"></i>
                                 Setting
                             </a>
-                            <a class="dropdown-item" href="#"> <i class="icon icon-editors icon-fw mr-2 mr-sm-1"></i>
+                            <a class="dropdown-item" href="<?= base_url('auth/logout') ?>"> <i class="icon icon-editors icon-fw mr-2 mr-sm-1"></i>
                                 Logout
                             </a>
                         </div>

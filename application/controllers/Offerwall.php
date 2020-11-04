@@ -9,7 +9,7 @@ class Offerwall extends MY_Controller {
 
 	public function index()
 	{
-        $this->data['title'] = 'RewardsVine - Offerwall';
+	    $this->data['title'] = 'RewardsVine - Offerwall';
 		$this->load->view('members/offerwall/index',$this->data);
 	}
 
@@ -19,7 +19,11 @@ class Offerwall extends MY_Controller {
         if(isset($offerwall)){
             if($offerwall == 'adscend'){
                 $header_title = 'Adscend Media';
-                $offerwall_frame = "https://asmwall.com/adwall/publisher/112515/profile/13016?subid1=439056";
+                $offerwall_frame = "https://asmwall.com/adwall/publisher/112515/profile/13016?subid1=".$_SESSION['user']->user_id;
+            }
+            if($offerwall == 'cpa_lead'){
+                $header_title = 'CPA Lead';
+                $offerwall_frame = "https://viral782.com/list/".$_SESSION['user']->user_id;
             }
         }else{
             redirect(base_url('offerwall/'));
