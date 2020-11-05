@@ -85,7 +85,7 @@
                                                                 </a>
                                                             </div>
                                                             <div class="col-xl-12">
-                                                                <a href="/offerwall/view/adscend" >
+                                                                <a href="/offerwall/view/offertoro" >
                                                                     <div class="dt-card dt-social-card animate-slide border border-w-2 border-dark">
                                                                         <div class="dt-social__circle bg-dark">
                                                                         </div>
@@ -108,7 +108,7 @@
                                                                 </a>
                                                             </div>
                                                             <div class="col-xl-12">
-                                                                <a href="/offerwall/view/adscend" >
+                                                                <a href="/offerwall/view/adgem" >
                                                                     <div class="dt-card dt-social-card animate-slide border border-w-2 border-dark">
                                                                         <div class="dt-social__circle bg-dark">
                                                                         </div>
@@ -131,14 +131,14 @@
                                                                 </a>
                                                             </div>
                                                             <div class="col-xl-12">
-                                                                <a href="/offerwall/view/adscend" >
+                                                                <a href="#" >
                                                                     <div class="dt-card dt-social-card animate-slide border border-w-2 border-dark">
                                                                         <div class="dt-social__circle bg-dark">
                                                                         </div>
                                                                         <div class="dt-card__body">
                                                                             <div class="row">
                                                                                 <div class="col-xl-9">
-                                                                                    <h3 class="font-weight-500 mb-1">OfferWall</h3>
+                                                                                    <h3 class="font-weight-500 mb-1">Payment Wall</h3>
                                                                                     <ul class="dt-list dt-list-bordered dt-list-cm-0 flex-nowrap">
                                                                                         <li class="dt-list__item text-truncate">
                                                                                             <p class="dt-indicator-title text-muted f-12">

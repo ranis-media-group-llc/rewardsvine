@@ -42,6 +42,10 @@ $this->load->view('layout/head');
                                             <div class="row">
                                                 <?php if(isset($frame)): ?>
                                                     <iframe width="100%" height="650px" src="<?= $frame; ?>" frameborder="0" allowfullscreen></iframe>
+
+                                                    <?php if($frame == 'offertoro'): ?>
+
+                                                    <?php endif; ?>
                                                 <?php endif; ?>
                                             </div>
                                         </div>
