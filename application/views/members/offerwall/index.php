@@ -52,9 +52,11 @@
                                                                                 <div class="col-xl-9">
                                                                                     <h3 class="font-weight-500 mb-1">Adscend Media</h3>
                                                                                     <ul class="dt-list dt-list-bordered dt-list-cm-0 flex-nowrap">
-                                                                                        <li class="dt-list__item text-truncate">
-                                                                                            <p class="dt-indicator-title text-muted f-12">Watch Videos, Complete Offers, Download Apps & More!</p>
-                                                                                        </li>>
+                                                                                        <li class="dt-list__item">
+                                                                                            <p class="dt-indicator-title text-muted" style="word-break:break-word !important;">
+                                                                                                Watch Videos, Complete Offers, Download Apps & More!
+                                                                                            </p>
+                                                                                        </li>
                                                                                     </ul>
                                                                                 </div>
                                                                                 <img class="img-fluid dt-card__tools responsive" width="60" src="/assets/images/members/adscend.jpg" alt="Adscend Media">
@@ -73,9 +75,9 @@
                                                                                 <div class="col-xl-9">
                                                                                     <h3 class="font-weight-500 mb-1">CPA Lead</h3>
                                                                                     <ul class="dt-list dt-list-bordered dt-list-cm-0 flex-nowrap">
-                                                                                        <li class="dt-list__item text-truncate">
+                                                                                        <li class="dt-list__item">
                                                                                             <p class="dt-indicator-title text-muted f-12"> Sign Up, Complete Offers, Download Apps and Surveys</p>
-                                                                                        </li>>
+                                                                                        </li>
                                                                                     </ul>
                                                                                 </div>
                                                                                 <img class="img-fluid dt-card__tools responsive" width="60" src="/assets/images/members/cpalead.jpg" alt="CPA Lead">
@@ -94,11 +96,11 @@
                                                                                 <div class="col-xl-9">
                                                                                     <h3 class="font-weight-500 mb-1">Offertoro</h3>
                                                                                     <ul class="dt-list dt-list-bordered dt-list-cm-0 flex-nowrap">
-                                                                                        <li class="dt-list__item text-truncate">
+                                                                                        <li class="dt-list__item">
                                                                                             <p class="dt-indicator-title text-muted f-12">
                                                                                                 Earn points by Watching Videos,Completing Offers and More!
                                                                                             </p>
-                                                                                        </li>>
+                                                                                        </li>
                                                                                     </ul>
                                                                                 </div>
                                                                                 <img class="img-fluid dt-card__tools responsive" width="60" src="/assets/images/members/offertoro.jpg" alt="Offertoro">
@@ -117,14 +119,16 @@
                                                                                 <div class="col-xl-9">
                                                                                     <h3 class="font-weight-500 mb-1">AdGem</h3>
                                                                                     <ul class="dt-list dt-list-bordered dt-list-cm-0 flex-nowrap">
-                                                                                        <li class="dt-list__item text-truncate">
+                                                                                        <li class="dt-list__item">
                                                                                             <p class="dt-indicator-title text-muted f-12">
                                                                                                 Earn points by Watching Videos,Completing Offers and More!
                                                                                             </p>
-                                                                                        </li>>
+                                                                                        </li>
                                                                                     </ul>
                                                                                 </div>
-                                                                                <img class="img-fluid dt-card__tools responsive" width="60" src="/assets/images/members/adgem.jpg" alt="AdGem">
+                                                                                <div class="col-xl-3">
+                                                                                        <img class="img-fluid dt-card__tools responsive" width="60" src="/assets/images/members/adgem.jpg" alt="AdGem">
+                                                                                </div>
                                                                             </div>
                                                                         </div>
                                                                     </div>
@@ -140,11 +144,11 @@
                                                                                 <div class="col-xl-9">
                                                                                     <h3 class="font-weight-500 mb-1">Payment Wall</h3>
                                                                                     <ul class="dt-list dt-list-bordered dt-list-cm-0 flex-nowrap">
-                                                                                        <li class="dt-list__item text-truncate">
+                                                                                        <li class="dt-list__item">
                                                                                             <p class="dt-indicator-title text-muted f-12">
                                                                                                 Earn points by Watching Videos,Completing Offers and More!
                                                                                             </p>
-                                                                                        </li>>
+                                                                                        </li>
                                                                                     </ul>
                                                                                 </div>
                                                                                 <img class="img-fluid dt-card__tools responsive" width="60" src="/assets/images/members/offerwall.jpg" alt="OfferWall">

@@ -12,26 +12,13 @@
 
         $add_points = $_GET['rate'] * 100;
         $points = $points + $add_points;
-      //  echo $points;
-    }
-
-    // record the points
-    if(isset($points)){
-        $update_points_sql = "UPDATE rv_users SET points='$points' WHERE user_id='$user_id'";
-        if ($mysqli->query($update_points_sql) === TRUE) {
-            echo "0";
-        } else {
-            echo "Error updating record: " . $mysqli->error;
+        if(isset($points)){
+            $update_points_sql = "UPDATE rv_users SET points='$points' WHERE user_id='$user_id'";
+            if ($mysqli->query($update_points_sql) === TRUE) {
+                echo "0";
+            } else {
+                echo "Error updating record: " . $mysqli->error;
+            }
         }
     }
-
-//    $offer_id =  $_GET['offerid'];
-//    $offer_name =  $_GET['name'];
-//    $offer_rate =  $_GET['rate'];
-//    $offer_sub_id =  $_GET['sub1'];
-//    $offer_status =  $_GET['status'];
-//    $offer_ip =  $_GET['ip'];
-//
-//    echo $offer_rate.'<br>';
-//    echo $offer_name.'<br>';
 ?>
