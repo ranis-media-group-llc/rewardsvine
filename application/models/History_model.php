@@ -2,7 +2,7 @@
 
 class History_model extends CI_Model {
 
-    protected $table = "activity_history";
+    protected $table = "rv_history";
 
     public function get_all($key)
     {

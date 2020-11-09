@@ -2,6 +2,7 @@
 		<script src="/assets/plugins/sweetalert2/js/sweetalert2.js"></script>
 		<script src="/assets/js/intranet/functions.js"></script>
 		<script src="/assets/js/intranet/customizer.js"></script>
+		<script src="//cdn.datatables.net/1.10.22/js/jquery.dataTables.min.js"></script>
 
 		<script src="/assets/js/intranet/script.js"></script>
 	</body>

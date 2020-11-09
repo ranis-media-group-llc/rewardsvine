@@ -40,43 +40,50 @@
                                         <br><br>
                                         <div class="tab-content">
                                             <div class="col-md-12">
-                                                <div class="media-list media-separator">
-                                                    <div class="media media-news">
-                                                        <img class="img-fluid rounded-xl order-sm-2 ml-sm-10" src="https://via.placeholder.com/640x420" alt="Currency">
-                                                            <div class="media-body order-sm-1">
-                                                                <h4 class="mb-2">TheoremReach</h4>
-                                                                <p class="mb-5">
-                                                                    No Description Yet.
-                                                                </p>
-                                                                <div class="text-light-gray mb-2">
-                                                                    <i class="icon icon-tag icon-lg mr-2 align-top"></i>
-                                                                    Survey
+                                                <div class="col-xl-6">
+                                                    <div class="col-xl-12">
+                                                        <a href="/offerwall/view/adscend" >
+                                                            <div class="dt-card dt-social-card animate-slide border border-w-2 border-dark">
+                                                                <div class="dt-social__circle bg-dark">
                                                                 </div>
-
-                                                                <a class="btn btn-dark btn-sm rounded-0 d-inline-block font-weight-500 align-middle"
-                                                                   href="javascript:void(0)">
-                                                                    <span>Start</span>
-                                                                    <i class="icon icon-arrow-long-right icon-lg ml-1"></i>
-                                                                </a>
+                                                                <div class="dt-card__body">
+                                                                    <div class="row">
+                                                                        <div class="col-xl-9">
+                                                                            <h3 class="font-weight-500 mb-1">TheoremReach</h3>
+                                                                            <ul class="dt-list dt-list-bordered dt-list-cm-0 flex-nowrap">
+                                                                                <li class="dt-list__item">
+                                                                                    <p class="dt-indicator-title text-muted" style="word-break:break-word !important;">
+                                                                                        Surveys
+                                                                                    </p>
+                                                                                </li>
+                                                                            </ul>
+                                                                        </div>
+                                                                        <img class="img-fluid dt-card__tools responsive" width="60" src="/assets/images/members/adscend.jpg" alt="Adscend Media">
+                                                                    </div>
+                                                                </div>
                                                             </div>
+                                                        </a>
                                                     </div>
-                                                    <div class="media media-news">
-                                                        <img class="img-fluid rounded-xl order-sm-2 ml-sm-10" src="https://via.placeholder.com/640x420" alt="Currency">
-                                                            <div class="media-body order-sm-1">
-                                                                <h4 class="mb-2">Pollfish</h4>
-                                                                <p class="mb-5">
-                                                                    No Description Yet.
-                                                                </p>
-                                                                <div class="text-light-gray mb-2">
-                                                                    <i class="icon icon-tag icon-lg mr-2 align-top"></i>
-                                                                    Survey
+                                                    <div class="col-xl-12">
+                                                        <a href="/offerwall/view/cpa_lead" >
+                                                            <div class="dt-card dt-social-card animate-slide border border-w-2 border-dark">
+                                                                <div class="dt-social__circle bg-dark">
                                                                 </div>
-                                                                <a class="btn btn-dark btn-sm rounded-0 d-inline-block font-weight-500 align-middle"
-                                                                   href="javascript:void(0)">
-                                                                    <span>Start</span>
-                                                                    <i class="icon icon-arrow-long-right icon-lg ml-1"></i>
-                                                                </a>
+                                                                <div class="dt-card__body">
+                                                                    <div class="row">
+                                                                        <div class="col-xl-9">
+                                                                            <h3 class="font-weight-500 mb-1">Pollfish</h3>
+                                                                            <ul class="dt-list dt-list-bordered dt-list-cm-0 flex-nowrap">
+                                                                                <li class="dt-list__item">
+                                                                                    <p class="dt-indicator-title text-muted">Surveys</p>
+                                                                                </li>
+                                                                            </ul>
+                                                                        </div>
+                                                                        <img class="img-fluid dt-card__tools responsive" width="60" src="/assets/images/members/cpalead.jpg" alt="CPA Lead">
+                                                                    </div>
+                                                                </div>
                                                             </div>
+                                                        </a>
                                                     </div>
                                                 </div>
                                             </div>

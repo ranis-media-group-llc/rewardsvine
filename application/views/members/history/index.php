@@ -40,7 +40,32 @@
                                         <br><br>
                                         <div class="tab-content">
                                             <div class="col-md-12">
-
+                                                <?php if(isset($history)) : ?>
+                                                <?php foreach($history as $his) : ?>
+                                                        <table id="myTable" class="display">
+                                                            <thead>
+                                                                <tr>
+                                                                    <th>Offer ID</th>
+                                                                    <th>Offer Name</th>
+                                                                    <th>Points Redeem</th>
+                                                                    <th>IP</th>
+                                                                    <th>Ad Network</th>
+                                                                    <th>DateTime</th>
+                                                                </tr>
+                                                            </thead>
+                                                            <tbody>
+                                                                <tr>
+                                                                    <td><?= $his->offer_id; ?></td>
+                                                                    <td><?= $his->offer_name; ?></td>
+                                                                    <td><?= $his->points_added; ?></td>
+                                                                    <td><?= $his->postback_ip; ?></td>
+                                                                    <td><?= $his->ad_network; ?></td>
+                                                                    <td><?= $his->offer_datetime; ?></td>
+                                                                </tr>
+                                                            </tbody>
+                                                        </table>
+                                                    <?php endforeach; ?>
+                                                <?php endif; ?>
                                             </div>
                                         </div>
                                     </div>
@@ -68,4 +93,10 @@
 <?php
 $this->load->view('layout/foot');
 ?>
+
+<script>
+    $(document).ready( function () {
+        $('#myTable').DataTable();
+    } );
+</script>
 

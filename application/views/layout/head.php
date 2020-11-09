@@ -25,6 +25,7 @@
 		<link rel="stylesheet" href="/assets/plugins/perfect-scrollbar/css/perfect-scrollbar.css">
 		<!-- /perfect scrollbar stylesheet -->
 		<link rel="stylesheet" href="/assets/css/intranet/theme.css">
+		<link rel="stylesheet" href="//cdn.datatables.net/1.10.22/css/jquery.dataTables.min.css">
 
 		<script>
 			var rtlEnable = '';

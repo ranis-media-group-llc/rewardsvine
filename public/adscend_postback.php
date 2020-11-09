@@ -19,6 +19,35 @@
             } else {
                 echo "Error updating record: " . $mysqli->error;
             }
+
+
+            $offer_id = $offer_name = $status = $ip_add =  "";
+            $offer_datetime = date('Y-m-d h:i A');
+
+            if(isset($_GET['offerid'])){
+                $offer_id = $_GET['offerid'];
+            }
+            if(isset($_GET['name'])){
+                $offer_name = $_GET['name'];
+            }
+            if(isset($_GET['status'])){
+                $status = $_GET['status'];
+            }
+            if(isset($_GET['ip'])){
+                $ip_add = $_GET['ip'];
+            }
+
+            $sql_history = "INSERT INTO rv_history (offer_id, offer_name, points_added,user_id,status,postback_ip,offer_datetime,ad_network) 
+                        VALUES ('$offer_id','$offer_name','$points','$user_id','$status','$ip_add','$offer_datetime','Adscend Media')";
+
+            if ($mysqli->query($sql_history) === TRUE) {
+
+            } else {
+                echo "Error: " . $sql . "<br>" . mysqli_error($mysqli);
+            }
         }
+
+
+
     }
 ?>

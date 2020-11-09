@@ -157,6 +157,47 @@
                                                                     </div>
                                                                 </a>
                                                             </div>
+                                                            <article data-id="62267"  data-brand="Website"  class="product">
+                                                                <a href="https://www.templatemonster.com/website-templates/monstroid2.html" class="product-image-wrapper">
+                                                                    <img src="/assets/images/test.jpg" alt="Monstroid2 Multipurpose Website Template"  class="product-image lazyloaded responsive">
+                                                                </a>
+                                                                <div class="product-details">
+                                                                    <div class="product-name">
+                                                                        <span data-bg="/assets/icons/types/type-html5-2.svg" class="product-name-icon lazyloaded" style="background-image: url(&quot;/assets/icons/types/type-html5-2.svg&quot;);"></span>
+                                                                        <span class="product-name-links">
+                                                                            <a href="https://www.templatemonster.com/website-templates/monstroid2.html" title="Monstroid2 Multipurpose Bootstrap Website Template" class="product-name-link">
+                                                                                <h3 class="product-name-title">POINTS TO PAYCHECK</h3>
+                                                                            </a>
+                                                                            <span class="product-name-vendor">
+                                                                                Last Date Purchase :
+                                                                                <a href="https://www.templatemonster.com/authors/zemez/" class="product-name-vendor-link"> 11/20/2020</a>
+                                                                            </span><br>
+                                                                            <span class="product-name-vendor">
+                                                                                Last Redeem Amt :
+                                                                                <a href="https://www.templatemonster.com/authors/zemez/" class="product-name-vendor-link"> $75</a>
+                                                                            </span>
+                                                                        </span>
+                                                                    </div>
+                                                                    <div class="product-info">
+                                                                        <div class="product-info-line">
+                                                                            <div class="product-sales">
+
+                                                                            </div>
+                                                                            <div class="product-price">
+
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="product-links">
+                                                                        <a href="https://www.templatemonster.com/website-templates/monstroid2.html" class="product-link product-link_details btn btn_3">
+                                                                            SEE DETAILS
+                                                                        </a>
+                                                                        <a href="https://www.templatemonsterpreview.com/demo/62267.html" rel="noopener noreferrer nofollow" target="_blank" class="product-link product-link_demo btn btn_2">
+                                                                            REDEEM POINTS
+                                                                        </a>
+                                                                    </div>
+                                                                </div>
+                                                            </article>
                                                         </div>
                                                 </div>
                                             </div>
@@ -167,6 +208,83 @@
                             </div>
                             <!-- /grid -->
                         </div>
+
+                        <style>
+                            .product {
+                                background: #fff;
+                                box-shadow: 2px 2px 2px 2px rgba(0,0,0,.3);
+                                border-radius: 3px;
+                                width : 300px;
+                                background-image: url('/assets/images/sample.png') !important;
+                            }
+                            .product-image-wrapper {
+                                display: block;
+                                padding-top: 1.5%;
+                                margin-bottom: 20px;
+                                border-radius: 3px 3px 0 0;
+                                overflow: hidden;
+                            }
+                            .product-details {
+                                padding: 0 10px 10px;
+                                font-size: 14px;
+                            }
+                            .product-info{
+                                text-align: center;
+                            }
+                            .product-name {
+                                display: flex;
+                                text-decoration: none;
+                                margin-bottom: 20px;
+                            }
+                            .product-info-line {
+                                display: flex;
+                                justify-content: space-between;
+                                align-items: center;
+                            }
+                            .product-sales {
+                                color: #78909c;
+                                margin-right: auto;
+                            }
+                            .product-price {
+                                font-weight: 600;
+                                font-size: 20px;
+                                color: #243238;
+                                margin-left: 10px;
+                            }
+                            .product-links {
+                                display: flex;
+                                margin-top: 1px;
+                            }
+                            .product-link {
+                                flex: 1;
+                            }
+                            .btn_3 {
+                                background: linear-gradient(180deg,#90a4ae,#78909c);
+                            }
+                            .btn, .btn:active, .btn:hover {
+                                color: #fff;
+                            }
+                            .product-link:not(:first-child) {
+                                margin-left: 20px;
+                            }
+                            .btn_2 {
+                                background: linear-gradient(180deg,#42a5f5,#2196f3);
+                            }
+                            .btn {
+                                display: inline-flex;
+                                justify-content: center;
+                                align-items: center;
+                                cursor: pointer;
+                                border-radius: 3px;
+                                font-size: 14px;
+                                line-height: 40px;
+                                height: 40px;
+                                padding: 0 20px;
+                                text-align: center;
+                                text-decoration: none;
+                                white-space: nowrap;
+                            }
+                        </style>
 
                         <!-- Footer -->
                         <footer class="dt-footer">
