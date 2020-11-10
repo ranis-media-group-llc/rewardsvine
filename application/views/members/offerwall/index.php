@@ -157,6 +157,7 @@
                                                                     </div>
                                                                 </a>
                                                             </div>
+                                                            <!--
                                                             <article data-id="62267"  data-brand="Website"  class="product">
                                                                 <a href="https://www.templatemonster.com/website-templates/monstroid2.html" class="product-image-wrapper">
                                                                     <img src="/assets/images/test.jpg" alt="Monstroid2 Multipurpose Website Template"  class="product-image lazyloaded responsive">
@@ -198,6 +199,7 @@
                                                                     </div>
                                                                 </div>
                                                             </article>
+                                                            -->
                                                         </div>
                                                 </div>
                                             </div>

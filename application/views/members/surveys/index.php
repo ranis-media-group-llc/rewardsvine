@@ -42,7 +42,7 @@
                                             <div class="col-md-12">
                                                 <div class="col-xl-6">
                                                     <div class="col-xl-12">
-                                                        <a href="/offerwall/view/adscend" >
+                                                        <a href="/surveys/view/theorem" >
                                                             <div class="dt-card dt-social-card animate-slide border border-w-2 border-dark">
                                                                 <div class="dt-social__circle bg-dark">
                                                                 </div>
@@ -58,7 +58,7 @@
                                                                                 </li>
                                                                             </ul>
                                                                         </div>
-                                                                        <img class="img-fluid dt-card__tools responsive" width="60" src="/assets/images/members/adscend.jpg" alt="Adscend Media">
+                                                                        <img class="img-fluid dt-card__tools responsive" width="60" src="/assets/images/members/theorem.png" alt="Theorem Reach">
                                                                     </div>
                                                                 </div>
                                                             </div>
@@ -79,7 +79,7 @@
                                                                                 </li>
                                                                             </ul>
                                                                         </div>
-                                                                        <img class="img-fluid dt-card__tools responsive" width="60" src="/assets/images/members/cpalead.jpg" alt="CPA Lead">
+                                                                        <img class="img-fluid dt-card__tools responsive" width="60" src="/assets/images/members/pollfish.jpg" alt="Pollfish">
                                                                     </div>
                                                                 </div>
                                                             </div>
