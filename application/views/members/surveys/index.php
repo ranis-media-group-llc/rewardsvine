@@ -65,7 +65,7 @@
                                                         </a>
                                                     </div>
                                                     <div class="col-xl-12">
-                                                        <a href="/offerwall/view/cpa_lead" >
+                                                        <a href="/surveys/view/pollfish" >
                                                             <div class="dt-card dt-social-card animate-slide border border-w-2 border-dark">
                                                                 <div class="dt-social__circle bg-dark">
                                                                 </div>
@@ -113,4 +113,5 @@
 <?php
 $this->load->view('layout/foot');
 ?>
+
 

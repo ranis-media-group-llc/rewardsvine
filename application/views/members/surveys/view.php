@@ -40,12 +40,8 @@ $this->load->view('layout/head');
                                     <div class="tab-content">
                                         <div class="col-md-12">
                                             <div class="row">
-                                                <?php if(isset($frame)): ?>
+                                                <?php if(isset($frame) && $header_title!="Pollfish"): ?>
                                                     <iframe width="100%" height="650px" src="<?= $frame; ?>" frameborder="0" allowfullscreen></iframe>
-
-                                                    <?php if($frame == 'offertoro'): ?>
-
-                                                    <?php endif; ?>
                                                 <?php endif; ?>
                                             </div>
                                         </div>
@@ -73,3 +69,18 @@ $this->load->view('layout/head');
 $this->load->view('layout/foot');
 ?>
 
+<?php if( isset($header_title) && $header_title== "Pollfish"): ?>
+
+    <script type="text/javascript">
+            var pollfishConfig = {
+                api_key: "8377d41d-0641-4b60-9330-650eb54431df",
+                indicator_position: "BOTTOM_RIGHT",
+                debug: true,
+                offerwall: false,
+                uuid: "<?= $_SESSION['user']->user_id; ?>",
+                survey_format : 0
+            };
+    </script>
+    <script src="https://storage.googleapis.com/pollfish_production/sdk/webplugin/pollfish.min.js"></script>
+
+<?php endif; ?>

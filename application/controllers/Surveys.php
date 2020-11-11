@@ -22,11 +22,15 @@ class Surveys extends MY_Controller {
                 $header_title = 'TheoremReach';
                 $survey_frame = "https://theoremreach.com/respondent_entry/direct?api_key=470417548628115e3f283a9c07aa&user_id=".$userid;
             }
+            if($survey == 'pollfish'){
+                $header_title = 'Pollfish';
+            }
         }else{
-            redirect(base_url('offerwall/'));
+            redirect(base_url('surveys/'));
         }
 
         $this->data['header_title'] = $header_title;
+
         $this->data['frame'] = $survey_frame;
         $this->data['title'] = 'RewardsVine - Offerwall';
         $this->load->view('members/surveys/view',$this->data);
