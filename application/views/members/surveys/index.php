@@ -94,7 +94,6 @@
                             </div>
                             <!-- /grid -->
                         </div>
-
                         <!-- Footer -->
                         <footer class="dt-footer">
                             Copyright.RewardsVine © 2020

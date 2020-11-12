@@ -40,16 +40,53 @@
                                         <br><br>
                                         <div class="tab-content">
                                             <div class="col-md-12">
-
+                                                <div class="social-box">
+                                                    <div class="container">
+                                                        <div class="row">
+                                                            <div class="col-lg-3 col-xs-12 text-center">
+                                                                <div class="box">
+                                                                    <img alt="" class="card-img-top img-fluid" src="/assets/images/paycheck.jpg">
+                                                                    <i class="fa fa-behance fa-3x" aria-hidden="true"></i>
+                                                                    <br><br>
+                                                                    <div class="box-title">
+                                                                        <h4>POINTS TO PAYCHECK</h4>
+                                                                        <small>$10-$200</small>
+                                                                    </div>
+                                                                    <div class="box-text">
+                                                                        <span></span>
+                                                                    </div>
+                                                                    <div class=" box-btn box-btn-redeem">
+                                                                        <a href="#">REDEEM</a>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            <div class="col-lg-3 col-xs-12 text-center">
+                                                                <div class="box">
+                                                                    <img alt="" class="card-img-top img-fluid" src="/assets/images/steam.jpg">
+                                                                    <i class="fa fa-behance fa-3x" aria-hidden="true"></i>
+                                                                    <br><br>
+                                                                    <div class="box-title">
+                                                                        <h4>STEAM</h4>
+                                                                        <small>$15 - 1500 points</small>
+                                                                    </div>
+                                                                    <div class="box-text">
+                                                                        <span></span>
+                                                                    </div>
+                                                                    <div class=" box-btn box-btn-redeem">
+                                                                        <a href="#">REDEEM</a>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
-
                             </div>
                             <!-- /grid -->
                         </div>
-
                         <!-- Footer -->
                         <footer class="dt-footer">
                             Copyright.RewardsVine © 2020
@@ -57,13 +94,61 @@
                         <!-- /footer -->
                     </div>
                     <!-- /site content wrapper -->
-
                 </main>
             </div>
 
         </div>
     </div>
     <!-- /root -->
+<style>
+    @import url('https://fonts.googleapis.com/css?family=Poppins&display=swap');
+
+
+    .box-btn {
+        background-color:#4385f8;
+        width: auto;
+        height: 40px;
+        border-radius: 2px;
+        color: #fff !important;
+        background-size: 100% 100%;
+        box-shadow: 0 0 0 7px #4385f8 inset;
+        margin-top: 15px;
+        cursor: pointer;
+    }
+
+    .card-img-top {
+        background-color: #f2f2f2;
+    }
+
+    .social-box .box{
+        backface-visibility: hidden;
+        background: #faf9f8;
+        border-radius: 10px;
+        padding: 0 ;
+        margin: 10px 0px;
+        transition: all 0.5s ease-out;
+        box-shadow: 0 0 6px #4183D7;
+    }
+
+    .social-box .box:hover{
+        box-shadow: 0 0 6px #00d7c6;
+    }
+
+
+
+    .social-box .box .box-btn a{
+        text-decoration: none;
+        color: #fff;
+        font-size: 16px;
+        top: 10px !important;
+        position: relative;
+    }
+
+    .fa{
+        color:#4183D7;
+    }
+</style>
+
 
 <?php
 $this->load->view('layout/foot');

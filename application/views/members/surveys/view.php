@@ -72,11 +72,17 @@ $this->load->view('layout/foot');
 <?php if( isset($header_title) && $header_title== "Pollfish"): ?>
 
     <script type="text/javascript">
+        $(document).ready(function () {
+            document.querySelector('body').onfocus = function () {
+                Pollfish.hide();
+                Pollfish.start(pollfishConfig);
+            };
+        });
             var pollfishConfig = {
                 api_key: "8377d41d-0641-4b60-9330-650eb54431df",
                 indicator_position: "BOTTOM_RIGHT",
                 debug: true,
-                offerwall: false,
+                offerwall: true,
                 uuid: "<?= $_SESSION['user']->user_id; ?>",
                 survey_format : 0
             };
