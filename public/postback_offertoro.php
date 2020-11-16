@@ -10,7 +10,7 @@ if(isset($_GET['user_id']) && isset($_GET['amount'])){
     $points = $row['points'];
     //echo $row['points'].'<br>';
 
-    $add_points = $_GET['amount'] * 100;
+    $add_points = $_GET['amount'];
     $points = $points + $add_points;
 
     if(isset($points)){
