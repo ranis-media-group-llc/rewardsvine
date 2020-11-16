@@ -66,27 +66,6 @@
                                                                 </a>
                                                             </div>
                                                             <div class="col-xl-12">
-                                                                <a href="/offerwall/view/cpa_lead" >
-                                                                    <div class="dt-card dt-social-card animate-slide border border-w-2 border-dark">
-                                                                        <div class="dt-social__circle bg-dark">
-                                                                        </div>
-                                                                        <div class="dt-card__body">
-                                                                            <div class="row">
-                                                                                <div class="col-xl-9">
-                                                                                    <h3 class="font-weight-500 mb-1">CPA Lead</h3>
-                                                                                    <ul class="dt-list dt-list-bordered dt-list-cm-0 flex-nowrap">
-                                                                                        <li class="dt-list__item">
-                                                                                            <p class="dt-indicator-title text-muted f-12"> Sign Up, Complete Offers, Download Apps and Surveys</p>
-                                                                                        </li>
-                                                                                    </ul>
-                                                                                </div>
-                                                                                <img class="img-fluid dt-card__tools responsive" width="60" src="/assets/images/members/cpalead.jpg" alt="CPA Lead">
-                                                                            </div>
-                                                                        </div>
-                                                                    </div>
-                                                                </a>
-                                                            </div>
-                                                            <div class="col-xl-12">
                                                                 <a href="/offerwall/view/offertoro" >
                                                                     <div class="dt-card dt-social-card animate-slide border border-w-2 border-dark">
                                                                         <div class="dt-social__circle bg-dark">
@@ -127,8 +106,29 @@
                                                                                     </ul>
                                                                                 </div>
                                                                                 <div class="col-xl-3">
-                                                                                        <img class="img-fluid dt-card__tools responsive" width="60" src="/assets/images/members/adgem.jpg" alt="AdGem">
+                                                                                    <img class="img-fluid dt-card__tools responsive" width="60" src="/assets/images/members/adgem.jpg" alt="AdGem">
                                                                                 </div>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </a>
+                                                            </div>
+                                                            <div class="col-xl-12">
+                                                                <a href="/offerwall/view/cpa_lead" >
+                                                                    <div class="dt-card dt-social-card animate-slide border border-w-2 border-dark">
+                                                                        <div class="dt-social__circle bg-dark">
+                                                                        </div>
+                                                                        <div class="dt-card__body">
+                                                                            <div class="row">
+                                                                                <div class="col-xl-9">
+                                                                                    <h3 class="font-weight-500 mb-1">CPA Lead</h3>
+                                                                                    <ul class="dt-list dt-list-bordered dt-list-cm-0 flex-nowrap">
+                                                                                        <li class="dt-list__item">
+                                                                                            <p class="dt-indicator-title text-muted f-12"> Sign Up, Complete Offers, Download Apps and Surveys</p>
+                                                                                        </li>
+                                                                                    </ul>
+                                                                                </div>
+                                                                                <img class="img-fluid dt-card__tools responsive" width="60" src="/assets/images/members/cpalead.jpg" alt="CPA Lead">
                                                                             </div>
                                                                         </div>
                                                                     </div>
