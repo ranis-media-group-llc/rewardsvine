@@ -38,7 +38,7 @@
             }
 
             $sql_history = "INSERT INTO rv_history (offer_id, offer_name, points_added,user_id,status,postback_ip,offer_datetime,ad_network) 
-                        VALUES ('$offer_id','$offer_name','$points','$user_id','$status','$ip_add','$offer_datetime','Adscend Media')";
+                        VALUES ('$offer_id','$offer_name','$add_points','$user_id','$status','$ip_add','$offer_datetime','Adscend Media')";
 
             if ($mysqli->query($sql_history) === TRUE) {
 
