@@ -45,12 +45,12 @@
                                                         <div class="row">
                                                             <div class="col-lg-3 col-xs-12 text-center">
                                                                 <div class="box">
-                                                                    <img alt="" class="card-img-top img-fluid" src="/assets/images/paycheck.jpg">
+                                                                    <img alt="" class="card-img-top img-fluid" src="/assets/images/steam.jpg">
                                                                     <i class="fa fa-behance fa-3x" aria-hidden="true"></i>
                                                                     <br><br>
                                                                     <div class="box-title">
-                                                                        <h4>POINTS TO PAYCHECK</h4>
-                                                                        <small>$10-$200</small>
+                                                                        <h4>STEAM</h4>
+                                                                        <small>$15 - 1500 points</small>
                                                                     </div>
                                                                     <div class="box-text">
                                                                         <span></span>
@@ -62,12 +62,131 @@
                                                             </div>
                                                             <div class="col-lg-3 col-xs-12 text-center">
                                                                 <div class="box">
-                                                                    <img alt="" class="card-img-top img-fluid" src="/assets/images/steam.jpg">
+                                                                    <img alt="" class="card-img-top img-fluid" src="/assets/images/gift_cards/itunes.png">
                                                                     <i class="fa fa-behance fa-3x" aria-hidden="true"></i>
                                                                     <br><br>
                                                                     <div class="box-title">
-                                                                        <h4>STEAM</h4>
-                                                                        <small>$15 - 1500 points</small>
+                                                                        <h4>iTunes</h4>
+                                                                        <small>$5 - 2000 points</small>
+                                                                    </div>
+                                                                    <div class="box-text">
+                                                                        <span></span>
+                                                                    </div>
+                                                                    <div class=" box-btn box-btn-redeem">
+                                                                        <a href="#">REDEEM</a>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            <div class="col-lg-3 col-xs-12 text-center">
+                                                                <div class="box">
+                                                                    <img alt="" class="card-img-top img-fluid" src="/assets/images/gift_cards/google-pay.png">
+                                                                    <i class="fa fa-behance fa-3x" aria-hidden="true"></i>
+                                                                    <br><br>
+                                                                    <div class="box-title">
+                                                                        <h4>Google Play</h4>
+                                                                        <small>$10 - 3300 points</small>
+                                                                    </div>
+                                                                    <div class="box-text">
+                                                                        <span></span>
+                                                                    </div>
+                                                                    <div class=" box-btn box-btn-redeem">
+                                                                        <a href="#">REDEEM</a>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            <div class="col-lg-3 col-xs-12 text-center">
+                                                                <div class="box">
+                                                                    <img alt="" class="card-img-top img-fluid" src="/assets/images/gift_cards/amazon.png">
+                                                                    <i class="fa fa-behance fa-3x" aria-hidden="true"></i>
+                                                                    <br><br>
+                                                                    <div class="box-title">
+                                                                        <h4>Amazon</h4>
+                                                                        <small>$5 - 1800 points</small>
+                                                                    </div>
+                                                                    <div class="box-text">
+                                                                        <span></span>
+                                                                    </div>
+                                                                    <div class=" box-btn box-btn-redeem">
+                                                                        <a href="#">REDEEM</a>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            <div class="col-lg-3 col-xs-12 text-center">
+                                                                <div class="box">
+                                                                    <img alt="" class="card-img-top img-fluid" src="/assets/images/gift_cards/bestbuy.png">
+                                                                    <i class="fa fa-behance fa-3x" aria-hidden="true"></i>
+                                                                    <br><br>
+                                                                    <div class="box-title">
+                                                                        <h4>Best Buy</h4>
+                                                                        <small>$10 - 3300 points</small>
+                                                                    </div>
+                                                                    <div class="box-text">
+                                                                        <span></span>
+                                                                    </div>
+                                                                    <div class=" box-btn box-btn-redeem">
+                                                                        <a href="#">REDEEM</a>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            <div class="col-lg-3 col-xs-12 text-center">
+                                                                <div class="box">
+                                                                    <img alt="" class="card-img-top img-fluid" src="/assets/images/gift_cards/sony.png">
+                                                                    <i class="fa fa-behance fa-3x" aria-hidden="true"></i>
+                                                                    <br><br>
+                                                                    <div class="box-title">
+                                                                        <h4>Sony Playstation</h4>
+                                                                        <small>$10 - 3000 points</small>
+                                                                    </div>
+                                                                    <div class="box-text">
+                                                                        <span></span>
+                                                                    </div>
+                                                                    <div class=" box-btn box-btn-redeem">
+                                                                        <a href="#">REDEEM</a>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            <div class="col-lg-3 col-xs-12 text-center">
+                                                                <div class="box">
+                                                                    <img alt="" class="card-img-top img-fluid" src="/assets/images/gift_cards/rixty.jpg">
+                                                                    <i class="fa fa-behance fa-3x" aria-hidden="true"></i>
+                                                                    <br><br>
+                                                                    <div class="box-title">
+                                                                        <h4>Rixty Gift Card</h4>
+                                                                        <small>$10 - 3000 points</small>
+                                                                    </div>
+                                                                    <div class="box-text">
+                                                                        <span></span>
+                                                                    </div>
+                                                                    <div class=" box-btn box-btn-redeem">
+                                                                        <a href="#">REDEEM</a>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            <div class="col-lg-3 col-xs-12 text-center">
+                                                                <div class="box">
+                                                                    <img alt="" class="card-img-top img-fluid" src="/assets/images/gift_cards/xbox.png">
+                                                                    <i class="fa fa-behance fa-3x" aria-hidden="true"></i>
+                                                                    <br><br>
+                                                                    <div class="box-title">
+                                                                        <h4>Xbox Digital Gift Card</h4>
+                                                                        <small>$15 - 4500 points</small>
+                                                                    </div>
+                                                                    <div class="box-text">
+                                                                        <span></span>
+                                                                    </div>
+                                                                    <div class=" box-btn box-btn-redeem">
+                                                                        <a href="#">REDEEM</a>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            <div class="col-lg-3 col-xs-12 text-center">
+                                                                <div class="box">
+                                                                    <img alt="" class="card-img-top img-fluid" src="/assets/images/gift_cards/defiance.png">
+                                                                    <i class="fa fa-behance fa-3x" aria-hidden="true"></i>
+                                                                    <br><br>
+                                                                    <div class="box-title">
+                                                                        <h4>Trion Defiance </h4>
+                                                                        <small>$15 - 4500 points</small>
                                                                     </div>
                                                                     <div class="box-text">
                                                                         <span></span>
