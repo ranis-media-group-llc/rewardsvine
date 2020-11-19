@@ -6,7 +6,8 @@ class History extends MY_Controller {
 	public function __construct ()
     {
         parent::__construct();
-        $this->auths->check(array("Admin","SuperAdmin"));
+        //$this->auths->check(array("Admin","SuperAdmin"));
+        $this->load->model('History_model', 'history');
     }
 
 	public function index()
@@ -17,14 +18,12 @@ class History extends MY_Controller {
             // $data =  $_SESSION['user'];
             // $id = $data->email;
         // }
-        if(isset($_SESSION['user'])){
-            $data =  $_SESSION['user'];
-            $id =  $data->user_id;
-        }
+
+        $this->data['title'] = "Admin -  History";
         $this->data['history'] = $this->history->get_all_history();
         //$this->load->view('members//index',$this->data);
         
         //Returns User's name 
-        $this->load->view('layout/admin/master', $this->data);
+        $this->load->view('admin/history/index', $this->data);
 	}
 }

@@ -6,13 +6,15 @@ class Users extends MY_Controller {
 	public function __construct ()
     {
         parent::__construct();
-        $this->auths->check(array("SuperAdmin", "Admin"));
+        //$this->auths->check(array("SuperAdmin", "Admin"));
+        $this->load->model('Users_model', 'users');
     }
 
 	public function index()
 	{
-        $this->data['users'] = $this->home->get_all();
-        $this->load->view('layout/admin/master', $this->data);
+        $this->data['users'] = $this->users->get_all();
+        $this->data['title'] = "Dashboard";
+        $this->load->view('admin/users/index', $this->data);
 	}
     public function delete()
     {

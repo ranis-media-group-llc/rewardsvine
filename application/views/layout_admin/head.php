@@ -29,22 +29,14 @@
 
     <link rel="stylesheet" href="/assets/css/default/theme-semidark.min.css">
 
-    <script>
-        var rtlEnable = '';
-        var $mediaUrl = '';
-        var $baseUrl = '../';
-        var current_path = window.location.href.split('/').pop();
-        if (current_path == '') {
-            current_path = 'index.html';
-        }
-    </script>
-
     <script src="/assets/plugins/jquery/js/jquery.min.js"></script>
     <script src="/assets/plugins/moment/js/moment.min.js"></script>
     <script src="/assets/plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
     <!-- Perfect Scrollbar jQuery -->
     <script src="/assets/plugins/perfect-scrollbar/js/perfect-scrollbar.min.js"></script>
     <!-- /perfect scrollbar jQuery -->
+
+
 
 </head>
 	

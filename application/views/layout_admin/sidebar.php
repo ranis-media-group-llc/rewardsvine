@@ -12,39 +12,27 @@
 
             <!-- Menu Item -->
             <li class="dt-side-nav__item">
-                <a href="#" class="dt-side-nav__link active">
+                <a href="<?= base_url('admin/dashboard')?>" class="dt-side-nav__link <?= $this->uri->segment(2) == "dashboard" ? 'active' : '' ?>">
                     <i class="icon icon-metrics icon-fw icon-lg"></i>
                     <span class="dt-side-nav__text">Dashboard</span>
                 </a>
             </li>
-            <li class="dt-side-nav__item">
-                <a href="#" class="dt-side-nav__link">
+            <li class="dt-side-nav__item ">
+                <a href="<?= base_url('admin/users')?>" class="dt-side-nav__link <?= $this->uri->segment(2) == "users" ? 'active' : '' ?>">
                     <i class="icon icon-metrics icon-fw icon-lg"></i>
-                    <span class="dt-side-nav__text">OfferWall</span>
+                    <span class="dt-side-nav__text">Users</span>
                 </a>
             </li>
             <li class="dt-side-nav__item">
-                <a href="#" class="dt-side-nav__link">
+                <a href="<?= base_url('admin/history')?>" class="dt-side-nav__link <?= $this->uri->segment(2) == "history" ? 'active' : '' ?>">
                     <i class="icon icon-metrics icon-fw icon-lg"></i>
-                    <span class="dt-side-nav__text">Surveys</span>
+                    <span class="dt-side-nav__text">History</span>
                 </a>
             </li>
             <li class="dt-side-nav__item">
-                <a href="#" class="dt-side-nav__link" title="Layouts">
+                <a href="<?= base_url('admin/messages')?>" class="dt-side-nav__link <?= $this->uri->segment(2) == "messages" ? 'active' : '' ?>">
                     <i class="icon icon-layout icon-fw icon-lg"></i>
-                    <span class="dt-side-nav__text">Videos</span>
-                </a>
-            </li>
-            <li class="dt-side-nav__item">
-                <a href="#" class="dt-side-nav__link" title="Layouts">
-                    <i class="icon icon-layout icon-fw icon-lg"></i>
-                    <span class="dt-side-nav__text">Offers</span>
-                </a>
-            </li>
-            <li class="dt-side-nav__item">
-                <a href="#" class="dt-side-nav__link" title="Layouts">
-                    <i class="icon icon-layout icon-fw icon-lg"></i>
-                    <span class="dt-side-nav__text">Apps</span>
+                    <span class="dt-side-nav__text">Redeem Messages</span>
                 </a>
             </li>
             <!-- /menu item -->

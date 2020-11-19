@@ -7,5 +7,17 @@
 		<script src="/assets/plugins/chartist/js/chartist.min.js"></script>
         <script src="/assets/plugins/owl.carousel/js/owl.carousel.min.js"></script>
         <script src="/assets/js/global/charts/dashboard-listing.js"></script>
+
+        <script src="//cdn.datatables.net/1.10.22/js/jquery.dataTables.min.js"></script>
+
+        <style>
+            .active {
+                background-color: #1e1532;
+                color: #FF4081;
+                border-top-right-radius: 50px;
+                border-bottom-right-radius: 50px;
+                padding-right: 28px;
+            }
+        </style>
 	</body>
 </html>
