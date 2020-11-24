@@ -42,210 +42,47 @@
                                         <div class="tab-content">
                                             <div class="col-md-12">
                                                 <div class="social-box">
-                                                    <div class="container">
                                                         <div class="row">
-                                                            <div class="col-md-12">
+                                                            <div class="col-md-12"><div id="status_sorting"  class=""></div>
                                                             <table class="table" id="gift_cards_table">
                                                                 <thead>
                                                                 <tr>
                                                                     <td class="d-"></td>
                                                                 </tr>
                                                                 </thead>
-                                                                <tbody>
+                                                                <tbody>m
+                                                                <?php
+                                                                    $giftcards = gift_cards();
+                                                                    for($x=0;$x<count($giftcards);$x++){ ?>
                                                                     <tr>
                                                                         <td>
                                                                             <div class="col-lg-3 col-xs-12 text-center gift_box">
                                                                                 <div class="box">
-                                                                                    <img alt="" class="card-img-top img-fluid" src="/assets/images/steam.jpg">
+                                                                                    <img alt="<?= $giftcards[$x]['name']; ?>" class="card-img-top img-fluid" src="<?= $giftcards[$x]['image_path']; ?>">
                                                                                     <i class="fa fa-behance fa-3x" aria-hidden="true"></i>
                                                                                     <br><br>
                                                                                     <div class="box-title">
-                                                                                        <h4>STEAM</h4>
-                                                                                        <small>$15 - 1500 points</small>
+                                                                                        <h4><?= $giftcards[$x]['name']; ?></h4>
+                                                                                        <small><?= $giftcards[$x]['points']; ?></small>
+                                                                                        <p style="display:none;">popular</p>
                                                                                     </div>
                                                                                     <div class="box-text">
                                                                                         <span></span>
                                                                                     </div>
-                                                                                    <div class=" box-btn box-btn-redeem">
-                                                                                        <a href="#">REDEEM</a>
-                                                                                    </div>
+                                                                                    <br>
+                                                                                    <a href="<?= base_url('gifts/view/'.$giftcards[$x]['slug'] ); ?>" style="width: 110px;" class="btn btn-secondary btn-xs text-uppercase">
+                                                                                        REDEEM
+                                                                                    </a>
                                                                                 </div>
                                                                             </div>
                                                                         </td>
                                                                     </tr>
-                                                                    <tr>
-                                                                        <td>
-                                                                            <div class="col-lg-3 col-xs-12 text-center gift_box">
-                                                                                <div class="box">
-                                                                                    <img alt="" class="card-img-top img-fluid" src="/assets/images/gift_cards/amazon.png">
-                                                                                    <i class="fa fa-behance fa-3x" aria-hidden="true"></i>
-                                                                                    <br><br>
-                                                                                    <div class="box-title">
-                                                                                        <h4>Amazon</h4>
-                                                                                        <small>$5 - 1800 points</small>
-                                                                                    </div>
-                                                                                    <div class="box-text">
-                                                                                        <span></span>
-                                                                                    </div>
-                                                                                    <div class=" box-btn box-btn-redeem">
-                                                                                        <a href="#">REDEEM</a>
-                                                                                    </div>
-                                                                                </div>
-                                                                            </div>
-                                                                        </td>
-                                                                    </tr>
-                                                                    <tr>
-                                                                        <td>
-                                                                            <div class="col-lg-3 col-xs-12 text-center gift_box">
-                                                                                <div class="box">
-                                                                                    <img alt="" class="card-img-top img-fluid" src="/assets/images/gift_cards/itunes.png">
-                                                                                    <i class="fa fa-behance fa-3x" aria-hidden="true"></i>
-                                                                                    <br><br>
-                                                                                    <div class="box-title">
-                                                                                        <h4>iTunes</h4>
-                                                                                        <small>$5 - 2000 points</small>
-                                                                                    </div>
-                                                                                    <div class="box-text">
-                                                                                        <span></span>
-                                                                                    </div>
-                                                                                    <div class=" box-btn box-btn-redeem">
-                                                                                        <a href="#">REDEEM</a>
-                                                                                    </div>
-                                                                                </div>
-                                                                            </div>
-                                                                        </td>
-                                                                    </tr>
-                                                                    <tr>
-                                                                        <td>
-                                                                            <div class="col-lg-3 col-xs-12 text-center gift_box">
-                                                                                <div class="box">
-                                                                                    <img alt="" class="card-img-top img-fluid" src="/assets/images/gift_cards/google-pay.png">
-                                                                                    <i class="fa fa-behance fa-3x" aria-hidden="true"></i>
-                                                                                    <br><br>
-                                                                                    <div class="box-title">
-                                                                                        <h4>Google Play</h4>
-                                                                                        <small>$10 - 3300 points</small>
-                                                                                    </div>
-                                                                                    <div class="box-text">
-                                                                                        <span></span>
-                                                                                    </div>
-                                                                                    <div class=" box-btn box-btn-redeem">
-                                                                                        <a href="#">REDEEM</a>
-                                                                                    </div>
-                                                                                </div>
-                                                                            </div>
-                                                                        </td>
-                                                                    </tr>
-                                                                <tr>
-                                                                    <td>
-                                                                    <div class="col-lg-3 col-xs-12 text-center gift_box">
-                                                                        <div class="box">
-                                                                            <img alt="" class="card-img-top img-fluid" src="/assets/images/gift_cards/bestbuy.png">
-                                                                            <i class="fa fa-behance fa-3x" aria-hidden="true"></i>
-                                                                            <br><br>
-                                                                            <div class="box-title">
-                                                                                <h4>Best Buy</h4>
-                                                                                <small>$10 - 3300 points</small>
-                                                                            </div>
-                                                                            <div class="box-text">
-                                                                                <span></span>
-                                                                            </div>
-                                                                            <div class=" box-btn box-btn-redeem">
-                                                                                <a href="#">REDEEM</a>
-                                                                            </div>
-                                                                        </div>
-                                                                    </div>
-                                                                    </td>
-                                                                </tr>
-                                                                <tr>
-                                                                    <td>
-                                                                    <div class="col-lg-3 col-xs-12 text-center gift_box">
-                                                                        <div class="box">
-                                                                            <img alt="" class="card-img-top img-fluid" src="/assets/images/gift_cards/sony.png">
-                                                                            <i class="fa fa-behance fa-3x" aria-hidden="true"></i>
-                                                                            <br><br>
-                                                                            <div class="box-title">
-                                                                                <h4>Sony Playstation</h4>
-                                                                                <small>$10 - 3000 points</small>
-                                                                            </div>
-                                                                            <div class="box-text">
-                                                                                <span></span>
-                                                                            </div>
-                                                                            <div class=" box-btn box-btn-redeem">
-                                                                                <a href="#">REDEEM</a>
-                                                                            </div>
-                                                                        </div>
-                                                                    </div>
-                                                                    </td>
-                                                                </tr>
-                                                                <tr>
-                                                                    <td>
-                                                                    <div class="col-lg-3 col-xs-12 text-center gift_box">
-                                                                        <div class="box">
-                                                                            <img alt="" class="card-img-top img-fluid" src="/assets/images/gift_cards/rixty.jpg">
-                                                                            <i class="fa fa-behance fa-3x" aria-hidden="true"></i>
-                                                                            <br><br>
-                                                                            <div class="box-title">
-                                                                                <h4>Rixty Gift Card</h4>
-                                                                                <small>$10 - 3000 points</small>
-                                                                            </div>
-                                                                            <div class="box-text">
-                                                                                <span></span>
-                                                                            </div>
-                                                                            <div class=" box-btn box-btn-redeem">
-                                                                                <a href="#">REDEEM</a>
-                                                                            </div>
-                                                                        </div>
-                                                                    </div>
-                                                                    </td>
-                                                                </tr>
-                                                                <tr>
-                                                                    <td>
-                                                                    <div class="col-lg-3 col-xs-12 text-center gift_box">
-                                                                        <div class="box">
-                                                                            <img alt="" class="card-img-top img-fluid" src="/assets/images/gift_cards/xbox.png">
-                                                                            <i class="fa fa-behance fa-3x" aria-hidden="true"></i>
-                                                                            <br><br>
-                                                                            <div class="box-title">
-                                                                                <h4>Xbox Digital Gift Card</h4>
-                                                                                <small>$15 - 4500 points</small>
-                                                                            </div>
-                                                                            <div class="box-text">
-                                                                                <span></span>
-                                                                            </div>
-                                                                            <div class=" box-btn box-btn-redeem">
-                                                                                <a href="#">REDEEM</a>
-                                                                            </div>
-                                                                        </div>
-                                                                    </div>
-                                                                    </td>
-                                                                </tr>
-                                                                <tr>
-                                                                    <td>
-                                                                    <div class="col-lg-3 col-xs-12 text-center gift_box">
-                                                                        <div class="box">
-                                                                            <img alt="" class="card-img-top img-fluid" src="/assets/images/gift_cards/defiance.png">
-                                                                            <i class="fa fa-behance fa-3x" aria-hidden="true"></i>
-                                                                            <br><br>
-                                                                            <div class="box-title">
-                                                                                <h4>Trion Defiance </h4>
-                                                                                <small>$15 - 4500 points</small>
-                                                                            </div>
-                                                                            <div class="box-text">
-                                                                                <span></span>
-                                                                            </div>
-                                                                            <div class=" box-btn box-btn-redeem">
-                                                                                <a href="#">REDEEM</a>
-                                                                            </div>
-                                                                        </div>
-                                                                    </div>
-                                                                    </td>
-                                                                </tr>
+                                                                <?php } ?>
                                                                 </tbody>
                                                             </table>
                                                             </div>
                                                         </div>
-                                                    </div>
+
                                                 </div>
                                             </div>
                                         </div>
@@ -267,9 +104,6 @@
         </div>
     </div>
     <!-- /root -->
-
-
-
 <?php
 $this->load->view('layout/foot');
 ?>
@@ -283,6 +117,27 @@ $this->load->view('layout/foot');
             "pageLength": 50,
             "info": false,
             "paging": false,
+            initComplete: function () {
+                this.api().columns().every( function () {
+                    var column = this;
+                    var select = $('<select class="input_select" style="padding: 5px;display: inline-block !important;">' +
+                        '<option value="">All</option>' +
+                        '<option value="popular">Most Popular</option>' +
+                        '</select>').appendTo($(".dataTables_filter"))
+                        .on( 'change', function () {
+                            var val = $.fn.dataTable.util.escapeRegex($(this).val());
+                            column.search( val ? val : '', false, true ).draw();
+                            console.log($(this).val());
+                            $(this).val();
+                        } );
+                    // column.data().unique().sort().each( function ( d, j ) {
+                    //     //var val = $('<div/>').html(d).text();
+                    //     //select.append( '<option value="' + val + '">' + val + '</option>' );
+                    //     select.append( '<option value="'+d+'">'+d+'</option>' )
+                    //     //console.log(val);
+                    // });
+                } );
+            }
 
         });
     } );
@@ -295,12 +150,28 @@ $this->load->view('layout/foot');
         border-bottom: 1px solid #fff !important;
     }
 
+    @media (min-width: 320px) and (max-width: 768px) {
+        .dataTables_filter {
+            margin-right: 0 !important;
+        }
+    }
+
+    .img-fluid{
+        width: auto;
+        border-radius: 2px;
+        border: 1px solid #f0eacb !important;
+    }
+
     #gift_cards_table {
         width: 100% !important;
     }
     tbody tr{
         display: inline-block !important;
         width : 250px;
+    }
+
+    tr:hover{
+        transform: scale(1.02);
     }
     .box-btn {
         background-color:#4385f8;
@@ -319,12 +190,24 @@ $this->load->view('layout/foot');
         background: #faf9f8;
         border-radius: 10px;
         padding: 0 ;
-        transition: all 0.5s ease-out;
         box-shadow: 0 0 6px #4183D7;
         height: 100px;
-        width: 50% !important;
         display: inherit;
+        transition: transform .5s; /* Animation */
+        margin: 0 auto;
+        cursor: pointer;
+        /* background-image: url('/assets/images/gc_bg.jpg') !important; */
     }
+
+
+    /*.box-title{
+     color : #ffffff !important;
+}
+
+h4{
+    color : #ffffff !important;
+    text-transform: uppercase;
+} */
 
     .card-img-top {
         background-color: #f2f2f2;
@@ -334,11 +217,12 @@ $this->load->view('layout/foot');
     .social-box .box:hover{
         box-shadow: 0 0 6px #00d7c6;
     }
-    .social-box .box .box-btn a{
+    .gift_card_redeem_btn{
         text-decoration: none;
         color: #fff;
         font-size: 16px;
+    }
+    .box-btn-redeem{
         top: 10px !important;
-        position: relative;
     }
 </style>
