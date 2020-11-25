@@ -50,7 +50,7 @@
                                                                     <td class="d-"></td>
                                                                 </tr>
                                                                 </thead>
-                                                                <tbody>m
+                                                                <tbody>
                                                                 <?php
                                                                     $giftcards = gift_cards();
                                                                     for($x=0;$x<count($giftcards);$x++){ ?>
@@ -73,6 +73,7 @@
                                                                                     <a href="<?= base_url('gifts/view/'.$giftcards[$x]['slug'] ); ?>" style="width: 110px;" class="btn btn-secondary btn-xs text-uppercase">
                                                                                         REDEEM
                                                                                     </a>
+                                                                                    <br><br>
                                                                                 </div>
                                                                             </div>
                                                                         </td>
@@ -196,18 +197,18 @@ $this->load->view('layout/foot');
         transition: transform .5s; /* Animation */
         margin: 0 auto;
         cursor: pointer;
-        /* background-image: url('/assets/images/gc_bg.jpg') !important; */
+        /* background-image: url('/assets/images/xmas3.jpg') !important;
     }
 
 
-    /*.box-title{
+    .box-title{
      color : #ffffff !important;
 }
-
-h4{
-    color : #ffffff !important;
-    text-transform: uppercase;
-} */
+    /*
+    h4{
+        color : #ffffff !important;
+        text-transform: uppercase;
+    } */
 
     .card-img-top {
         background-color: #f2f2f2;

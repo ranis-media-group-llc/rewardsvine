@@ -35,13 +35,16 @@ $this->load->view('layout/head');
                                 <div class="card">
                                     <div class="card-header card-nav border-bottom-0">
                                         <div class="d-flex align-items-center justify-content-between mb-4">
-                                            <h3 class="dt-card__title"><?= $slug; ?></h3>
+                                            <h3 class="dt-card__title"><?= $slug['name']; ?></h3>
                                         </div>
                                     </div>
                                     <br><br>
                                     <div class="tab-content">
                                         <div class="col-md-12">
-                                            <form method="post" enctype="multipart/form-data" >
+                                            <center>
+                                                <img alt="<?= $slug['name']; ?>" style="width:300px !important;" class="card-img-top img-fluid" src="<?= $slug['image_path']; ?>">
+                                            </center>
+                                            <form method="post" id="form_redeem">
                                                 <?php if(isset($error))
                                                 { ?>
                                                     <div class="alert alert-danger alert-dismissible" role="alert">
@@ -53,21 +56,26 @@ $this->load->view('layout/head');
                                                 } ?>
                                                 <div class="form-group">
                                                     <label for="offerwallName">Vendor</label>
-                                                    <input type="text" name="slug" class="form-control" required>
+                                                    <input type="text" value="<?= $slug['name']; ?>" name="redeem_option" class="form-control" readonly>
                                                 </div>
                                                 <div class="form-group">
                                                     <label for="offerwallName">Amount</label>
-                                                    <select class="form-control" data-style="btn-white" name="is_active">
-                                                        <option value="1">$5</option>
-                                                        <option value="0">$10</option>
+                                                    <select class="form-control" data-style="btn-white" name="redeem_amt">
+                                                        <?php
+                                                            $points = explode(",",$slug['all_points']);
+                                                            if(count($points) > 0){
+                                                                for($xx=0;$xx<count($points);$xx++){
+                                                                    ?>  <option value="<?= $points[$xx] ?>"><?= '$'.$points[$xx].' points' ?></option>  <?php
+                                                                }
+                                                            }
+                                                        ?>
                                                     </select>
                                                 </div>
                                                 <div class="form-group">
                                                     <label for="offerwallLink">Message <small>(You can state here your account number,etc.)</small></label>
-                                                    <textarea type="text" name="api_naming" class="form-control"></textarea>
+                                                    <textarea type="text" name="redeem_message" class="form-control"></textarea>
                                                 </div>
-                                                <a href="javascript:void(0)" class="btn btn-secondary btn-xs text-uppercase">Send
-                                                </a>
+                                                <button type="submit" class="btn btn-secondary btn-xs text-uppercase">Send</button>
                                                 <br><br><br>
                                             </form>
                                         </div>
@@ -93,3 +101,60 @@ $this->load->view('layout/head');
 <?php
 $this->load->view('layout/foot');
 ?>
+
+<script>
+    $("#form_redeem").submit(function(e) {
+        //alert("asf");
+        e.preventDefault(); // avoid to execute the actual submit of the form.
+        var form = $(this);
+        //var url = form.attr('action');
+        $.ajax({
+            type: "POST",
+            url: "/gifts/redeem",
+            data: form.serialize(), // serializes the form's elements.
+            success: function(data)
+            {
+                console.log(data);
+                if(data === "points_error"){
+                    alert_display('Your points is not enough!',1,'warning','Warning');
+                }else if(data === "user_error"){
+                    alert_display('Error occur,contact Administrator!',0,'error','Error');
+                }else if(data === "success"){
+                    alert_display('Redeeem message has been sent to admin successfully !',1,'success','Congrats');
+                }else{
+                    alert_display('Error occur,contact Administrator!',0,'error','Error');
+                }
+                // if(data === "Success"){
+                //     //window.location.reload();
+                //     sucess_add('Furnisher Added Successfully!',1);
+                // }else {
+                //     warning('There is an error adding Creditor/Furnisher. Contact Administrator!');
+                //
+                // }
+            }
+        });
+    });
+
+    function alert_display(information,is_reload,icon,title){
+        Swal.fire({
+            title: title,
+            text: information,
+            icon: icon,
+            showCancelButton: false,
+            confirmButtonColor: '#32243d',
+            cancelButtonColor: '#d33',
+            confirmButtonText: 'Ok'
+        }).then((result) => {
+            if(is_reload === 1){
+                if(icon === 'success'){
+                    window.location.href="/gifts";
+                }else{
+                    if (result.value) {
+                        window.location.reload();
+                    }
+                }
+            }
+        });
+    }
+
+</script>

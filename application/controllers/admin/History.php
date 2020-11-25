@@ -18,7 +18,6 @@ class History extends MY_Controller {
             // $data =  $_SESSION['user'];
             // $id = $data->email;
         // }
-
         $this->data['title'] = "Admin -  History";
         $this->data['history'] = $this->history->get_all_history();
         //$this->load->view('members//index',$this->data);
