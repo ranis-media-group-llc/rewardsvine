@@ -26,13 +26,10 @@
 
                     <!-- Grid -->
                     <div class="row">
-
                         <!-- Grid Item -->
                         <div class="col-xl-3 col-sm-6 col-12">
-
                             <!-- Card -->
                             <div class="dt-card">
-
                                 <!-- Card Body -->
                                 <div class="dt-card__body px-5 py-4">
                                     <h6 class="text-body text-uppercase mb-2">No Of Users</h6>
@@ -40,7 +37,6 @@
                                         <span class="display-4 font-weight-500 text-dark mr-2">
                                             <?= isset($users) ? count($users) : ''; ?>
                                         </span>
-
                                         <div class="d-flex align-items-center">
                                             <div class="trending-section font-weight-500 text-success mr-2">
                                                 <span class="value"></span>
@@ -48,7 +44,6 @@
                                             <span class="f-12"></span>
                                         </div>
                                     </div>
-
                                     <div class="dt-indicator-item__info mb-2" data-fill="62" data-max="100">
                                         <div class="dt-indicator-item__bar">
                                             <div class="dt-indicator-item__fill fill-pointer bg-primary"></div>
@@ -65,21 +60,17 @@
 
                         <!-- Grid Item -->
                         <div class="col-xl-3 col-sm-6 col-12">
-
                             <!-- Card -->
                             <div class="dt-card">
-
                                 <!-- Card Body -->
                                 <div class="dt-card__body px-5 py-4">
                                     <h6 class="text-body text-uppercase mb-2">Pending Messages</h6>
                                     <div class="d-flex align-items-baseline mb-4">
                                         <span class="display-4 font-weight-500 text-dark mr-2"><?= isset($messages) ? $messages : 0; ?> </span>
-
                                         <div class="d-flex align-items-center">
                                             <span class="f-12"></span>
                                         </div>
                                     </div>
-
                                     <div class="dt-indicator-item__info mb-2" data-fill="48" data-max="100">
                                         <div class="dt-indicator-item__bar">
                                             <div class="dt-indicator-item__fill fill-pointer bg-warning"></div>
@@ -96,10 +87,8 @@
 
                         <!-- Grid Item -->
                         <div class="col-xl-3 col-sm-6 col-12">
-
                             <!-- Card -->
                             <div class="dt-card">
-
                                 <!-- Card Body -->
                                 <div class="dt-card__body px-5 py-4">
                                     <h6 class="text-body text-uppercase mb-2">Unread Messages</h6>
@@ -110,7 +99,6 @@
                                             <span class="f-12">Avg. 327 visits daily</span>
                                         </div>
                                     </div>
-
                                     <div class="dt-indicator-item__info mb-2" data-fill="85" data-max="100">
                                         <div class="dt-indicator-item__bar">
                                             <div class="dt-indicator-item__fill fill-pointer bg-success"></div>
@@ -118,10 +106,8 @@
                                     </div>
                                 </div>
                                 <!-- /bard body -->
-
                             </div>
                             <!-- /card -->
-
                         </div>
                         <!-- /grid item -->
 

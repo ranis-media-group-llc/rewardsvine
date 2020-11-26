@@ -52,7 +52,7 @@
         });
     }
 
-    var $current_menu = $('a[href="' + current_path + '"]');
+    var $current_menu = $('a[href="' + '' + '"]');
     $current_menu.addClass('active').parents('.nav-item').find('> .nav-link').addClass('active');
 
     if ($current_menu.length > 0) {

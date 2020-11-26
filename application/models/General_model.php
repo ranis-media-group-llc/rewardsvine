@@ -12,9 +12,19 @@ class General_model extends CI_Model
         }
     }
 
-    public function get_all_with_key($key)
+    public function update($input, $id,$table)
     {
-        $query = $this->db->get_where($this->table,array('user_id' => $key));
+        //$input['date_modified'] = date('Y-m-d H:i:s');;
+        if ($this->db->update($table, $input, array('id' => $id))) {
+            return true;
+        } else {
+            return false;
+        }
+    }
+
+    public function get_all_with_key($key,$table)
+    {
+        $query = $this->db->get_where($table,array('user_id' => $key));
         return $query->result();
     }
 

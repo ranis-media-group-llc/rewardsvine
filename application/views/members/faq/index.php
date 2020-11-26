@@ -40,12 +40,11 @@
                                         <br><br>
                                         <div class="tab-content">
                                             <div class="col-md-12">
-
+                                                <center><h1>Coming Soon!</h1></center>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
-
                             </div>
                             <!-- /grid -->
                         </div>

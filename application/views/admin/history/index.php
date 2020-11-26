@@ -26,7 +26,8 @@
 
                     <div class="row">
                         <div class="col-xl-12">
-                            <table class="table" id="gift_cards_table">
+                            <div class="table-responsive">
+                            <table class="table table-striped table-hover dt-responsive display nowrap" id="gift_cards_table">
                                 <thead>
                                     <tr>
                                         <td >Offer ID</td>
@@ -50,6 +51,7 @@
                                     <?php endforeach; ?>
                                 </tbody>
                             </table>
+                            </div>
                         </div>
                     </div>
                 </div>

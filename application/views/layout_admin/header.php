@@ -60,7 +60,7 @@
                     <li class="dt-nav__item dt-notification dropdown">
 
                         <!-- Dropdown Link -->
-                        <a href="#" class="dt-nav__link dropdown-toggle no-arrow" data-toggle="dropdown"
+                        <a href="#" class="dt-nav__link dropdown-toggle no-arrow"
                            aria-haspopup="true" aria-expanded="false"> <i class="icon icon-notification2 icon-fw dt-icon-alert"></i>
                         </a>
                         <!-- /dropdown link -->
@@ -198,7 +198,7 @@
                             <a class="dropdown-item" href="javascript:void(0)"> <i class="icon icon-user icon-fw mr-2 mr-sm-1"></i>Account
                             </a> <a class="dropdown-item" href="javascript:void(0)">
                                 <i class="icon icon-settings icon-fw mr-2 mr-sm-1"></i>Setting </a>
-                            <a class="dropdown-item" href="page-login.html"> <i class="icon icon-editors icon-fw mr-2 mr-sm-1"></i>Logout
+                            <a class="dropdown-item" href="<?= base_url('auth/logout') ?>"> <i class="icon icon-editors icon-fw mr-2 mr-sm-1"></i>Logout
                             </a>
                         </div>
                         <!-- /dropdown option -->

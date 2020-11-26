@@ -34,6 +34,8 @@
     <script src="/assets/plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
     <!-- Perfect Scrollbar jQuery -->
     <script src="/assets/plugins/perfect-scrollbar/js/perfect-scrollbar.min.js"></script>
+    <link src="https://cdn.datatables.net/responsive/2.2.6/css/responsive.dataTables.min.css">
+    <link rel="stylesheet" href="//cdn.datatables.net/1.10.22/css/jquery.dataTables.min.css">
     <!-- /perfect scrollbar jQuery -->
 
 

@@ -4,8 +4,8 @@
 
 $config['auth_login_success'] = "offerwall";
 
-$config['auth_login_admin'] = "admin/home";
+$config['auth_login_admin'] = "admin/dashboard";
 
 $config['auth_login'] = "login"; //Redirect to this page after logout was initiated
 
-$config['auth_denied'] = "auth/access-denied"; //Redirect to this page after logout was initiated
+$config['auth_denied'] = "offerwall"; //Redirect to this page after logout was initiated

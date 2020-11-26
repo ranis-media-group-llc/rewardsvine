@@ -40,7 +40,34 @@
                                         <br><br>
                                         <div class="tab-content">
                                             <div class="col-md-12">
-
+                                                <center>
+                                                    <img alt="image" style="width: 300px;" class="card-img-top img-fluid" src="/assets/images/bitcoin.png">
+                                                </center>
+                                                <form method="post" id="form_redeem">
+                                                    <div class="form-group">
+                                                        <label for="offerwallName">Vendor</label>
+                                                        <input type="text" value="Bitcoin" name="redeem_option" class="form-control" readonly>
+                                                    </div>
+                                                    <div class="form-group">
+                                                        <label for="offerwallName">Amount</label>
+                                                        <select class="form-control" data-style="btn-white" name="redeem_amt">
+                                                            <option value="5-1500">$5 = 1500 points - Bitcoin (Coinbase)</option>
+                                                            <option value="5-1800">$5 = 1800 points - Bitcoin (Non - coinbase)</option>
+                                                            <option value="10-2800">$10 = 2800 points - Bitcoin (Coinbase)</option>
+                                                            <option value="10-3000">$10 = 3000 points - Bitcoin (Non - coinbase)</option>
+                                                            <option value="25-6500">$25 = 6500 points - Bitcoin (Coinbase)</option>
+                                                            <option value="25-7000">$25 = 7000 points - Bitcoin (Non - coinbase)</option>
+                                                            <option value="50-13500">$50 = 13500 points - Bitcoin (Coinbase)</option>
+                                                            <option value="50-13500">$50 = 13500 points - Bitcoin (Non - coinbase)</option>
+                                                        </select>
+                                                    </div>
+                                                    <div class="form-group">
+                                                        <label for="offerwallLink">Message <small>(You can state here your account number,etc.)</small></label>
+                                                        <textarea type="text" name="redeem_message" class="form-control"></textarea>
+                                                    </div>
+                                                    <button type="submit" class="btn btn-secondary btn-xs text-uppercase">Send</button>
+                                                    <br><br><br>
+                                                </form>
                                             </div>
                                         </div>
                                     </div>

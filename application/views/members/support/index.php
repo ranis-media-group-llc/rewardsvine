@@ -40,15 +40,14 @@
                                         <br><br>
                                         <div class="tab-content">
                                             <div class="col-md-12">
+                                                <center><h1>Coming Soon!</h1></center>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
-
                             </div>
                             <!-- /grid -->
                         </div>
-
                         <!-- Footer -->
                         <footer class="dt-footer">
                             Copyright.RewardsVine © 2020
@@ -56,7 +55,6 @@
                         <!-- /footer -->
                     </div>
                     <!-- /site content wrapper -->
-
                 </main>
             </div>
 

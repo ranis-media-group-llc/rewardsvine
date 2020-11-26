@@ -9,7 +9,7 @@
         <script src="/assets/js/global/charts/dashboard-listing.js"></script>
 
         <script src="//cdn.datatables.net/1.10.22/js/jquery.dataTables.min.js"></script>
-
+        <script src="https://cdn.jsdelivr.net/npm/sweetalert2@9"></script>
         <style>
             .active {
                 background-color: #1e1532;

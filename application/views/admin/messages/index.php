@@ -1,7 +1,7 @@
 <?php
     $this->load->view('layout_admin/head');
 ?>
-<link rel="stylesheet" href="//cdn.datatables.net/1.10.22/css/jquery.dataTables.min.css">
+
 <!-- Root -->
 <div class="dt-root">
     <div class="dt-root__inner">
@@ -25,8 +25,9 @@
                     </div>
 
                     <div class="row">
-                        <div class="col-xl-12">
-                            <table class="table" id="gift_cards_table">
+                        <div class="col-md-12">
+                            <div class="table-responsive">
+                            <table class="table table-striped table-hover dt-responsive display nowrap" id="redeem_table">
                                 <thead>
                                     <tr>
                                         <td >User ID</td>
@@ -52,18 +53,35 @@
                                                 <?php
                                                     if($message->status == 0){
                                                         echo 'Pending';
+                                                    }else if($message->status == 1){
+                                                        echo 'In Progress';
+                                                    }else if($message->status == 2){
+                                                        echo 'Rejected';
+                                                    }else if($message->status == 3){
+                                                        echo 'Completed';
                                                     }
                                                 ?>
                                             </td>
                                             <td>
-                                                <button type="submit" class="btn btn-secondary btn-xs text-uppercase">Accept</button>
-                                                <button type="submit" class="btn btn-danger btn-xs text-uppercase">Reject</button>
-                                                <button type="submit" class="btn btn-success btn-xs text-uppercase">Done</button>
+                                                <?php
+                                                    if($message->status == 0){
+                                                        ?>
+                                                        <button id="<?= $message->id; ?>" type="submit" class="btn btn-secondary btn-xs text-uppercase btn_accept">Accept</button>
+                                                        <button id="<?= $message->id; ?>" type="submit" class="btn btn-danger btn-xs text-uppercase btn_reject">Reject</button>
+                                                        <?php
+                                                    }else if($message->status == 1){
+                                                        ?>
+                                                            <button id="<?= $message->id; ?>" type="submit" class="btn btn-success btn-xs text-uppercase btn_complete">Mark As Complete</button>
+                                                        <?php
+                                                    }
+
+                                                ?>
                                             </td>
                                         </tr>
                                     <?php endforeach; ?>
                                 </tbody>
                             </table>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -85,9 +103,127 @@ $this->load->view('layout_admin/foot');
 
 <script>
     $(document).ready( function () {
-        $('#gift_cards_table').DataTable({
-            "responsive" : true,
+        $('#redeem_table').DataTable({
+            "responsive" : false,
             "pageLength": 10,
         });
+
+        $(".btn_accept").on( "click", function( event ) {
+            var ID=this.id;
+            Swal.fire({
+                title: 'Accept Redeem?',
+                text: "",
+                icon: 'warning',
+                showCancelButton: true,
+                confirmButtonColor: '#32243d',
+                cancelButtonColor: '#d33',
+                confirmButtonText: 'Yes',
+                cancelButtonText: 'No',
+            }).then((result) => {
+                $.ajax({
+                    type: "POST",
+                    url: "/admin/messages/redeem_status",
+                    data: {id : ID,stat : 'accept'}, // serializes the form's elements.
+                    success: function(data)
+                    {
+                        //console.log(data);
+                        if(data === "success"){
+                            sucess_add("Accepted!",1);
+                        }else{
+                            warning('An error occur, contact superadmin!');
+                        }
+                    }
+                });
+            });
+        });
+
+        $(".btn_reject").on( "click", function( event ) {
+            var ID=this.id;
+            Swal.fire({
+                title: 'Reject Redeem?',
+                text: "",
+                icon: 'warning',
+                showCancelButton: true,
+                confirmButtonColor: '#32243d',
+                cancelButtonColor: '#d33',
+                confirmButtonText: 'Yes',
+                cancelButtonText: 'No',
+            }).then((result) => {
+                $.ajax({
+                    type: "POST",
+                    url: "/admin/messages/redeem_status",
+                    data: {id : ID,stat : 'reject'}, // serializes the form's elements.
+                    success: function(data)
+                    {
+                        //console.log(data);
+                        if(data === "success"){
+                            sucess_add("Rejected!",1);
+                        }else{
+                            warning('An error occur, contact superadmin!');
+                        }
+                    }
+                });
+            });
+        });
+
+        $(".btn_complete").on( "click", function( event ) {
+            var ID=this.id;
+            Swal.fire({
+                title: 'Complete Redeem?',
+                text: "",
+                icon: 'warning',
+                showCancelButton: true,
+                confirmButtonColor: '#32243d',
+                cancelButtonColor: '#d33',
+                confirmButtonText: 'Yes',
+                cancelButtonText: 'No',
+            }).then((result) => {
+                $.ajax({
+                    type: "POST",
+                    url: "/admin/messages/redeem_status",
+                    data: {id : ID,stat : 'complete'}, // serializes the form's elements.
+                    success: function(data)
+                    {
+                        //console.log(data);
+                        if(data === "success"){
+                            sucess_add("Completed!",1);
+                        }else{
+                            warning('An error occur, contact superadmin!');
+                        }
+                    }
+                });
+            });
+        });
+
+        function sucess_add(information,is_reload){
+            Swal.fire({
+                title: 'Good job!',
+                text: information,
+                icon: 'success',
+                showCancelButton: false,
+                confirmButtonColor: '#32243d',
+                cancelButtonColor: '#d33',
+                confirmButtonText: 'Ok'
+            }).then((result) => {
+                if(is_reload === 1){
+                    if (result.value) {
+                        window.location.reload();
+                    }
+                }
+            });
+        }
+        function warning(information){
+            Swal.fire({
+                title: 'Warning!',
+                text: information,
+                icon: 'warning',
+                showCancelButton: false,
+                confirmButtonColor: '#32243d',
+                cancelButtonColor: '#d33',
+                confirmButtonText: 'Ok'
+            }).then((result) => {
+
+            });
+        }
     } );
 </script>
