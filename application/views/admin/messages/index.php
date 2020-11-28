@@ -88,7 +88,7 @@
 
                 <!-- Footer -->
                 <footer class="dt-footer">
-                    Copyright Company Name © 2019
+                    Copyright. RewardsVine © 2020
                 </footer>
             <!-- /site content wrapper -->
             </div>

@@ -96,3 +96,61 @@
 $this->load->view('layout/foot');
 ?>
 
+<script>
+    $("#form_redeem").submit(function(e) {
+        //alert("asf");
+        e.preventDefault(); // avoid to execute the actual submit of the form.
+        var form = $(this);
+        //var url = form.attr('action');
+        $.ajax({
+            type: "POST",
+            url: "/gifts/redeem",
+            data: form.serialize(), // serializes the form's elements.
+            success: function(data)
+            {
+                console.log(data);
+                if(data === "points_error"){
+                    alert_display('Your points is not enough!',1,'warning','Warning');
+                }else if(data === "user_error"){
+                    alert_display('Error occur,contact Administrator!',0,'error','Error');
+                }else if(data === "success"){
+                    alert_display('Redeeem message has been sent to admin successfully !',1,'success','Congrats');
+                }else if(data === "password_error"){
+                    alert_display('Password, is not correct!',0,'error','Error');
+                }else{
+                    alert_display('Error occur,contact Administrator!',0,'error','Error');
+                }
+                // if(data === "Success"){
+                //     //window.location.reload();
+                //     sucess_add('Furnisher Added Successfully!',1);
+                // }else {
+                //     warning('There is an error adding Creditor/Furnisher. Contact Administrator!');
+                //
+                // }
+            }
+        });
+    });
+
+    function alert_display(information,is_reload,icon,title){
+        Swal.fire({
+            title: title,
+            text: information,
+            icon: icon,
+            showCancelButton: false,
+            confirmButtonColor: '#32243d',
+            cancelButtonColor: '#d33',
+            confirmButtonText: 'Ok'
+        }).then((result) => {
+            if(is_reload === 1){
+                if(icon === 'success'){
+                    window.location.href="/gifts";
+                }else{
+                    if (result.value) {
+                        window.location.reload();
+                    }
+                }
+            }
+        });
+    }
+
+</script>

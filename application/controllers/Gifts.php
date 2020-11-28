@@ -5,6 +5,7 @@ class Gifts extends MY_Controller {
     public function __construct ()
     {
         parent::__construct();
+        if (!class_exists('bcrypt')) { $this->load->library('bcrypt'); }
         $this->load->helper('site');
         $this->load->model('Users_model', 'users');
         $this->load->model('General_model', 'general');
@@ -48,11 +49,16 @@ class Gifts extends MY_Controller {
                 if($points_redeem[1] > $user_data->points){
                     echo 'points_error';
                 }else{
-                    if($this->general->add($input,"rv_redeem")){
-                        echo "success";
-                    }else{
-                        echo "user_error";
+                    if ($this->bcrypt->check_password($input['user_password'], $user_data->password)) { //if ($input['password']== $user->password)
+                        if($this->general->add($input,"rv_redeem")){
+                            echo "success";
+                        } else{
+                            echo "user_error";
+                        }
+                    }else {
+                        echo "password_error";
                     }
+
                 }
             }else{
                 echo 'user_error';

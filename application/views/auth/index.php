@@ -75,7 +75,7 @@
                                             <a class="d-inline-block font-weight-500 ml-3" href="/auth/signup"> SIGN UP</a>
                                         </span>
                                     </div>
-                                    <div class="d-flex flex-wrap align-items-center">
+                                    <!--<div class="d-flex flex-wrap align-items-center">
                                         <span class="d-inline-block mr-2">Or connect with</span>
                                         <ul class="dt-list dt-list-sm dt-list-cm-0 ml-auto">
                                             <li class="dt-list__item">
@@ -101,7 +101,7 @@
                                                 </a>
                                             </li>
                                         </ul>
-                                    </div>
+                                    </div>-->
                                 </form>
                             </div>
                             <div class="dt-login__content-footer">

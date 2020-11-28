@@ -75,6 +75,10 @@ $this->load->view('layout/head');
                                                     <label for="offerwallLink">Message <small>(You can state here your account number,etc.)</small></label>
                                                     <textarea type="text" name="redeem_message" class="form-control"></textarea>
                                                 </div>
+                                                <div class="form-group">
+                                                    <label for="offerwallName">Enter your password</label><span style="color: red;"> *</span>
+                                                    <input type="password" name="user_password" class="form-control" required>
+                                                </div>
                                                 <button type="submit" class="btn btn-secondary btn-xs text-uppercase">Send</button>
                                                 <br><br><br>
                                             </form>
@@ -121,6 +125,8 @@ $this->load->view('layout/foot');
                     alert_display('Error occur,contact Administrator!',0,'error','Error');
                 }else if(data === "success"){
                     alert_display('Redeeem message has been sent to admin successfully !',1,'success','Congrats');
+                }else if(data === "password_error"){
+                    alert_display('Password, is not correct!',0,'error','Error');
                 }else{
                     alert_display('Error occur,contact Administrator!',0,'error','Error');
                 }
