@@ -75,7 +75,7 @@
                                             <a class="d-inline-block font-weight-500 ml-3" href="/auth/signup"> SIGN UP</a>
                                         </span>
                                     </div>
-                                    <!--<div class="d-flex flex-wrap align-items-center">
+                                    <div class="d-flex flex-wrap align-items-center">
                                         <span class="d-inline-block mr-2">Or connect with</span>
                                         <ul class="dt-list dt-list-sm dt-list-cm-0 ml-auto">
                                             <li class="dt-list__item">
@@ -89,19 +89,8 @@
                                                     <i class="icon icon-google-plus icon-xl"></i>
                                                 </a>
                                             </li>
-
-                                            <li class="dt-list__item">
-                                                <a href="javascript:void(0)" class="btn btn-outline-primary dt-fab-btn size-30">
-                                                    <i class="icon icon-github icon-xl"></i>
-                                                </a>
-                                            </li>
-                                            <li class="dt-list__item">
-                                                <a href="javascript:void(0)" class="btn btn-outline-primary dt-fab-btn size-30">
-                                                    <i class="icon icon-twitter icon-xl"></i>
-                                                </a>
-                                            </li>
                                         </ul>
-                                    </div>-->
+                                    </div>
                                 </form>
                             </div>
                             <div class="dt-login__content-footer">

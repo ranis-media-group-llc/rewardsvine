@@ -67,7 +67,8 @@
                                     </div>
                                     <div class="form-group">
                                         <label class="" for="email-1">Email Address</label>
-                                        <input type="email" class="form-control" id="email-1" aria-describedby="email-1" name="email_address" required>
+                                        <input type="email" class="form-control" id="email-1" aria-describedby="email-1" autocomplete="off" placeholder="Your Best Email" name="email_address" required>
+                                        <small><i>It's where we will send you your digital gift cards valid email only to receive digital gift cards.</i></small>
                                     </div>
                                     <div class="form-group">
                                         <label class="" for="password-1">Password</label>
@@ -81,16 +82,34 @@
                                         <input type="checkbox" id="checkbox-1" required>
                                         <label class="dt-checkbox-content" for="checkbox-1"> By creating an account you are agreeing to RewardsVine's
                                             <a href="https://rewardsvine.com/privacy" target="_blank">Privacy and Policy</a> and
-                                            <a href="https://rewardsvine.com/terms" target="_blank">Terms Service</a>
+                                            <a href="https://rewardsvine.com/terms" target="_blank">Terms of Service</a>
                                         </label>
                                     </div>
+
                                     <div class="form-group">
-                                        <button type="submit" class="btn btn-primary text-uppercase">Sign up</button>
+                                        <button type="submit" class="btn btn-primary text-uppercase">Create Account</button>
                                         <span class="d-inline-block ml-4">OR
                                             <a class="d-inline-block font-weight-500 ml-3" href="<?= base_url('/auth/login'); ?>">LOGIN</a>
                                         </span>
                                     </div>
 
+                                    <div class="d-flex flex-wrap align-items-center">
+                                        <span class="d-inline-block mr-2">Or connect with</span>
+                                        <ul class="dt-list dt-list-sm dt-list-cm-0 ml-auto">
+                                            <li class="dt-list__item">
+                                                <a href="javascript:void(0)" class="btn btn-outline-primary dt-fab-btn size-30">
+                                                    <i class="icon icon-facebook icon-xl"></i>
+                                                </a>
+                                            </li>
+
+                                            <li class="dt-list__item">
+                                                <a href="javascript:void(0)" class="btn btn-outline-primary dt-fab-btn size-30">
+                                                    <i class="icon icon-google-plus icon-xl"></i>
+                                                </a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <small>We respect your privacy.  We hate spam too. </small>
                                 </form>
                             </div>
                         </div>
