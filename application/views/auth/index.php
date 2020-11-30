@@ -19,7 +19,7 @@
         <link rel="stylesheet" href="/assets/plugins/flag-icon-css/css/flag-icon.min.css">
         <link rel="stylesheet" href="/assets/vendor/gaxon-icon/styles.css">
         <!-- /font icon Styles -->
-        <link rel="stylesheet" href="/assets/css/intranet/theme.css">
+        <link rel="stylesheet" href="<?= base_url('/assets/css/intranet/theme.css'); ?>">
         <script src="/assets/plugins/jquery/js/jquery.min.js"></script>
         <script src="/assets/plugins/moment/js/moment.min.js"></script>
         <script src="/assets/plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
