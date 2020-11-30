@@ -36,7 +36,7 @@
             <div class="dt-root__inner">
                 <div class="dt-login--container">
                     <div class="dt-login__content-wrapper">
-                        <div class="dt-login__bg-section" style="background-color: #000000  !important;background:transparent;">
+                        <div class="dt-login__bg-section" style="background-color: #000000  !important;">
                             <div class="dt-login__bg-content">
                                 <h1 class="dt-login__title">Sign Up</h1>
                                 <p class="f-16">Welcome to RewardsVine.</p>
