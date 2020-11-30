@@ -19,7 +19,7 @@
         <link rel="stylesheet" href="/assets/plugins/flag-icon-css/css/flag-icon.min.css">
         <link rel="stylesheet" href="/assets/vendor/gaxon-icon/styles.css">
         <!-- /font icon Styles -->
-        <link rel="stylesheet" href="/assets/css/intranet/theme.min.css">
+        <link rel="stylesheet" href="/assets/css/intranet/theme.css">
         <script src="/assets/plugins/jquery/js/jquery.min.js"></script>
         <script src="/assets/plugins/moment/js/moment.min.js"></script>
         <script src="/assets/plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
@@ -36,7 +36,7 @@
             <div class="dt-root__inner">
                 <div class="dt-login--container">
                     <div class="dt-login__content-wrapper">
-                        <div class="dt-login__bg-section">
+                        <div class="dt-login__bg-section" style="background-color: #000000  !important;background:transparent;">
                             <div class="dt-login__bg-content">
                                 <h1 class="dt-login__title">Sign Up</h1>
                                 <p class="f-16">Welcome to RewardsVine.</p>

@@ -196,18 +196,18 @@ $this->load->view('layout/foot');
         transition: transform .5s; /* Animation */
         margin: 0 auto;
         cursor: pointer;
-        /* background-image: url('/assets/images/xmas3.jpg') !important;
+         background-image: url('/assets/images/xmas4.jpg') !important;
     }
 
-
-    .box-title{
-     color : #ffffff !important;
-}
     /*
-    h4{
-        color : #ffffff !important;
-        text-transform: uppercase;
-    } */
+        .box-title{
+         color : #ffffff !important;
+    }
+        /*
+        h4{
+            color : #ffffff !important;
+            text-transform: uppercase;
+        } */
 
     .card-img-top {
         background-color: #f2f2f2;

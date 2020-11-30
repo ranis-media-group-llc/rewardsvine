@@ -15369,7 +15369,7 @@ a.text-light-cyan:hover, a.text-light-cyan:focus {
     z-index: 1;
     width: 100%;
     height: 100%;
-    background-color: rgba(81, 45, 168, 0.8); }
+   }
   .dt-login__bg-section > * {
     position: relative;
     z-index: 2; }
