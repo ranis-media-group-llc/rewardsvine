@@ -15349,10 +15349,7 @@ a.text-light-cyan:hover, a.text-light-cyan:focus {
 .dt-login__bg-section {
   position: relative;
   padding: 3.2rem 3.2rem;
-  background-image: url("https://via.placeholder.com/640x962");
-  background-position: center bottom;
-  background-repeat: no-repeat;
-  background-size: cover;
+  background-color: #000000 !important;
   color: #fff;
   display: -ms-flexbox;
   display: flex;
