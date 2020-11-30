@@ -79,14 +79,15 @@
                                     </div>
                                     <div class="dt-checkbox d-block mb-6">
                                         <input type="checkbox" id="checkbox-1" required>
-                                        <label class="dt-checkbox-content" for="checkbox-1"> by signing up, I accept
-                                            <a href="javascript:void(0)">Term &amp; Condition</a>
+                                        <label class="dt-checkbox-content" for="checkbox-1"> By creating an account you are agreeing to RewardsVine's
+                                            <a href="https://rewardsvine.com/privacy" target="_blank">Privacy and Policy</a> and
+                                            <a href="https://rewardsvine.com/terms" target="_blank">Terms Service</a>
                                         </label>
                                     </div>
                                     <div class="form-group">
                                         <button type="submit" class="btn btn-primary text-uppercase">Sign up</button>
                                         <span class="d-inline-block ml-4">OR
-                                            <a class="d-inline-block font-weight-500 ml-3" href="/auth/login">LOGIN</a>
+                                            <a class="d-inline-block font-weight-500 ml-3" href="<?= base_url('/auth/login'); ?>">LOGIN</a>
                                         </span>
                                     </div>
 
