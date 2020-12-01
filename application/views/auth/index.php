@@ -1,28 +1,21 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
-        <!-- Meta tags -->
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
         <meta name="description" content="Drift - A fully responsive, HTML5 based admin template">
         <meta name="keywords" content="Responsive, HTML5, admin theme, business, professional, jQuery, web design, CSS3, sass">
-        <!-- /meta tags -->
         <title> <?= $title ?>  </title>
-
-        <!-- Site favicon -->
         <link rel="shortcut icon" href="/assets/images/mini_logo.png" type="image/x-icon">
-        <!-- /site favicon -->
-
-        <!-- Font Icon Styles -->
         <link rel="stylesheet" href="/assets/fonts/noir-pro/styles.css">
-        <link rel="stylesheet" href="/assets/plugins/flag-icon-css/css/flag-icon.min.css">
+        <link rel="stylesheet" href="/assets/plugins/flag-icon-css/css/flag  -icon.min.css">
         <link rel="stylesheet" href="/assets/vendor/gaxon-icon/styles.css">
-        <!-- /font icon Styles -->
         <link rel="stylesheet" href="<?= base_url('/assets/css/intranet/theme.css?sdsds'); ?>">
         <script src="/assets/plugins/jquery/js/jquery.min.js"></script>
         <script src="/assets/plugins/moment/js/moment.min.js"></script>
         <script src="/assets/plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
+        <script src='https://www.google.com/recaptcha/api.js'></script>
     </head>
     <body>
         <div class="dt-loader-container">
@@ -68,6 +61,11 @@
                                     <div class="form-group">
                                         <label class="" for="password-1">Password</label>
                                         <input type="password" class="form-control" id="password-1" name="password" required>
+                                    </div>
+                                    <div class="form-group">
+                                        <div class="col-xs-12">
+                                            <div class="g-recaptcha" name="g-recaptcha" data-sitekey="AIzaSyCD6skS2RX-ccSTT95F5M3jhi6Arg8E1Jk" data-callback="verifyRecaptchaCallback" data-expired-callback="expiredRecaptchaCallback"></div>
+                                        </div>
                                     </div>
                                     <div class="form-group">
                                         <button type="submit" class="btn btn-primary text-uppercase">LOGIN</button>

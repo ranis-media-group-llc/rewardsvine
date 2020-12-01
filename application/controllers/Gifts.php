@@ -58,12 +58,10 @@ class Gifts extends MY_Controller {
                     }else {
                         echo "password_error";
                     }
-
                 }
-            }else{
+            } else{
                 echo 'user_error';
             }
-
         }
     }
 }

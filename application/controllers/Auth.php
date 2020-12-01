@@ -81,7 +81,7 @@ class Auth extends CI_Controller {
 	{
         $input = $this->input->post();
         if($input){
-//            $secretKey = "6LcZ0pMUAAAAAJd_SqRMYon1lRXMkCCCwQfpZ1v4";
+            $secretKey = "AIzaSyCD6skS2RX-ccSTT95F5M3jhi6Arg8E1Jk";
 //            $captcha=$_POST['g-recaptcha-response'];
 //            $url = 'https://www.google.com/recaptcha/api/siteverify?secret=' . urlencode($secretKey) .  '&response=' . urlencode($captcha);
 //            $response = file_get_contents($url);
@@ -134,7 +134,6 @@ class Auth extends CI_Controller {
         }
         $this->data['title'] = "RewardsVine - SignUp";
         $this->load->view('auth/signup', $this->data);
-        
 	}
     
     public function logout()
