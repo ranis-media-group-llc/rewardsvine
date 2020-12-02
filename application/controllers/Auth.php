@@ -22,19 +22,19 @@ class Auth extends CI_Controller {
         $ip = $_SERVER['REMOTE_ADDR'];
         $input = $this->input->post();
         if($input){
-//            $secretKey = "6LcZ0pMUAAAAAJd_SqRMYon1lRXMkCCCwQfpZ1v4";
-//            $captcha=$_POST['g-recaptcha-response'];
-//
-//                $url = 'https://www.google.com/recaptcha/api/siteverify?secret=' . urlencode($secretKey) .  '&response=' . urlencode($captcha);
-//                $response = file_get_contents($url);
-//                $responseKeys = json_decode($response,true);
-//                // should return JSON with success as true
-//                if(!$responseKeys["success"]) {
-            // set the api key and email to be validated
+            $secretKey = "6LcZ0pMUAAAAAJd_SqRMYon1lRXMkCCCwQfpZ1v4";
+            $captcha=$_POST['g-recaptcha-response'];
+
+                $url = 'https://www.google.com/recaptcha/api/siteverify?secret=' . urlencode($secretKey) .  '&response=' . urlencode($captcha);
+                $response = file_get_contents($url);
+                $responseKeys = json_decode($response,true);
+                // should return JSON with success as true
+                if(!$responseKeys["success"]) {
+                // set the api key and email to be validated
                     $key = 'PqxX53dayLwspoNTIrDFRYnfm2z0Q4Kh';
                     $email = urlencode($input['email_address']);
 
-        // use curl to make the request
+                    // use curl to make the request
                     $url = 'https://api-v4.bulkemailchecker.com/?key='.$key.'&email='.$email;
                     $ch = curl_init($url);
                     curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
@@ -43,10 +43,10 @@ class Auth extends CI_Controller {
                     $response = curl_exec($ch);
                     curl_close($ch);
 
-        // decode the json response
+                    // decode the json response
                     $json = json_decode($response, true);
 
-        // if address is failed, alert the user they entered an invalid email
+                    // if address is failed, alert the user they entered an invalid email
                     if($json['status'] == 'failed'){
                         $this->data['error'] = "You have entered an invalid email.";
                     }else {
@@ -69,9 +69,9 @@ class Auth extends CI_Controller {
                             $this->data['error'] = "Email Address don't exist.";
                         }
                     }
-//                } else {
-//                    $this->data['error'] = "Captcha Invalid.";
-//                }
+                } else {
+                    $this->data['error'] = "Captcha Invalid.";
+                }
         }
         $this->data['title'] = "RewardsVine - Login";
         $this->load->view('auth/index', $this->data);
@@ -82,12 +82,12 @@ class Auth extends CI_Controller {
         $input = $this->input->post();
         if($input){
             $secretKey = "AIzaSyCD6skS2RX-ccSTT95F5M3jhi6Arg8E1Jk";
-//            $captcha=$_POST['g-recaptcha-response'];
-//            $url = 'https://www.google.com/recaptcha/api/siteverify?secret=' . urlencode($secretKey) .  '&response=' . urlencode($captcha);
-//            $response = file_get_contents($url);
-//            $responseKeys = json_decode($response,true);
-//
-//            if($responseKeys["success"]) {
+            $captcha=$_POST['g-recaptcha-response'];
+            $url = 'https://www.google.com/recaptcha/api/siteverify?secret=' . urlencode($secretKey) .  '&response=' . urlencode($captcha);
+            $response = file_get_contents($url);
+            $responseKeys = json_decode($response,true);
+
+            if($responseKeys["success"]) {
                 $key = 'PqxX53dayLwspoNTIrDFRYnfm2z0Q4Kh';
                 $email = urlencode($input['email_address']);
 
@@ -127,9 +127,9 @@ class Auth extends CI_Controller {
                         }
                     }
                 }
-//            }else{
-//                $this->data['error'] = "Captcha Invalid.";
-//            }
+            }else{
+                $this->data['error'] = "Captcha Invalid.";
+            }
 
         }
         $this->data['title'] = "RewardsVine - SignUp";

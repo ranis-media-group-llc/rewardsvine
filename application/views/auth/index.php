@@ -64,7 +64,7 @@
                                     </div>
                                     <div class="form-group">
                                         <div class="col-xs-12">
-                                            <div class="g-recaptcha" name="g-recaptcha" data-sitekey="AIzaSyCD6skS2RX-ccSTT95F5M3jhi6Arg8E1Jk" data-callback="verifyRecaptchaCallback" data-expired-callback="expiredRecaptchaCallback"></div>
+                                            <div class="g-recaptcha" name="g-recaptcha" data-sitekey="6LcZ0pMUAAAAACpi606MstLG0evbI3EMsubXLhWg" data-callback="verifyRecaptchaCallback" data-expired-callback="expiredRecaptchaCallback"></div>
                                         </div>
                                     </div>
                                     <div class="form-group">

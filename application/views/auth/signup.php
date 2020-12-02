@@ -23,6 +23,7 @@
         <script src="/assets/plugins/jquery/js/jquery.min.js"></script>
         <script src="/assets/plugins/moment/js/moment.min.js"></script>
         <script src="/assets/plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
+        <script src='https://www.google.com/recaptcha/api.js'></script>
     </head>
     <body>
         <div class="dt-loader-container">
@@ -85,7 +86,11 @@
                                             <a href="https://rewardsvine.com/terms" target="_blank">Terms of Service</a>
                                         </label>
                                     </div>
-
+                                    <div class="form-group">
+                                        <div class="col-xs-12">
+                                            <div class="g-recaptcha" name="g-recaptcha" data-sitekey="6LcZ0pMUAAAAACpi606MstLG0evbI3EMsubXLhWg" data-callback="verifyRecaptchaCallback" data-expired-callback="expiredRecaptchaCallback"></div>
+                                        </div>
+                                    </div>
                                     <div class="form-group">
                                         <button type="submit" class="btn btn-primary text-uppercase">Create Account</button>
                                         <span class="d-inline-block ml-4">OR
