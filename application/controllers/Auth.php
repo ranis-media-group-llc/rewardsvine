@@ -23,7 +23,7 @@ class Auth extends CI_Controller {
         $input = $this->input->post();
         if($input){
             $secretKey = "6LcZ0pMUAAAAAJd_SqRMYon1lRXMkCCCwQfpZ1v4";
-            $captcha=$_POST['g-recaptcha-response'];
+            $captcha=$input['g-recaptcha-response'];
 
                 $url = 'https://www.google.com/recaptcha/api/siteverify?secret=' . urlencode($secretKey) .  '&response=' . urlencode($captcha);
                 $response = file_get_contents($url);
