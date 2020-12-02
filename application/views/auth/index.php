@@ -70,7 +70,7 @@
                                     <div class="form-group">
                                         <button type="submit" class="btn btn-primary text-uppercase">LOGIN</button>
                                         <span class="d-inline-block ml-4">OR
-                                            <a class="d-inline-block font-weight-500 ml-3" href="/auth/signup"> SIGN UP</a>
+                                            <a class="d-inline-block font-weight-500 ml-3" href="/auth/signup"> SIGN IN</a>
                                         </span>
                                     </div>
                                     <div class="d-flex flex-wrap align-items-center">
