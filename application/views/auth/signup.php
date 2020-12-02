@@ -68,7 +68,7 @@
                                     <div class="form-group">
                                         <label class="" for="email-1">Email Address</label>
                                         <input type="email" class="form-control" id="email-1" aria-describedby="email-1" autocomplete="off" placeholder="Your Best Email" name="email_address" required>
-                                        <small><i>It's where we will send you your digital gift cards valid email only to receive digital gift cards.</i></small>
+                                        <small><i>Valid email only to receive digital gift cards.</i></small>
                                     </div>
                                     <div class="form-group">
                                         <label class="" for="password-1">Password</label>
