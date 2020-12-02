@@ -30,7 +30,7 @@ class Auth extends CI_Controller {
                 $responseKeys = json_decode($response,true);
                 // should return JSON with success as true
 
-                print_r($responseKeys);
+                //print_r($responseKeys);
                 if($responseKeys["success"]) {
                     //if (array_key_exists('success', $responseKeys)) {
                         // set the api key and email to be validated
@@ -43,11 +43,11 @@ class Auth extends CI_Controller {
                         curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
                         curl_setopt($ch, CURLOPT_CONNECTTIMEOUT, 15);
                         curl_setopt($ch, CURLOPT_TIMEOUT, 15);
-                        $response = curl_exec($ch);
+                        $response1 = curl_exec($ch);
                         curl_close($ch);
 
                         // decode the json response
-                        $json = json_decode($response, true);
+                        $json = json_decode($response1, true);
 
                         // if address is failed, alert the user they entered an invalid email
                         if($json['status'] == 'failed'){
