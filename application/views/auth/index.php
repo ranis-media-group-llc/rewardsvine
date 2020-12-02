@@ -16,6 +16,51 @@
         <script src="/assets/plugins/moment/js/moment.min.js"></script>
         <script src="/assets/plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
         <script src='https://www.google.com/recaptcha/api.js'></script>
+        <meta name="google-signin-scope" content="profile email">
+        <script src="https://apis.google.com/js/platform.js?onload=renderButton" async defer></script>
+        <meta name="google-signin-client_id" content="758165209849-af6jro1dba88u8mk56u9mvncteovnj0t.apps.googleusercontent.com">
+        <meta name="google-site-verification" content="PvJbCXAs0h5Jy3QhpEMWuDwxJseKQzurcKbr34XOn8Y" />
+
+        <script>
+            function onSuccess(googleUser) {
+                console.log('Logged in as: ' + googleUser.getBasicProfile().getName());
+            }
+            function onFailure(error) {
+                console.log(error);
+            }
+            function renderButton() {
+                gapi.signin2.render('my-signin2', {
+                    'scope': 'profile email',
+                    'width': 270,
+                    'height': 50,
+                    'longtitle': true,
+                    'theme': 'white',
+                    'onsuccess': onSuccess,
+                    'onfailure': onFailure,
+                });
+            }
+        </script>
+        <style>
+            /* Glyph, by Harry Roberts */
+
+            hr.hr-or {
+                overflow: visible; /* For IE */
+                padding: 0;
+                border: none;
+                border-top: medium double #333;
+                color: #333;
+                text-align: center;
+            }
+            hr.hr-or:after {
+                content: "OR";
+                display: inline-block;
+                position: relative;
+                top: -0.7em;
+                font-size: 1.5em;
+                padding: 0 0.25em;
+                background: white;
+            }
+        </style>
     </head>
     <body>
         <div class="dt-loader-container">
@@ -53,6 +98,23 @@
                             }
                             ?>
                             <div class="dt-login__content-inner">
+
+                                    <div class="col-md-12 ">
+                                        <div class="panel panel-default" >
+                                            <div class="panel-heading">
+                                                <h3 class="panel-title"></h3>
+                                                <center>
+
+                                                <div id="my-signin2" class="g-signin2" data-onsuccess="onSignIn" ></div>
+                                                </center>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                <div class="login-or">
+                                    <hr class="hr-or">
+                                </div>
+
                                 <form method="post">
                                     <div class="form-group">
                                         <label class="" for="email-1">Email Address</label>
@@ -73,22 +135,6 @@
                                             <a class="d-inline-block font-weight-500 ml-3" href="/auth/signup"> SIGN UP</a>
                                         </span>
                                     </div>
-                                    <div class="d-flex flex-wrap align-items-center">
-                                        <span class="d-inline-block mr-2">Or connect with</span>
-                                        <ul class="dt-list dt-list-sm dt-list-cm-0 ml-auto">
-                                            <li class="dt-list__item">
-                                                <a href="javascript:void(0)" class="btn btn-outline-primary dt-fab-btn size-30">
-                                                    <i class="icon icon-facebook icon-xl"></i>
-                                                </a>
-                                            </li>
-
-                                            <li class="dt-list__item">
-                                                <a href="javascript:void(0)" class="btn btn-outline-primary dt-fab-btn size-30">
-                                                    <i class="icon icon-google-plus icon-xl"></i>
-                                                </a>
-                                            </li>
-                                        </ul>
-                                    </div>
                                 </form>
                             </div>
                             <div class="dt-login__content-footer">
@@ -104,5 +150,15 @@
         <script src="/assets/js/intranet/functions.js"></script>
         <script src="/assets/js/intranet/customizer.js"></script>
         <script src="/assets/js/intranet/script.js"></script>
+        <script>
+            function onSignIn(googleUser) {
+                var profile = googleUser.getBasicProfile();
+                console.log('ID: ' + profile.getId()); // Do not send to your backend! Use an ID token instead.
+                console.log('Name: ' + profile.getName());
+                console.log('Image URL: ' + profile.getImageUrl());
+                console.log('Email: ' + profile.getEmail()); // This is null if the 'email' scope is not present.
+            }
+
+        </script>
     </body>
 </html>
