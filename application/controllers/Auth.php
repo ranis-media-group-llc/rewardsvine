@@ -29,6 +29,8 @@ class Auth extends CI_Controller {
                 $response = file_get_contents($url);
                 $responseKeys = json_decode($response,true);
                 // should return JSON with success as true
+
+            print_r($responseKeys);
                 if(!$responseKeys["success"]) {
                 // set the api key and email to be validated
                     $key = 'PqxX53dayLwspoNTIrDFRYnfm2z0Q4Kh';
