@@ -30,50 +30,51 @@ class Auth extends CI_Controller {
                 $responseKeys = json_decode($response,true);
                 // should return JSON with success as true
 
-            print_r($responseKeys);
-                if(!$responseKeys["success"]) {
-                // set the api key and email to be validated
-                    $key = 'PqxX53dayLwspoNTIrDFRYnfm2z0Q4Kh';
-                    $email = urlencode($input['email_address']);
+                print_r($responseKeys);
+                //if($responseKeys["success"]) {
+                    if (array_key_exists('success', $responseKeys)) {
+                        // set the api key and email to be validated
+                        $key = 'PqxX53dayLwspoNTIrDFRYnfm2z0Q4Kh';
+                        $email = urlencode($input['email_address']);
 
-                    // use curl to make the request
-                    $url = 'https://api-v4.bulkemailchecker.com/?key='.$key.'&email='.$email;
-                    $ch = curl_init($url);
-                    curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
-                    curl_setopt($ch, CURLOPT_CONNECTTIMEOUT, 15);
-                    curl_setopt($ch, CURLOPT_TIMEOUT, 15);
-                    $response = curl_exec($ch);
-                    curl_close($ch);
+                        // use curl to make the request
+                        $url = 'https://api-v4.bulkemailchecker.com/?key='.$key.'&email='.$email;
+                        $ch = curl_init($url);
+                        curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
+                        curl_setopt($ch, CURLOPT_CONNECTTIMEOUT, 15);
+                        curl_setopt($ch, CURLOPT_TIMEOUT, 15);
+                        $response = curl_exec($ch);
+                        curl_close($ch);
 
-                    // decode the json response
-                    $json = json_decode($response, true);
+                        // decode the json response
+                        $json = json_decode($response, true);
 
-                    // if address is failed, alert the user they entered an invalid email
-                    if($json['status'] == 'failed'){
-                        $this->data['error'] = "You have entered an invalid email.";
-                    }else {
-                        $user = $this->users->get_details($input['email_address'], 'email_address');
-                        if ($user) {
-                            if ($this->bcrypt->check_password($input['password'], $user->password)) //if ($input['password']== $user->password)
-                            {
-                                unset($user->password);
-                                $this->session->set_userdata('user', $user);
-                                if ($user->role == "Member") {
-                                    redirect(base_url($this->config->item('auth_login_success')));
+                        // if address is failed, alert the user they entered an invalid email
+                        if($json['status'] == 'failed'){
+                            $this->data['error'] = "You have entered an invalid email.";
+                        }else {
+                            $user = $this->users->get_details($input['email_address'], 'email_address');
+                            if ($user) {
+                                if ($this->bcrypt->check_password($input['password'], $user->password)) //if ($input['password']== $user->password)
+                                {
+                                    unset($user->password);
+                                    $this->session->set_userdata('user', $user);
+                                    if ($user->role == "Member") {
+                                        redirect(base_url($this->config->item('auth_login_success')));
+                                    } else {
+                                        redirect(base_url($this->config->item('auth_login_admin')));
+                                    }
+                                    exit;
                                 } else {
-                                    redirect(base_url($this->config->item('auth_login_admin')));
+                                    $this->data['error'] = "Invalid Username and/or Password.";
                                 }
-                                exit;
                             } else {
-                                $this->data['error'] = "Invalid Username and/or Password.";
+                                $this->data['error'] = "Email Address don't exist.";
                             }
-                        } else {
-                            $this->data['error'] = "Email Address don't exist.";
                         }
+                    } else {
+                        $this->data['error'] = "Captcha Invalid.";
                     }
-                } else {
-                    $this->data['error'] = "Captcha Invalid.";
-                }
         }
         $this->data['title'] = "RewardsVine - Login";
         $this->load->view('auth/index', $this->data);
