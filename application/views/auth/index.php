@@ -31,7 +31,7 @@
                     <div class="dt-login__content-wrapper">
                         <div class="dt-login__bg-section">
                             <div class="dt-login__bg-content">
-                                <h1 class="dt-login__title">Sign Up</h1>
+                                <h1 class="dt-login__title">SIGN IN</h1>
                                 <p class="f-16">Welcome to RewardsVine.</p>
                             </div>
                             <div class="dt-login__logo">
@@ -70,7 +70,7 @@
                                     <div class="form-group">
                                         <button type="submit" class="btn btn-primary text-uppercase">LOGIN</button>
                                         <span class="d-inline-block ml-4">OR
-                                            <a class="d-inline-block font-weight-500 ml-3" href="/auth/signup"> SIGN IN</a>
+                                            <a class="d-inline-block font-weight-500 ml-3" href="/auth/signup"> SIGN UP</a>
                                         </span>
                                     </div>
                                     <div class="d-flex flex-wrap align-items-center">
