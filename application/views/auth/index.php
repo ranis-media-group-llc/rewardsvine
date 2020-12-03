@@ -9,7 +9,7 @@
         <title> <?= $title ?>  </title>
         <link rel="shortcut icon" href="/assets/images/mini_logo.png" type="image/x-icon">
         <link rel="stylesheet" href="/assets/fonts/noir-pro/styles.css">
-        <link rel="stylesheet" href="/assets/plugins/flag-icon-css/css/flag  -icon.min.css">
+        <link rel="stylesheet" href="/assets/plugins/flag-icon-css/css/flag-icon.min.css">
         <link rel="stylesheet" href="/assets/vendor/gaxon-icon/styles.css">
         <link rel="stylesheet" href="<?= base_url('/assets/css/intranet/theme.css?sdsds'); ?>">
         <script src="/assets/plugins/jquery/js/jquery.min.js"></script>
@@ -18,7 +18,7 @@
         <script src='https://www.google.com/recaptcha/api.js'></script>
         <meta name="google-signin-scope" content="profile email">
         <script src="https://apis.google.com/js/platform.js?onload=renderButton" async defer></script>
-        <meta name="google-signin-client_id" content="758165209849-mbmn536r244a2gk764udk4jshaoe5ag8.apps.googleusercontent.com">
+        <meta name="google-signin-client_id" content="758165209849-af6jro1dba88u8mk56u9mvncteovnj0t.apps.googleusercontent.com">
         <meta name="google-site-verification" content="PvJbCXAs0h5Jy3QhpEMWuDwxJseKQzurcKbr34XOn8Y" />
 
         <script>
@@ -151,13 +151,7 @@
         <script src="/assets/js/intranet/customizer.js"></script>
         <script src="/assets/js/intranet/script.js"></script>
         <script>
-            function onSignIn(googleUser) {
-                var profile = googleUser.getBasicProfile();
-                console.log('ID: ' + profile.getId()); // Do not send to your backend! Use an ID token instead.
-                console.log('Name: ' + profile.getName());
-                console.log('Image URL: ' + profile.getImageUrl());
-                console.log('Email: ' + profile.getEmail()); // This is null if the 'email' scope is not present.
-            }
+
 
         </script>
     </body>

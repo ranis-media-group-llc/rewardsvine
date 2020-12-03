@@ -20,6 +20,41 @@ class Auth extends CI_Controller {
 
     public function login($error = FALSE)
 	{
+        // Redirect to profile page if the user already logged in
+        if($this->session->userdata('loggedIn') == true){
+            redirect(base_url($this->config->item('auth_login_success')));
+        }
+        if(isset($_GET['code'])){
+
+            // Authenticate user with google
+            if($this->google->getAuthenticate()){
+
+                // Get user info from google
+                $gpInfo = $this->google->getUserInfo();
+
+                // Preparing data for database insertion
+                $userData['oauth_provider'] = 'google';
+                $userData['oauth_uid']         = $gpInfo['id'];
+                $userData['first_name']     = $gpInfo['given_name'];
+                $userData['last_name']         = $gpInfo['family_name'];
+                $userData['email']             = $gpInfo['email'];
+                $userData['gender']         = !empty($gpInfo['gender'])?$gpInfo['gender']:'';
+                $userData['locale']         = !empty($gpInfo['locale'])?$gpInfo['locale']:'';
+                $userData['picture']         = !empty($gpInfo['picture'])?$gpInfo['picture']:'';
+
+                // Insert or update user data to the database
+                $userID = $this->user->checkUser($userData);
+
+                // Store the status and user profile info into session
+                $this->session->set_userdata('loggedIn', true);
+                $this->session->set_userdata('userData', $userData);
+
+                // Redirect to profile page
+                redirect(base_url($this->config->item('auth_login_success')));
+            }
+        }
+
+
         $ip = $_SERVER['REMOTE_ADDR'];
         $input = $this->input->post();
         if($input){
@@ -142,6 +177,12 @@ class Auth extends CI_Controller {
     
     public function logout()
     {
+        // Reset OAuth access token
+        $this->google->revokeToken();
+
+        // Remove token and user data from the session
+        $this->session->unset_userdata('loggedIn');
+        $this->session->unset_userdata('userData');
         $this->session->sess_destroy();
 		redirect(base_url('auth/login'));
     }
