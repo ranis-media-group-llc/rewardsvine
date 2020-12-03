@@ -15,6 +15,7 @@ class Auth extends CI_Controller {
         // Required Configs
         $this->config->load('auth');
         $this->load->model('Users_model', 'users');
+        $this->load->library('Google');
     }
 
     public function login($error = FALSE)
@@ -31,7 +32,7 @@ class Auth extends CI_Controller {
                 // should return JSON with success as true
 
                 //print_r($responseKeys);
-                if($responseKeys["success"]) {
+                if(!$responseKeys["success"]) {
                     //if (array_key_exists('success', $responseKeys)) {
                         // set the api key and email to be validated
                         $key = 'PqxX53dayLwspoNTIrDFRYnfm2z0Q4Kh';

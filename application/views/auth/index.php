@@ -18,7 +18,7 @@
         <script src='https://www.google.com/recaptcha/api.js'></script>
         <meta name="google-signin-scope" content="profile email">
         <script src="https://apis.google.com/js/platform.js?onload=renderButton" async defer></script>
-        <meta name="google-signin-client_id" content="758165209849-af6jro1dba88u8mk56u9mvncteovnj0t.apps.googleusercontent.com">
+        <meta name="google-signin-client_id" content="758165209849-mbmn536r244a2gk764udk4jshaoe5ag8.apps.googleusercontent.com">
         <meta name="google-site-verification" content="PvJbCXAs0h5Jy3QhpEMWuDwxJseKQzurcKbr34XOn8Y" />
 
         <script>
