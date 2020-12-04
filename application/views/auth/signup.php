@@ -85,7 +85,7 @@
                         <div class="dt-login__bg-section">
                             <div class="dt-login__bg-content">
                                 <h1 class="dt-login__title">Sign Up</h1>
-                                <p class="f-16">Sign in and explore the Rewardsvine Apps.</p>
+                                <p class="f-16">Explore The RewardsVine App.</p>
                             </div>
                             <div class="dt-login__logo">
                                 <a class="dt-brand__logo-link" href="#">

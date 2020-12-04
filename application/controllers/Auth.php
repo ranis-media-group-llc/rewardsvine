@@ -25,7 +25,6 @@ class Auth extends CI_Controller {
             redirect(base_url($this->config->item('auth_login_success')));
         }
         if(isset($_GET['code'])){
-
             // Authenticate user with google
             if($this->google->getAuthenticate()){
 
@@ -43,7 +42,7 @@ class Auth extends CI_Controller {
                 $userData['picture']         = !empty($gpInfo['picture'])?$gpInfo['picture']:'';
 
                 // Insert or update user data to the database
-                $userID = $this->user->checkUser($userData);
+                $userID = $this->users->checkUser($userData);
 
                 // Store the status and user profile info into session
                 $this->session->set_userdata('loggedIn', true);
@@ -53,8 +52,6 @@ class Auth extends CI_Controller {
                 redirect(base_url($this->config->item('auth_login_success')));
             }
         }
-
-
         $ip = $_SERVER['REMOTE_ADDR'];
         $input = $this->input->post();
         if($input){
