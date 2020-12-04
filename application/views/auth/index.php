@@ -23,6 +23,7 @@
 
         <script>
             function onSuccess(googleUser) {
+                console.log(googleUser);
                 console.log('Logged in as: ' + googleUser.getBasicProfile().getName());
             }
             function onFailure(error) {

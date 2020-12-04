@@ -22,6 +22,7 @@ class Auth extends CI_Controller {
 	{
         // Redirect to profile page if the user already logged in
         if($this->session->userdata('loggedIn') == true){
+            echo "session is up";
             redirect(base_url($this->config->item('auth_login_success')));
         }
         if(isset($_GET['code'])){
@@ -109,6 +110,8 @@ class Auth extends CI_Controller {
                         $this->data['error'] = "Captcha Invalid.";
                     }
         }
+
+        echo $_GET['code'];
         $this->data['title'] = "RewardsVine - Login";
         $this->load->view('auth/index', $this->data);
         
