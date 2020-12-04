@@ -18,7 +18,6 @@ Class Google
         $this->ci->load->helper('url');
 
 
-
         // Create Client Request to access Google API
         $this->client = new Google_Client();
         $this->client->setApplicationName($this->ci->config->item('application_name'));
@@ -40,7 +39,7 @@ Class Google
         if (isset($_GET['code'])) {
             $this->client->authenticate($_GET['code']);
             $_SESSION['access_token'] = $this->client->getAccessToken();
-            header('Location: ' . filter_var($this->config->item('redirect_uri'), FILTER_SANITIZE_URL));
+            header('Location: ' . filter_var($this->ci->config->item('redirect_uri'), FILTER_SANITIZE_URL));
         }
 
         // Set Access Token to make Request

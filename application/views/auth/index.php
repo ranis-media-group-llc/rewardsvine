@@ -25,7 +25,7 @@
             function onSuccess(googleUser) {
                 console.log(googleUser);
                 console.log('Logged in as: ' + googleUser.getBasicProfile().getName());
-                console.log( googleUser.getBasicProfile());
+                console.log( googleUser.getBasicProfile().getAll());
             }
             function onFailure(error) {
                 console.log(error);
