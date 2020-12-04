@@ -111,7 +111,7 @@ class Auth extends CI_Controller {
                     }
         }  // Google authentication url
 
-        $this->data['loginURL'] = $this->google->loginURL();
+        $this->data['loginURL'] = $this->google->getLoginUrl();
         $this->data['title'] = "RewardsVine - Login";
         $this->load->view('auth/index', $this->data);
         

@@ -110,7 +110,7 @@
                                                 <div id="my-signin2" class="g-signin2" data-onsuccess="onSignIn" ></div>
                                                 </center>
 
-                                                <a href="<?php echo $loginURL; ?>"><img src="<?php echo base_url('assets/images/google-sign-in-btn.png'); ?>" /></a>
+                                                <a href="<?php echo $loginURL; ?>">Login</a>
                                             </div>
                                         </div>
                                     </div>
