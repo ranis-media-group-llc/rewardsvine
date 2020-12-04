@@ -26,7 +26,7 @@ Class Google
         $this->client->setClientSecret($this->ci->config->item('client_secret'));
         $this->client->setRedirectUri($this->ci->config->item('redirect_uri'));
         $this->client->setDeveloperKey($this->ci->config->item('api_key'));
-        $this->client->addScope("");
+        $this->client->addScope('https://www.googleapis.com/auth/userinfo.email');
         $this->authenticate_();
     }
 
