@@ -109,8 +109,9 @@ class Auth extends CI_Controller {
                     } else {
                         $this->data['error'] = "Captcha Invalid.";
                     }
-        }
+        }  // Google authentication url
 
+        $this->data['loginURL'] = $this->google->loginURL();
         $this->data['title'] = "RewardsVine - Login";
         $this->load->view('auth/index', $this->data);
         
