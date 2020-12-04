@@ -111,7 +111,6 @@ class Auth extends CI_Controller {
                     }
         }
 
-        echo $_GET['code'];
         $this->data['title'] = "RewardsVine - Login";
         $this->load->view('auth/index', $this->data);
         
