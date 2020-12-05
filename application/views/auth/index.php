@@ -24,8 +24,9 @@
         <script>
             function onSuccess(googleUser) {
                 console.log(googleUser);
+                console.log(googleUser.wt);
                 console.log('Logged in as: ' + googleUser.getBasicProfile().getName());
-                console.log( googleUser.getBasicProfile().getAll());
+                console.log( googleUser.getBasicProfile().getN);
             }
             function onFailure(error) {
                 console.log(error);
