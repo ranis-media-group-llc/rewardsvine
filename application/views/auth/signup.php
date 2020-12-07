@@ -25,29 +25,77 @@
         <script src="/assets/plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
         <script src='https://www.google.com/recaptcha/api.js'></script>
         <meta name="google-signin-scope" content="profile email">
-        <script src="https://apis.google.com/js/platform.js?onload=renderButton" async defer></script>
+
         <meta name="google-signin-client_id" content="758165209849-af6jro1dba88u8mk56u9mvncteovnj0t.apps.googleusercontent.com">
         <meta name="google-site-verification" content="PvJbCXAs0h5Jy3QhpEMWuDwxJseKQzurcKbr34XOn8Y" />
+        <script src="https://apis.google.com/js/api:client.js"></script>
 
         <script>
-            function onSuccess(googleUser) {
-                console.log('Logged in as: ' + googleUser.getBasicProfile().getName());
-            }
-            function onFailure(error) {
-                console.log(error);
-            }
-            function renderButtons() {
-                gapi.signin2.render('my-signin2', {
-                    'scope': 'profile email',
-                    'width': 270,
-                    'height': 50,
-                    'longtitle': true,
-                    'theme': 'white',
-                    'onsuccess': onSuccess,
-                    'onfailure': onFailure,
+            var googleUser = {};
+            var startApp = function() {
+                gapi.load('auth2', function(){
+                    // Retrieve the singleton for the GoogleAuth library and set up the client.
+                    auth2 = gapi.auth2.init({
+                        client_id: '758165209849-af6jro1dba88u8mk56u9mvncteovnj0t.apps.googleusercontent.com',
+                        cookiepolicy: 'single_host_origin',
+                        // Request scopes in addition to 'profile' and 'email'
+                        scope: 'profile email'
+                    });
+                    attachSignin(document.getElementById('customBtn'));
                 });
+            };
+
+            function attachSignin(element) {
+                console.log(element.id);
+                auth2.attachClickHandler(element, {},
+                    function(googleUser) {
+                        var user_data = {};
+                        user_data['email_address'] = googleUser.wt.cu;
+                        user_data['fullname'] = googleUser.wt.fV + googleUser.wt.iT;
+                        user_data['oauth_provider'] = 'google';
+                        //console.log( googleUser.getBasicProfile().getN);
+                        check_user(user_data);
+                    }, function(error) {
+                        alert(JSON.stringify(error, undefined, 2));
+                    });
             }
         </script>
+        <style type="text/css">
+            #customBtn {
+                display: inline-block;
+                background: white;
+                color: #444;
+                width: 270px;
+                border-radius: 5px;
+                border: thin solid #888;
+                box-shadow: 1px 1px 1px grey;
+                white-space: nowrap;
+                text-align: center;
+            }
+            #customBtn:hover {
+                cursor: pointer;
+            }
+            span.label {
+                font-family: serif;
+                font-weight: normal;
+            }
+            span.icon {
+                background: url('/assets/images/g-normal.png') transparent 5px 50% no-repeat;
+                display: inline-block;
+                vertical-align: middle;
+                width: 42px;
+                height: 42px;
+            }
+            span.buttonText {
+                display: inline-block;
+                vertical-align: middle;
+                padding-left: 42px;
+                padding-right: 42px;
+                font-size: 14px;
+                /* Use the Roboto font that is loaded in the <head> */
+                font-family: 'Roboto', sans-serif;
+            }
+        </style>
         <style>
             /* Glyph, by Harry Roberts */
 
@@ -109,10 +157,16 @@
                                 <div class="col-md-12 ">
                                     <div class="panel panel-default" >
                                         <div class="panel-heading">
-                                            <h3 class="panel-title"></h3>
                                             <center>
-
-                                                <div id="my-signin2" class="g-signin2" data-onsuccess="onSignIn" ></div>
+                                                <div id="gSignInWrapper">
+                                                    <span class="label">:</span>
+                                                    <div id="customBtn" class="customGPlusSignIn">
+                                                        <span class="icon"></span>
+                                                        <span class="buttonText"> Sign in with Google</span>
+                                                    </div>
+                                                </div>
+                                                <div id="name"></div>
+                                                <script>startApp();</script>
                                             </center>
                                         </div>
                                     </div>

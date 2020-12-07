@@ -20,7 +20,6 @@
         <meta name="google-signin-scope" content="profile email">
         <meta name="google-signin-client_id" content="758165209849-af6jro1dba88u8mk56u9mvncteovnj0t.apps.googleusercontent.com">
         <meta name="google-site-verification" content="PvJbCXAs0h5Jy3QhpEMWuDwxJseKQzurcKbr34XOn8Y" />
-        <script src="https://apis.google.com/js/platform.js?onload=renderButton" async defer></script>
 
         <script src="https://apis.google.com/js/api:client.js"></script>
 
@@ -44,20 +43,14 @@
                 auth2.attachClickHandler(element, {},
                     function(googleUser) {
                         var user_data = {};
-                        //console.log(googleUser);
-                        //console.log(googleUser.wt.cu);
-                       // console.log('Logged in as: ' + googleUser.getBasicProfile().getName());
                         user_data['email_address'] = googleUser.wt.cu;
                         user_data['fullname'] = googleUser.wt.fV + googleUser.wt.iT;
                         user_data['oauth_provider'] = 'google';
                         //console.log( googleUser.getBasicProfile().getN);
                         check_user(user_data);
-
-                        // document.getElementById('name').innerText = "Signed in: " +
-                        //     googleUser.getBasicProfile().getName();
                     }, function(error) {
                         alert(JSON.stringify(error, undefined, 2));
-                    });
+                });
             }
         </script>
         <style type="text/css">
@@ -169,10 +162,6 @@
                                                 <div id="name"></div>
                                                 <script>startApp();</script>
                                                 </center>
-                                                <h3 class="panel-title"></h3>
-                                                    <center>
-                                                        <div id="my-signin2" class="g-signin2"></div>
-                                                    </center>
                                             </div>
                                         </div>
                                     </div>
@@ -227,31 +216,6 @@
                             console.log(data);
                         }
                     }
-                });
-            }
-            function onSuccess(googleUser) {
-                var user_data = {};
-                console.log(googleUser);
-                console.log(googleUser.wt.cu);
-                console.log('Logged in as: ' + googleUser.getBasicProfile().getName());
-                user_data['email_address'] = googleUser.wt.cu;
-                user_data['fullname'] = googleUser.wt.fV + googleUser.wt.iT;
-                user_data['oauth_provider'] = 'google';
-                //console.log( googleUser.getBasicProfile().getN);
-                //check_user(user_data);
-            }
-            function onFailure(error) {
-                console.log(error);
-            }
-            function renderButtons() {
-                gapi.signin2.render('my-signin2', {
-                    'scope': 'profile email',
-                    'width': 270,
-                    'height': 50,
-                    'longtitle': true,
-                    'theme': 'white',
-                    'onsuccess': onSuccess,
-                    'onfailure': onFailure,
                 });
             }
         </script>
