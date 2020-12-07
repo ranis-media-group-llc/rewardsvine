@@ -137,11 +137,7 @@
 
         </script>
         <script>
-            function onSuccess(googleUser) {
-                console.log(googleUser);
-                console.log(googleUser.wt.cu);
-                console.log('Logged in as: ' + googleUser.getBasicProfile().getName());
-                //console.log( googleUser.getBasicProfile().getN);
+            $(document).ready(function () {
                 $.ajax({
                     type: "POST",
                     url: "/auth/google_login",
@@ -150,6 +146,13 @@
                         console.log(data);
                     }
                 });
+            });
+            function onSuccess(googleUser) {
+                console.log(googleUser);
+                console.log(googleUser.wt.cu);
+                console.log('Logged in as: ' + googleUser.getBasicProfile().getName());
+                //console.log( googleUser.getBasicProfile().getN);
+                
             }
             function onFailure(error) {
                 console.log(error);
