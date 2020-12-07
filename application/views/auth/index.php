@@ -88,7 +88,6 @@
                                                     <center>
                                                         <div id="my-signin2" class="g-signin2"></div>
                                                     </center>
-                                                <a href="<?php echo $loginURL; ?>">Login</a>
                                             </div>
                                         </div>
                                     </div>

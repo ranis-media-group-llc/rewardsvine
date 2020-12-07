@@ -15,7 +15,7 @@ class Auth extends CI_Controller {
         // Required Configs
         $this->config->load('auth');
         $this->load->model('Users_model', 'users');
-        $this->load->library('Google');
+       // $this->load->library('Google');
     }
 
     public function login($error = FALSE)
@@ -110,8 +110,7 @@ class Auth extends CI_Controller {
                         $this->data['error'] = "Captcha Invalid.";
                     }
         }  // Google authentication url
-
-        $this->data['loginURL'] = $this->google->getLoginUrl();
+        //$this->data['loginURL'] = $this->google->getLoginUrl();
         $this->data['title'] = "RewardsVine - Login";
         $this->load->view('auth/index', $this->data);
         
