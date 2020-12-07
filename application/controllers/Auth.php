@@ -118,7 +118,24 @@ class Auth extends CI_Controller {
 
 	public function google_login(){
         $data = $_POST['data'];
-        print_r($data);
+
+        $user = $this->users->get_details($data['email_address'], 'email_address');
+        if ($user) {
+            $this->session->set_userdata('user', $user);
+            echo $user->role;
+//            if ($user->role == "Member") {
+//                redirect(base_url($this->config->item('auth_login_success')));
+//            } else {
+//                redirect(base_url($this->config->item('auth_login_admin')));
+//            }
+        }else{
+            $input = array();
+            $input['date_created'] = date("d-m-Y h:i A");
+            $input['role'] = "Member";
+            $input['points'] = 0;
+            $input['user_id'] = random_string('numeric', 6);
+            print_r($data);
+        }
     }
 
     public function signup($error = FALSE)
@@ -183,11 +200,11 @@ class Auth extends CI_Controller {
     public function logout()
     {
         // Reset OAuth access token
-        $this->google->revokeToken();
+        //$this->google->revokeToken();
 
         // Remove token and user data from the session
-        $this->session->unset_userdata('loggedIn');
-        $this->session->unset_userdata('userData');
+        //$this->session->unset_userdata('loggedIn');
+        //$this->session->unset_userdata('userData');
         $this->session->sess_destroy();
 		redirect(base_url('auth/login'));
     }

@@ -80,7 +80,6 @@
                             }
                             ?>
                             <div class="dt-login__content-inner">
-
                                     <div class="col-md-12 ">
                                         <div class="panel panel-default" >
                                             <div class="panel-heading">
@@ -91,11 +90,9 @@
                                             </div>
                                         </div>
                                     </div>
-
                                 <div class="login-or">
                                     <hr class="hr-or">
                                 </div>
-
                                 <form method="post">
                                     <div class="form-group">
                                         <label class="" for="email-1">Email Address</label>
@@ -132,10 +129,6 @@
         <script src="/assets/js/intranet/customizer.js"></script>
         <script src="/assets/js/intranet/script.js"></script>
         <script>
-
-
-        </script>
-        <script>
             function check_user(user_data){
                 $.ajax({
                     type: "POST",
@@ -146,7 +139,6 @@
                     }
                 });
             }
-
             function onSuccess(googleUser) {
                 var user_data = {};
                 console.log(googleUser);
@@ -161,7 +153,6 @@
             function onFailure(error) {
                 console.log(error);
             }
-
             function renderButton() {
                 gapi.signin2.render('my-signin2', {
                     'scope': 'profile email',
