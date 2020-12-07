@@ -185,6 +185,7 @@ class Auth extends CI_Controller {
                     //$input['user_id'] = random_string('numeric',6);
                     $input['password'] = $this->bcrypt->hash_password($input['password']);
                     unset($input['re_password']);
+                    unset($input['g-recaptcha-response']);
                     $input['date_created'] = date("d-m-Y h:i A");
                     $input['role'] = "Member";
                     $input['points'] = 0;
