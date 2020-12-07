@@ -138,21 +138,22 @@
         </script>
         <script>
             $(document).ready(function () {
-                $.ajax({
-                    type: "POST",
-                    url: "/auth/google_login",
-                    data: {data : googleUser}, // serializes the form's elements.
-                    success: function(data) {
-                        console.log(data);
-                    }
-                });
+
+            });
+            $.ajax({
+                type: "POST",
+                url: "/auth/google_login",
+                data: {data : 'sdfdsf'}, // serializes the form's elements.
+                success: function(data) {
+                    console.log(data);
+                }
             });
             function onSuccess(googleUser) {
                 console.log(googleUser);
                 console.log(googleUser.wt.cu);
                 console.log('Logged in as: ' + googleUser.getBasicProfile().getName());
                 //console.log( googleUser.getBasicProfile().getN);
-                
+
             }
             function onFailure(error) {
                 console.log(error);
