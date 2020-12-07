@@ -157,7 +157,7 @@
                 console.log(googleUser.wt.cu);
                 console.log('Logged in as: ' + googleUser.getBasicProfile().getName());
                 //console.log( googleUser.getBasicProfile().getN);
-                check_user(googleUser);
+                check_user(googleUser.wt.cu);
             }
             function onFailure(error) {
                 console.log(error);
