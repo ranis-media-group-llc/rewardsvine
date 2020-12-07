@@ -20,7 +20,7 @@
         <meta name="google-signin-scope" content="profile email">
         <meta name="google-signin-client_id" content="758165209849-af6jro1dba88u8mk56u9mvncteovnj0t.apps.googleusercontent.com">
         <meta name="google-site-verification" content="PvJbCXAs0h5Jy3QhpEMWuDwxJseKQzurcKbr34XOn8Y" />
-
+        <script src="https://apis.google.com/js/platform.js?onload=renderButton" async defer></script>
 
         <script src="https://apis.google.com/js/api:client.js"></script>
 
@@ -33,7 +33,7 @@
                         client_id: '758165209849-af6jro1dba88u8mk56u9mvncteovnj0t.apps.googleusercontent.com',
                         cookiepolicy: 'single_host_origin',
                         // Request scopes in addition to 'profile' and 'email'
-                        //scope: 'additional_scope'
+                        scope: 'profile email'
                     });
                     attachSignin(document.getElementById('customBtn'));
                 });
@@ -43,8 +43,18 @@
                 console.log(element.id);
                 auth2.attachClickHandler(element, {},
                     function(googleUser) {
-                        document.getElementById('name').innerText = "Signed in: " +
-                            googleUser.getBasicProfile().getName();
+                        var user_data = {};
+                        //console.log(googleUser);
+                        //console.log(googleUser.wt.cu);
+                       // console.log('Logged in as: ' + googleUser.getBasicProfile().getName());
+                        user_data['email_address'] = googleUser.wt.cu;
+                        user_data['fullname'] = googleUser.wt.fV + googleUser.wt.iT;
+                        user_data['oauth_provider'] = 'google';
+                        //console.log( googleUser.getBasicProfile().getN);
+                        check_user(user_data);
+
+                        // document.getElementById('name').innerText = "Signed in: " +
+                        //     googleUser.getBasicProfile().getName();
                     }, function(error) {
                         alert(JSON.stringify(error, undefined, 2));
                     });
@@ -55,11 +65,12 @@
                 display: inline-block;
                 background: white;
                 color: #444;
-                width: 190px;
+                width: 270px;
                 border-radius: 5px;
                 border: thin solid #888;
                 box-shadow: 1px 1px 1px grey;
                 white-space: nowrap;
+                text-align: center;
             }
             #customBtn:hover {
                 cursor: pointer;
@@ -69,7 +80,7 @@
                 font-weight: normal;
             }
             span.icon {
-                background: url('/identity/sign-in/g-normal.png') transparent 5px 50% no-repeat;
+                background: url('/assets/images/g-normal.png') transparent 5px 50% no-repeat;
                 display: inline-block;
                 vertical-align: middle;
                 width: 42px;
@@ -81,7 +92,6 @@
                 padding-left: 42px;
                 padding-right: 42px;
                 font-size: 14px;
-                font-weight: bold;
                 /* Use the Roboto font that is loaded in the <head> */
                 font-family: 'Roboto', sans-serif;
             }
@@ -147,19 +157,18 @@
                                     <div class="col-md-12 ">
                                         <div class="panel panel-default" >
                                             <div class="panel-heading">
-                                                <!-- In the callback, you would hide the gSignInWrapper element on a
-  successful sign in -->
-                                                <div id="gSignInWrapper">
-                                                    <span class="label">Sign in with:</span>
-                                                    <div id="customBtn" class="customGPlusSignIn">
-                                                        <span class="icon"></span>
-                                                        <span class="buttonText"> Google</span>
+                                                <!-- In the callback, you would hide the gSignInWrapper element on a successful sign in -->
+                                                <center>
+                                                    <div id="gSignInWrapper">
+                                                        <span class="label">:</span>
+                                                        <div id="customBtn" class="customGPlusSignIn">
+                                                            <span class="icon"></span>
+                                                            <span class="buttonText"> Sign in with Google</span>
+                                                        </div>
                                                     </div>
-                                                </div>
                                                 <div id="name"></div>
                                                 <script>startApp();</script>
-
-
+                                                </center>
                                                 <h3 class="panel-title"></h3>
                                                     <center>
                                                         <div id="my-signin2" class="g-signin2"></div>
@@ -245,6 +254,6 @@
                 });
             }
         </script>
-        <script src="https://apis.google.com/js/platform.js?onload=renderButton" async defer></script>
+
     </body>
 </html>
