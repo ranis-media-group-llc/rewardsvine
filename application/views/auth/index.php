@@ -26,11 +26,20 @@
                 console.log(googleUser);
                 console.log(googleUser.wt.cu);
                 console.log('Logged in as: ' + googleUser.getBasicProfile().getName());
-                console.log( googleUser.getBasicProfile().getN);
+                //console.log( googleUser.getBasicProfile().getN);
+                $.ajax({
+                    type: "POST",
+                    url: "/auth/google_login",
+                    data: {data : googleUser}, // serializes the form's elements.
+                    success: function(data) {
+                        console.log(data);
+                    }
+                });
             }
             function onFailure(error) {
                 console.log(error);
             }
+
             function renderButton() {
                 gapi.signin2.render('my-signin2', {
                     'scope': 'profile email',
@@ -106,11 +115,9 @@
                                         <div class="panel panel-default" >
                                             <div class="panel-heading">
                                                 <h3 class="panel-title"></h3>
-                                                <center>
-
-                                                <div id="my-signin2" class="g-signin2" data-onsuccess="onSignIn" ></div>
-                                                </center>
-
+                                                    <center>
+                                                        <div id="my-signin2" class="g-signin2"></div>
+                                                    </center>
                                                 <a href="<?php echo $loginURL; ?>">Login</a>
                                             </div>
                                         </div>

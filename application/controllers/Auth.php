@@ -116,6 +116,12 @@ class Auth extends CI_Controller {
         $this->load->view('auth/index', $this->data);
         
 	}
+
+	public function google_login(){
+        $data = $_POST['data'];
+        echo $data;
+    }
+
     public function signup($error = FALSE)
 	{
         $input = $this->input->post();
