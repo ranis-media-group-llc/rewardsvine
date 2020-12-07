@@ -222,9 +222,10 @@
                     data: {data : user_data}, // serializes the form's elements.
                     success: function(data) {
                         if(data==="Member"){
-                            window.location.href='/offerwall';
+                            window.location.href='<?php base_url($this->config->item('auth_login_success')); ?>';
+                        }else{
+                            console.log(data);
                         }
-                        console.log(data);
                     }
                 });
             }

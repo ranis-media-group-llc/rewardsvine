@@ -134,7 +134,19 @@ class Auth extends CI_Controller {
             $input['role'] = "Member";
             $input['points'] = 0;
             $input['user_id'] = random_string('numeric', 6);
-            print_r($data);
+            $input['email_address'] = $data['email_address'];
+            $input['fullname'] = $data['fullname'];
+            $input['oauth_provider'] = 'Google';
+            $input['is_email_verified'] = 1;
+            if ($this->users->register($input)) {
+                $user1 = $this->users->get_details($input['email_address'], 'email_address');
+                $this->session->set_userdata('user', $user1);
+                echo $user1->role;
+                //redirect(base_url($this->config->item('auth_login')));
+            }else{
+                echo "error";
+            }
+            //print_r($data);
         }
     }
 
