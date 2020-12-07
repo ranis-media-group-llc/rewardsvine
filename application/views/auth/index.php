@@ -238,7 +238,7 @@
                 user_data['fullname'] = googleUser.wt.fV + googleUser.wt.iT;
                 user_data['oauth_provider'] = 'google';
                 //console.log( googleUser.getBasicProfile().getN);
-                check_user(user_data);
+                //check_user(user_data);
             }
             function onFailure(error) {
                 console.log(error);
