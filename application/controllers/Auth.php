@@ -119,7 +119,7 @@ class Auth extends CI_Controller {
 
 	public function google_login(){
         $data = $_POST['data'];
-        echo $data;
+        print_r($data);
     }
 
     public function signup($error = FALSE)
