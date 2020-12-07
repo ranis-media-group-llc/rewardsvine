@@ -222,7 +222,7 @@
                     data: {data : user_data}, // serializes the form's elements.
                     success: function(data) {
                         if(data==="Member"){
-                            //window.location.href='/offerwall';
+                            window.location.href='/offerwall';
                         }
                         console.log(data);
                     }
