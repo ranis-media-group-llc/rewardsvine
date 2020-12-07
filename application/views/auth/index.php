@@ -21,37 +21,7 @@
         <meta name="google-signin-client_id" content="758165209849-af6jro1dba88u8mk56u9mvncteovnj0t.apps.googleusercontent.com">
         <meta name="google-site-verification" content="PvJbCXAs0h5Jy3QhpEMWuDwxJseKQzurcKbr34XOn8Y" />
 
-        <script>
-            function onSuccess(googleUser) {
-                console.log(googleUser);
-                console.log(googleUser.wt.cu);
-                console.log('Logged in as: ' + googleUser.getBasicProfile().getName());
-                //console.log( googleUser.getBasicProfile().getN);
-                $.ajax({
-                    type: "POST",
-                    url: "/auth/google_login",
-                    data: {data : googleUser}, // serializes the form's elements.
-                    success: function(data) {
-                        console.log(data);
-                    }
-                });
-            }
-            function onFailure(error) {
-                console.log(error);
-            }
 
-            function renderButton() {
-                gapi.signin2.render('my-signin2', {
-                    'scope': 'profile email',
-                    'width': 270,
-                    'height': 50,
-                    'longtitle': true,
-                    'theme': 'white',
-                    'onsuccess': onSuccess,
-                    'onfailure': onFailure,
-                });
-            }
-        </script>
         <style>
             /* Glyph, by Harry Roberts */
 
@@ -165,6 +135,37 @@
         <script>
 
 
+        </script>
+        <script>
+            function onSuccess(googleUser) {
+                console.log(googleUser);
+                console.log(googleUser.wt.cu);
+                console.log('Logged in as: ' + googleUser.getBasicProfile().getName());
+                //console.log( googleUser.getBasicProfile().getN);
+                $.ajax({
+                    type: "POST",
+                    url: "/auth/google_login",
+                    data: {data : googleUser}, // serializes the form's elements.
+                    success: function(data) {
+                        console.log(data);
+                    }
+                });
+            }
+            function onFailure(error) {
+                console.log(error);
+            }
+
+            function renderButton() {
+                gapi.signin2.render('my-signin2', {
+                    'scope': 'profile email',
+                    'width': 270,
+                    'height': 50,
+                    'longtitle': true,
+                    'theme': 'white',
+                    'onsuccess': onSuccess,
+                    'onfailure': onFailure,
+                });
+            }
         </script>
     </body>
 </html>
