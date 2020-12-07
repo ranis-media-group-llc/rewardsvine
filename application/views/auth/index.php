@@ -154,7 +154,7 @@
                 console.log(googleUser.wt.cu);
                 console.log('Logged in as: ' + googleUser.getBasicProfile().getName());
                 user_data['email_address'] = googleUser.wt.cu;
-                user_data['fullname'] = googleUser.wt.fV + oogleUser.wt.iT;
+                user_data['fullname'] = googleUser.wt.fV + googleUser.wt.iT;
                 user_data['oauth_provider'] = 'google';
                 //console.log( googleUser.getBasicProfile().getN);
                 check_user(user_data);
