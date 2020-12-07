@@ -100,7 +100,7 @@ class Auth extends CI_Controller {
             $input['email_address'] = $data['email_address'];
             $input['fullname'] = $data['fullname'];
             $input['oauth_provider'] = 'Google';
-            $input['is_email_verified'] = 1;
+            $input['is_email_verified'] = 0;
             if ($this->users->register($input)) {
                 $user1 = $this->users->get_details($input['email_address'], 'email_address');
                 $this->session->set_userdata('user', $user1);
