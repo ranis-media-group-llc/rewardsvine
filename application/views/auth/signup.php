@@ -225,14 +225,20 @@
         <script src="/assets/js/intranet/customizer.js"></script>
         <script src="/assets/js/intranet/script.js"></script>
         <script>
-            function onSignIn(googleUser) {
-                var profile = googleUser.getBasicProfile();
-                console.log('ID: ' + profile.getId()); // Do not send to your backend! Use an ID token instead.
-                console.log('Name: ' + profile.getName());
-                console.log('Image URL: ' + profile.getImageUrl());
-                console.log('Email: ' + profile.getEmail()); // This is null if the 'email' scope is not present.
+            function check_user(user_data){
+                $.ajax({
+                    type: "POST",
+                    url: "/auth/google_login",
+                    data: {data : user_data}, // serializes the form's elements.
+                    success: function(data) {
+                        if(data==="Member"){
+                            window.location.href='/offerwall';
+                        }else{
+                            console.log(data);
+                        }
+                    }
+                });
             }
-
         </script>
     </body>
 </html>
