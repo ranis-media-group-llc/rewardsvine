@@ -196,7 +196,7 @@
                                     <div class="dt-checkbox d-block mb-6">
                                         <input type="checkbox" id="checkbox-1" required>
                                         <label class="dt-checkbox-content" for="checkbox-1"> By creating an account you are agreeing to RewardsVine's
-                                            <a href="https://rewardsvine.com/privacy" target="_blank">Privacy and Policy</a> and
+                                            <a href="https://rewardsvine.com/privacy" target="_blank">Privacy Policy</a> and
                                             <a href="https://rewardsvine.com/terms" target="_blank">Terms of Service</a>
                                         </label>
                                     </div>
