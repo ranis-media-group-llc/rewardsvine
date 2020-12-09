@@ -17,8 +17,10 @@ class MY_Controller extends CI_Controller {
         define('DIRECTORY', rtrim($this->router->fetch_directory(),'/'));
         define('CONTROLLER', $this->router->fetch_class());
         define('METHOD', $this->router->fetch_method());
-        $this->data['users_data'] = $this->users->get_details($_SESSION['user']->user_id,'user_id');
+
+
         if(isset($_SESSION['user'])){
+            $this->data['users_data'] = $this->users->get_details($_SESSION['user']->user_id,'user_id');
             $data =  $_SESSION['user'];
             $id = $data->email_address;
         }else{
