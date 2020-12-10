@@ -46,9 +46,6 @@ Class Google
         if (isset($_SESSION['access_token']) && $_SESSION['access_token']) {
             $this->client->setAccessToken($_SESSION['access_token']);
         }
-
-
-
     }
 
     public function setAccessToken()
@@ -73,7 +70,6 @@ Class Google
     public function getUserInfo()
     {
         $service = new Google_Service_Oauth2($this->client);
-
         return $service->userinfo->get();
     }
 
