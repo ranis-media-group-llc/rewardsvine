@@ -172,7 +172,13 @@ class Auth extends CI_Controller {
         $this->data['title'] = "RewardsVine - SignUp";
         $this->load->view('auth/signup', $this->data);
 	}
-    
+
+
+    public function forgot_password()
+    {
+        $this->data['title'] = "RewardsVine - Forgot Password";
+        $this->load->view('auth/forgot_password', $this->data);
+    }
     public function logout()
     {
         // Reset OAuth access token

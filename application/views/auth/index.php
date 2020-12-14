@@ -191,7 +191,7 @@
                                 </form>
                             </div>
                             <div class="dt-login__content-footer">
-                                <a href="#">Forgot your password?</a>
+                                <a href="<?= base_url('auth/forgot_password/') ?>">Forgot your password?</a>
                             </div>
                         </div>
                     </div>
