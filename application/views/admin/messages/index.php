@@ -136,7 +136,6 @@ $this->load->view('layout_admin/foot');
                 });
             });
         });
-
         $(".btn_reject").on( "click", function( event ) {
             var ID=this.id;
             Swal.fire({
@@ -165,7 +164,6 @@ $this->load->view('layout_admin/foot');
                 });
             });
         });
-
         $(".btn_complete").on( "click", function( event ) {
             var ID=this.id;
             Swal.fire({
@@ -194,7 +192,6 @@ $this->load->view('layout_admin/foot');
                 });
             });
         });
-
         function sucess_add(information,is_reload){
             Swal.fire({
                 title: 'Good job!',

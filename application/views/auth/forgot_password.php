@@ -33,8 +33,8 @@
                     <div class="dt-login__content-inner" style="background-color: #000000 !important;">
                         <span class="dt-login__logo" >
                              <a class="dt-brand__logo-link" href="#">
-                                    <img  width="200" class="responsive" src="/assets/images/header_logo2.png" alt="Rewardsvine">
-                                </a>
+                                 <img  width="200" class="responsive" src="/assets/images/header_logo2.png" alt="Rewardsvine">
+                             </a>
                         </span>
                         <form action="#" method="post">
                             <div class="form-group search-box right-side-icon mw-100">
@@ -42,13 +42,15 @@
                                 <input type="email" class="form-control" id="email-1" aria-describedby="email-1" placeholder="Enter email" required>
                                 <span class="search-icon"><i class="icon icon-mail icon-lg"></i></span>
                             </div>
-                            <p class="mb-8">Don't remember your email? &nbsp;
-                                <a class="small" href="javascript:void(0)">Contact Support.</a>
-                            </p>
+                            <p class="mb-8">Don't remember your email? &nbsp;<a style="color: #ffffff !important;" href="javascript:void(0)">Contact Support</a></p>
                             <div class="form-group">
                                 <button type="submit" class="btn btn-primary text-uppercase">Reset Password</button>
+                                <a style="text-align :right;" class="pull-right" href="<?= base_url('auth/login') ?>">Login</a>
                             </div>
                         </form>
+                    </div>
+                    <div class="dt-login__content-footer">
+
                     </div>
                 </div>
             </div>
