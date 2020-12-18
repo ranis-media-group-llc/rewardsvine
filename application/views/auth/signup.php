@@ -240,5 +240,12 @@
                 });
             }
         </script>
+        <script type="text/javascript" src="https://cdn.neverbounce.com/widget/dist/NeverBounce.js"></script>
+        <script type="text/javascript">
+            _NBSettings = {
+                apiKey: 'public_8980355723982c47a7281c87c1dcd637'
+            };
+        </script>
+
     </body>
 </html>
