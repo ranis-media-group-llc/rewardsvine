@@ -51,6 +51,8 @@ class Auth extends CI_Controller {
                         // decode the json response
                         $json = json_decode($response1, true);
 
+                        print_r($json);
+
                         // if address is failed, alert the user they entered an invalid email
                         if($json['status'] == 'failed'){
                             $this->data['error'] = "You have entered an invalid email.";
