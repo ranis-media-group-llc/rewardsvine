@@ -42,10 +42,15 @@ class Auth extends CI_Controller {
                             if ($user) {
                                 if ($this->bcrypt->check_password($input['password'], $user->password)) //if ($input['password']== $user->password)
                                 {
-                                    unset($user->password);
-                                    $this->session->set_userdata('user', $user);
                                     if ($user->role == "Member") {
-                                        redirect(base_url($this->config->item('auth_login_success')));
+                                        if($user->status == 0){
+                                            $this->session->set_flashdata('reset_link_sent', 'Confirm your email first in order to use our app. It has been sent to your email, check it on Primary or Promotions.');
+                                            redirect(base_url('auth/login'));
+                                        }else{
+                                            unset($user->password);
+                                            $this->session->set_userdata('user', $user);
+                                            redirect(base_url($this->config->item('auth_login_success')));
+                                        }
                                     } else {
                                         redirect(base_url($this->config->item('auth_login_admin')));
                                     }
@@ -140,9 +145,29 @@ class Auth extends CI_Controller {
                         $this->data['error'] = "Password didn't match.";
                     } else {
                         if ($this->users->register($input)) {
-                            $user = $this->users->get_details($input['email_address'], 'email_address');
-                            $this->session->set_userdata('user', $user);
-                            redirect(base_url($this->config->item('auth_login_success')));
+                            //$user = $this->users->get_details($input['email_address'], 'email_address');
+                            //$this->session->set_userdata('user', $user);
+                            //redirect(base_url($this->config->item('auth_login_success')));
+                            $reset_code_token = hash_code();
+                            $input['confirm_token'] = $reset_code_token;
+                            // set post fields
+                            // hash_code - password reset token for each reset
+                            $post = [
+                                'test_email' => $input['email_address'],
+                                'campaign_id' => $this->config->item('confirm_email_camp_id'),
+                                'display_errors'   => 0,
+                                'password_reset_link'   => $_SERVER['SERVER_NAME'].'/auth/confirm_email/?r='.$reset_code_token.'&email='.$input['email_address'],
+                            ];
+                            $send_reset_pass_mail = mail_send($post);
+                            // do anything you want with your response
+                            // Further processing ...
+                            if ($send_reset_pass_mail == "ok,") {
+                                $user = $this->users->get_details($input['email_address'], 'email_address');
+                                if ($this->general->update($input,$user->id,'rv_users')) {
+                                    $this->session->set_flashdata('reset_link_sent', 'Email confirmation has been sent to your email. Check it on Primary or Promotions.');
+                                    redirect(base_url('auth/login'));
+                                }
+                            }
                         }
                     }
                 }
@@ -171,19 +196,10 @@ class Auth extends CI_Controller {
                     'display_errors'   => 0,
                     'password_reset_link'   => $_SERVER['SERVER_NAME'].'/auth/reset_password/?r='.$reset_code_token.'&email='.$input['email_address'],
                 ];
-                $ch = curl_init('https://mail.rewardsvine.com//includes/create/rewardsvine_email.php');
-                curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
-                curl_setopt($ch, CURLOPT_POSTFIELDS, $post);
-
-                // execute!
-                $response = curl_exec($ch);
-
-                // close the connection, release resources used
-                curl_close($ch);
-
+                $send_reset_pass_mail = mail_send($post);
                 // do anything you want with your response
                 // Further processing ...
-                if ($response == "ok,") {
+                if ($send_reset_pass_mail == "ok,") {
                     unset($input['email_address']);
                     if ($this->general->update($input,$user->id,'rv_users')) {
                         $this->session->set_flashdata('reset_link_sent', 'Password Reset has been sent to your email!');
@@ -232,6 +248,29 @@ class Auth extends CI_Controller {
         }
         $this->data['title'] = "RewardsVine - Password Reset";
         $this->load->view('auth/reset_password', $this->data);
+    }
+
+    public function confirm_email()
+    {
+        //echo $_GET['r'];
+        $user = $this->users->get_details($_GET['email'], 'email_address');
+        if ($user) {
+            $input = array();
+            if($this->users->get_details($_GET['r'], 'confirm_token')){
+                $input['status'] = 2;
+                $input['confirm_token'] = '';
+                $input['confirm_email_datetime'] = date('Y-m-d h:i A');
+                if ($this->general->update($input,$user->id,'rv_users')) {
+                    $this->session->set_flashdata('reset_link_sent', 'Email Successfully Confirmed!');
+                    redirect(base_url('auth/login'));
+                }
+
+            }else{
+                echo 'Something went wrong. Contact RewardsVine support.';
+            }
+        }else{
+            echo 'Email Address doesnt exist';
+        }
     }
     public function logout()
     {

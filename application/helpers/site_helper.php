@@ -142,4 +142,21 @@ if (!function_exists('gift_cards')) {
             return $pwd_reset_hash;
         }
     }
+
+    if (!function_exists('mail_send')) {
+        function mail_send($post_data)
+        {
+            $ch = curl_init('https://mail.rewardsvine.com//includes/create/rewardsvine_email.php');
+            curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
+            curl_setopt($ch, CURLOPT_POSTFIELDS, $post_data);
+
+            // execute!
+            $response = curl_exec($ch);
+
+            // close the connection, release resources used
+            curl_close($ch);
+
+            return $response;
+        }
+    }
 }

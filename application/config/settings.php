@@ -8,3 +8,4 @@ $config['auth_login'] = "auth/login"; //Redirect to this page after logout was i
 $config['auth_denied'] = "auth/access-denied"; //Redirect to this page after logout was initiated
 
 $config['forgot_pass_camp_id'] = 10;
+$config['confirm_email_camp_id'] = 11;
