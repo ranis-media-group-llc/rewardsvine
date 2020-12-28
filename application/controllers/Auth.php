@@ -36,7 +36,7 @@ class Auth extends CI_Controller {
                 // should return JSON with success as true
 
                 //print_r($responseKeys);
-                if(!$responseKeys["success"]) {
+                if($responseKeys["success"]) {
                     //if (array_key_exists('success', $responseKeys)) {
                             $user = $this->users->get_details($input['email_address'], 'email_address');
                             if ($user) {
