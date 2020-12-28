@@ -6,3 +6,5 @@ $config['site_name'] = "Living Hope";
 $config['auth_login_success'] = "admin/dashboard";
 $config['auth_login'] = "auth/login"; //Redirect to this page after logout was initiated
 $config['auth_denied'] = "auth/access-denied"; //Redirect to this page after logout was initiated
+
+$config['forgot_pass_camp_id'] = 10;

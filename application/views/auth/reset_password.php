@@ -49,14 +49,19 @@
                         </span>
                         <form method="post">
                             <div class="form-group search-box right-side-icon mw-100">
-                                <label class="sr-only" for="email-1">Email address</label>
-                                <input type="email" class="form-control" name="email_address" id="email-1" aria-describedby="email-1" placeholder="Enter email" required>
-                                <span class="search-icon"><i class="icon icon-mail icon-lg"></i></span>
+                                <label class="sr-only" for="email-1">Enter New Password</label>
+                                <input type="password" class="form-control" name="password"  placeholder="Enter New Password" required>
+                                <span class="search-icon"><i class="icon icon-forgot-pass icon-lg"></i></span>
                             </div>
-                            <p class="mb-8">Don't remember your email? &nbsp;<a style="color: #ffffff !important;" href="javascript:void(0)">Contact Support</a></p>
+                            <div class="form-group search-box right-side-icon mw-100">
+                                <label class="sr-only" for="email-1">New Password</label>
+                                <input type="password" class="form-control" name="re_password"  placeholder="Re-Enter New Password" required>
+                                <span class="search-icon"><i class="icon icon-forgot-pass icon-lg"></i></span>
+                            </div>
                             <div class="form-group">
-                                <button type="submit" class="btn btn-primary text-uppercase">Reset Password</button>
-                                <a style="text-align :right;" class="pull-right" href="<?= base_url('auth/login') ?>">Login</a>
+                                <input type="hidden" name="id" value="<?= $user; ?>">
+                                <button type="submit" class="btn btn-primary text-uppercase">Submit</button>
+                                <a style="text-align :right;color: #7d287e;" class="pull-right" href="<?= base_url('auth/login') ?>">Login</a>
                             </div>
                         </form>
                     </div>

@@ -43,10 +43,17 @@
                 <!-- Header Menu -->
                 <ul class="dt-nav">
                     <li class="dt-nav__item dt-notification dropdown">
-
                         <!-- Dropdown Link -->
                         <a href="/history" class="dt-nav__link dropdown-toggle no-arrow"
                            aria-haspopup="true" aria-expanded="false"> <i class="icon icon-notification2 icon-fw dt-icon-alert"></i>
+                        </a>
+                        <!-- /dropdown link -->
+                    </li>
+
+                    <li class="dt-nav__item dt-notification dropdown">
+                        <!-- Dropdown Link -->
+                        <a href="/messages" class="dt-nav__link dropdown-toggle no-arrow"
+                           aria-haspopup="true" aria-expanded="false"> <i class="icon icon-message icon-fw dt-icon-alert"></i>
                         </a>
                         <!-- /dropdown link -->
                     </li>

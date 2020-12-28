@@ -146,6 +146,19 @@
                                 <?php
                             }
                             ?>
+                            <?php
+                                $success_reset = $this->session->flashdata('reset_link_sent');
+                                if(isset($success_reset)) {
+                                    ?>
+                                    <div class="alert alert-success alert-dismissible" role="alert">
+                                        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                                            <span aria-hidden="true">&times;</span>
+                                        </button>
+                                        <p><?php echo $success_reset; ?></p>
+                                    </div>
+                                    <?php
+                                }
+                            ?>
                             <div class="dt-login__content-inner">
                                     <div class="col-md-12 ">
                                         <div class="panel panel-default" >

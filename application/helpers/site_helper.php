@@ -134,4 +134,12 @@ if (!function_exists('gift_cards')) {
         }
         return $gift_cards;
     }
+
+    if (!function_exists('hash_code')) {
+        function hash_code()
+        {
+            $pwd_reset_hash = hash('sha256', md5(time() . 12202021 . 'rewardsVine'));
+            return $pwd_reset_hash;
+        }
+    }
 }

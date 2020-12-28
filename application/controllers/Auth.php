@@ -16,6 +16,9 @@ class Auth extends CI_Controller {
         $this->config->load('auth');
         $this->load->model('Users_model', 'users');
        // $this->load->library('Google');
+        $this->load->helper('site');
+        $this->load->model('General_model', 'general');
+        $this->load->config('settings');
     }
 
     public function login($error = FALSE)
@@ -33,7 +36,7 @@ class Auth extends CI_Controller {
                 // should return JSON with success as true
 
                 //print_r($responseKeys);
-                if($responseKeys["success"]) {
+                if(!$responseKeys["success"]) {
                     //if (array_key_exists('success', $responseKeys)) {
                             $user = $this->users->get_details($input['email_address'], 'email_address');
                             if ($user) {
@@ -107,8 +110,8 @@ class Auth extends CI_Controller {
                 $email = urlencode($input['email_address']);
 
                 // use curl to make the request
-                $url = 'https://api-v4.bulkemailchecker.com/?key='.$key.'&email='.$email;
-                $ch = curl_init($url);
+                $url2 = 'https://api-v4.bulkemailchecker.com/?key='.$key.'&email='.$email;
+                $ch = curl_init($url2);
                 curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
                 curl_setopt($ch, CURLOPT_CONNECTTIMEOUT, 15);
                 curl_setopt($ch, CURLOPT_TIMEOUT, 15);
@@ -152,11 +155,83 @@ class Auth extends CI_Controller {
         $this->load->view('auth/signup', $this->data);
 	}
 
-
     public function forgot_password()
     {
+        $input = $this->input->post();
+        if($input){
+            $user = $this->users->get_details($input['email_address'], 'email_address');
+            if ($user) {
+                $reset_code_token = hash_code();
+                $input['reset_token'] = $reset_code_token;
+                // set post fields
+                // hash_code - password reset token for each reset
+                $post = [
+                    'test_email' => $input['email_address'],
+                    'campaign_id' => $this->config->item('forgot_pass_camp_id'),
+                    'display_errors'   => 0,
+                    'password_reset_link'   => $_SERVER['SERVER_NAME'].'/auth/reset_password/?r='.$reset_code_token.'&email='.$input['email_address'],
+                ];
+                $ch = curl_init('https://mail.rewardsvine.com//includes/create/rewardsvine_email.php');
+                curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
+                curl_setopt($ch, CURLOPT_POSTFIELDS, $post);
+
+                // execute!
+                $response = curl_exec($ch);
+
+                // close the connection, release resources used
+                curl_close($ch);
+
+                // do anything you want with your response
+                // Further processing ...
+                if ($response == "ok,") {
+                    unset($input['email_address']);
+                    if ($this->general->update($input,$user->id,'rv_users')) {
+                        $this->session->set_flashdata('reset_link_sent', 'Password Reset has been sent to your email!');
+                        redirect(base_url('auth/login'));
+                    }
+                } else {
+                    $this->data['error'] = "Email didn't goes well. Contact RewardsVine Supprot.";
+                }
+            }else{
+                $this->data['error'] = "Email doesn't exist!";
+            }
+        }
         $this->data['title'] = "RewardsVine - Forgot Password";
         $this->load->view('auth/forgot_password', $this->data);
+    }
+
+    public function reset_password()
+    {
+        $input = $this->input->post();
+        if($input){
+            if($input['password'] == $input['re_password']){
+                unset($input['re_password']);
+                $input['password'] = $this->bcrypt->hash_password($input['password']);
+                $input['reset_token'] = '';
+                $input['reset_pass_datetime'] = date('Y-m-d h:i A');
+                if ($this->general->update($input,$input['id'],'rv_users')) {
+                    $this->session->set_flashdata('reset_link_sent', 'Password Successfully Changed.');
+                    redirect(base_url('auth/login'));
+                }
+            }else{
+                $this->data['user'] = $input['id'];
+                $this->data['error'] = "Password didn't match!";
+            }
+        }else{
+            $user = $this->users->get_details($_GET['email'], 'email_address');
+            if ($user) {
+                if($this->users->get_details($_GET['r'], 'reset_token')){
+                    $this->data['user'] = $user->id;
+                }else{
+                    $this->session->set_flashdata('reset_link_sent', 'Password Reset token has been expired!');
+                    redirect(base_url('auth/login'));
+                }
+            }else{
+                redirect(base_url('auth/login'));
+            }
+        }
+        $this->data['title'] = "RewardsVine - Password Reset";
+        $this->load->view('auth/reset_password', $this->data);
     }
     public function logout()
     {
