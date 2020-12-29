@@ -110,12 +110,10 @@ class Auth extends CI_Controller {
             $response = file_get_contents($url);
             $responseKeys = json_decode($response,true);
 
-            if($responseKeys["success"]) {
-                $key = 'PqxX53dayLwspoNTIrDFRYnfm2z0Q4Kh';
+            if(!$responseKeys["success"]) {
                 $email = urlencode($input['email_address']);
-
                 // use curl to make the request
-                $url2 = 'https://api-v4.bulkemailchecker.com/?key='.$key.'&email='.$email;
+                $url2 = 'https://api-v4.bulkemailchecker.com/?key='.$this->config->item('bulkemailchecker_api_key').'&email='.$email;
                 $ch = curl_init($url2);
                 curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
                 curl_setopt($ch, CURLOPT_CONNECTTIMEOUT, 15);
@@ -123,17 +121,16 @@ class Auth extends CI_Controller {
                 $response = curl_exec($ch);
                 curl_close($ch);
 
-
                 // decode the json response
                 $json = json_decode($response, true);
-                print_r($json);
-                if($json['status'] == 'failed'){
-                    $this->data['error'] = "You have entered an invalid email.";
+                //print_r($json);
+
+                if (array_key_exists('error', $json)) {
+                    $this->data['error'] = "An error occured : " . $json['error'];
                 }else {
                     $pass1 = $input['password'];
                     $pass2 = $input['re_password'];
                     $this->load->helper('string');
-                    //$input['user_id'] = random_string('numeric',6);
                     $input['password'] = $this->bcrypt->hash_password($input['password']);
                     unset($input['re_password']);
                     unset($input['g-recaptcha-response']);
@@ -159,7 +156,8 @@ class Auth extends CI_Controller {
                                 'display_errors'   => 0,
                                 'password_reset_link'   => $_SERVER['SERVER_NAME'].'/auth/confirm_email/?r='.$reset_code_token.'&email='.$input['email_address'],
                             ];
-                            $send_reset_pass_mail = mail_send($post);
+                            $send_reset_pass_mail = '';
+                            //$send_reset_pass_mail = mail_send($post);
                             // do anything you want with your response
                             // Further processing ...
                             if ($send_reset_pass_mail == "ok,") {
@@ -168,6 +166,8 @@ class Auth extends CI_Controller {
                                     $this->session->set_flashdata('reset_link_sent', 'Email confirmation has been sent to your email. Check it on Primary or Promotions.');
                                     redirect(base_url('auth/login'));
                                 }
+                            }else{
+                                $this->data['error'] = "Can't send to your email.";
                             }
                         }
                     }
