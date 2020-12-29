@@ -110,7 +110,7 @@ class Auth extends CI_Controller {
             $response = file_get_contents($url);
             $responseKeys = json_decode($response,true);
 
-            if(!$responseKeys["success"]) {
+            if($responseKeys["success"]) {
                 $email = urlencode($input['email_address']);
                 // use curl to make the request
                 $url2 = 'https://api-v4.bulkemailchecker.com/?key='.$this->config->item('bulkemailchecker_api_key').'&email='.$email;
@@ -126,7 +126,7 @@ class Auth extends CI_Controller {
                 //print_r($json);
 
                 if (array_key_exists('error', $json)) {
-                    $this->data['error'] = "An error occured : " . $json['error'];
+                    $this->data['error'] = "An error occured on Email Checker: " . $json['error'];
                 }else {
                     $pass1 = $input['password'];
                     $pass2 = $input['re_password'];
