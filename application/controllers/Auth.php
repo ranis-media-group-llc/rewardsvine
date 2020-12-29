@@ -123,9 +123,10 @@ class Auth extends CI_Controller {
                 $response = curl_exec($ch);
                 curl_close($ch);
 
+
                 // decode the json response
                 $json = json_decode($response, true);
-
+                print_r($json);
                 if($json['status'] == 'failed'){
                     $this->data['error'] = "You have entered an invalid email.";
                 }else {
@@ -137,9 +138,9 @@ class Auth extends CI_Controller {
                     unset($input['re_password']);
                     unset($input['g-recaptcha-response']);
                     $input['date_created'] = date("d-m-Y h:i A");
-                    $input['role'] = "Member";
                     $input['points'] = 0;
                     $input['user_id'] = random_string('numeric', 6);
+                    $input['role'] = "Member";
 
                     if ($pass1 != $pass2) {
                         $this->data['error'] = "Password didn't match.";
