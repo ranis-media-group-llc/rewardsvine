@@ -123,7 +123,7 @@ class Auth extends CI_Controller {
 
                 // decode the json response
                 $json = json_decode($response, true);
-                //print_r($json);
+                print_r($json);
 
                 if (array_key_exists('error', $json)) {
                     $this->data['error'] = "An error occured on Email Checker: " . $json['error'];
@@ -156,8 +156,8 @@ class Auth extends CI_Controller {
                                 'display_errors'   => 0,
                                 'password_reset_link'   => $_SERVER['SERVER_NAME'].'/auth/confirm_email/?r='.$reset_code_token.'&email='.$input['email_address'],
                             ];
-                            $send_reset_pass_mail = '';
-                            //$send_reset_pass_mail = mail_send($post);
+                            //$send_reset_pass_mail = '';
+                            $send_reset_pass_mail = mail_send($post);
                             // do anything you want with your response
                             // Further processing ...
                             if ($send_reset_pass_mail == "ok,") {

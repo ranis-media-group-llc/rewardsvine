@@ -10,4 +10,4 @@ $config['auth_denied'] = "auth/access-denied"; //Redirect to this page after log
 $config['forgot_pass_camp_id'] = 10;
 $config['confirm_email_camp_id'] = 11;
 
-$config['bulkemailchecker_api_key'] = 'PqxX53dayLwspoNTIrDFRYnfm2z0Q4Kh';
+$config['bulkemailchecker_api_key'] = 'b6cE7prk0q2sBjXSfneyKZwgYLFANdH8';
