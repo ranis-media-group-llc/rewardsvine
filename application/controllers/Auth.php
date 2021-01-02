@@ -38,29 +38,33 @@ class Auth extends CI_Controller {
                 //print_r($responseKeys);
                 if($responseKeys["success"]) {
                     //if (array_key_exists('success', $responseKeys)) {
-                            $user = $this->users->get_details($input['email_address'], 'email_address');
-                            if ($user) {
-                                if ($this->bcrypt->check_password($input['password'], $user->password)) //if ($input['password']== $user->password)
-                                {
-                                    if ($user->role == "Member") {
-                                        if($user->status == 0){
-                                            $this->session->set_flashdata('reset_link_sent', 'Confirm your email first in order to use our app. It has been sent to your email, check it on Primary or Promotions.');
-                                            redirect(base_url('auth/login'));
-                                        }else{
-                                            unset($user->password);
-                                            $this->session->set_userdata('user', $user);
-                                            redirect(base_url($this->config->item('auth_login_success')));
-                                        }
-                                    } else {
-                                        redirect(base_url($this->config->item('auth_login_admin')));
+                    $user = $this->users->get_details($input['email_address'], 'email_address');
+                        if ($user) {
+                            if ($this->bcrypt->check_password($input['password'], $user->password)) { //if ($input['password']== $user->password)
+                                $this->session->set_userdata('user', $user);
+                                if ($user->role == "Member") {
+                                    if($user->status == 0){
+                                        $this->session->set_flashdata('reset_link_sent', 'Confirm your email first in order to use our app. It has been sent to your email, check it on Primary or Promotions.');
+                                        redirect(base_url('auth/login'));
+                                    }else{
+                                        unset($user->password);
+                                            //redirect(base_url($this->config->item('auth_login_success')));
                                     }
-                                    exit;
-                                } else {
-                                    $this->data['error'] = "Invalid Username and/or Password.";
+                                } else if ($user->role == "Admin")  {
+                                    echo 'admin';
+                                    redirect(base_url($this->config->item('auth_login_admin')));
+                                } else if ($user->role == "SuperAdmin") {
+                                    redirect(base_url('superadmin/dashboard'));
+                                }else{
+                                    $this->data['error'] = "User doesn't have a role.";
                                 }
+                                exit;
                             } else {
-                                $this->data['error'] = "Email Address don't exist.";
+                                $this->data['error'] = "Invalid Username and/or Password.";
                             }
+                        } else {
+                            $this->data['error'] = "Email Address don't exist.";
+                        }
                     } else {
                         $this->data['error'] = "Captcha Invalid.";
                     }
@@ -68,7 +72,6 @@ class Auth extends CI_Controller {
         //$this->data['loginURL'] = $this->google->getLoginUrl();
         $this->data['title'] = "RewardsVine - Login";
         $this->load->view('auth/index', $this->data);
-        
 	}
 
 	public function google_login(){
@@ -123,7 +126,7 @@ class Auth extends CI_Controller {
 
                 // decode the json response
                 $json = json_decode($response, true);
-                print_r($json);
+                //print_r($json);
 
                 if (array_key_exists('error', $json)) {
                     $this->data['error'] = "An error occured on Email Checker: " . $json['error'];
