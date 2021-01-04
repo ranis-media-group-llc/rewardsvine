@@ -6,12 +6,12 @@
 <div class="dt-root">
     <div class="dt-root__inner">
         <?php
-            $this->load->view('layout_admin/header');
+            $this->load->view('layout_superadmin/header');
         ?>
         <!-- Site Main -->
         <main class="dt-main">
             <?php
-                $this->load->view('layout_admin/sidebar');
+                $this->load->view('layout_superadmin/sidebar');
             ?>
             <!-- Site Content Wrapper -->
             <div class="dt-content-wrapper">

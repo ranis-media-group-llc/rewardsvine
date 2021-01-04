@@ -182,7 +182,7 @@
                            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                             <img class="dt-avatar size-30" src="/assets/images/avatar1.png" alt="Andy Ranis">
                             <span class="dt-avatar-info d-none d-sm-block">
-                <span class="dt-avatar-name">Andy Ranis</span>
+                <span class="dt-avatar-name"><?= $_SESSION['user']->fullname ?></span>
               </span> </a>
                         <!-- /dropdown link -->
 
@@ -191,8 +191,8 @@
                             <div class="dt-avatar-wrapper flex-nowrap p-6 mt-n2 bg-gradient-purple text-white rounded-top">
                                 <img class="dt-avatar" src="https://via.placeholder.com/150x150" alt="Domnic Harris">
                                 <span class="dt-avatar-info">
-                  <span class="dt-avatar-name">Andy Ranis</span>
-                  <span class="f-12">Administrator</span>
+                  <span class="dt-avatar-name"><?= $_SESSION['user']->fullname ?></span>
+                  <span class="f-12"><?= $_SESSION['user']->role ?></span>
                 </span>
                             </div>
                             <a class="dropdown-item" href="javascript:void(0)"> <i class="icon icon-user icon-fw mr-2 mr-sm-1"></i>Account

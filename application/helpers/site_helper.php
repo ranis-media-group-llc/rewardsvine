@@ -159,4 +159,21 @@ if (!function_exists('gift_cards')) {
             return $response;
         }
     }
+
+    if (!function_exists('email_checker')) {
+        function email_checker($api_key,$email)
+        {
+            $url2 = 'https://api-v4.bulkemailchecker.com/?key='.$api_key.'&email='.$email;
+            $ch = curl_init($url2);
+            curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
+            curl_setopt($ch, CURLOPT_CONNECTTIMEOUT, 15);
+            curl_setopt($ch, CURLOPT_TIMEOUT, 15);
+            $response = curl_exec($ch);
+            curl_close($ch);
+
+            // decode the json response
+            $json = json_decode($response, true);
+            return $json;
+        }
+    }
 }

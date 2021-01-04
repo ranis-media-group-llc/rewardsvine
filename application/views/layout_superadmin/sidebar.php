@@ -18,19 +18,19 @@
                 </a>
             </li>
             <li class="dt-side-nav__item ">
-                <a href="<?= base_url('admin/users')?>" class="dt-side-nav__link <?= $this->uri->segment(2) == "users" ? 'active' : '' ?>">
+                <a href="<?= base_url('superadmin/users')?>" class="dt-side-nav__link <?= $this->uri->segment(2) == "users" ? 'active' : '' ?>">
                     <i class="icon icon-metrics icon-fw icon-lg"></i>
                     <span class="dt-side-nav__text">Users</span>
                 </a>
             </li>
             <li class="dt-side-nav__item">
-                <a href="<?= base_url('admin/history')?>" class="dt-side-nav__link <?= $this->uri->segment(2) == "history" ? 'active' : '' ?>">
+                <a href="<?= base_url('superadmin/history')?>" class="dt-side-nav__link <?= $this->uri->segment(2) == "history" ? 'active' : '' ?>">
                     <i class="icon icon-metrics icon-fw icon-lg"></i>
                     <span class="dt-side-nav__text">History</span>
                 </a>
             </li>
             <li class="dt-side-nav__item">
-                <a href="<?= base_url('admin/messages')?>" class="dt-side-nav__link <?= $this->uri->segment(2) == "messages" ? 'active' : '' ?>">
+                <a href="<?= base_url('superadmin/messages')?>" class="dt-side-nav__link <?= $this->uri->segment(2) == "messages" ? 'active' : '' ?>">
                     <i class="icon icon-layout icon-fw icon-lg"></i>
                     <span class="dt-side-nav__text">Redeem Messages</span>
                 </a>

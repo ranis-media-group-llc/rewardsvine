@@ -48,13 +48,12 @@ class Auth extends CI_Controller {
                                         redirect(base_url('auth/login'));
                                     }else{
                                         unset($user->password);
-                                            //redirect(base_url($this->config->item('auth_login_success')));
+                                       redirect(base_url($this->config->item('auth_login_success')));
                                     }
                                 } else if ($user->role == "Admin")  {
-                                    echo 'admin';
                                     redirect(base_url($this->config->item('auth_login_admin')));
                                 } else if ($user->role == "SuperAdmin") {
-                                    redirect(base_url('superadmin/dashboard'));
+                                   redirect(base_url('superadmin/dashboard'));
                                 }else{
                                     $this->data['error'] = "User doesn't have a role.";
                                 }
@@ -116,20 +115,9 @@ class Auth extends CI_Controller {
             if($responseKeys["success"]) {
                 $email = urlencode($input['email_address']);
                 // use curl to make the request
-                $url2 = 'https://api-v4.bulkemailchecker.com/?key='.$this->config->item('bulkemailchecker_api_key').'&email='.$email;
-                $ch = curl_init($url2);
-                curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
-                curl_setopt($ch, CURLOPT_CONNECTTIMEOUT, 15);
-                curl_setopt($ch, CURLOPT_TIMEOUT, 15);
-                $response = curl_exec($ch);
-                curl_close($ch);
-
-                // decode the json response
-                $json = json_decode($response, true);
-                //print_r($json);
-
-                if (array_key_exists('error', $json)) {
-                    $this->data['error'] = "An error occured on Email Checker: " . $json['error'];
+                $check_email = email_checker($this->config->item('bulkemailchecker_api_key'),$email);
+                if (array_key_exists('error', $check_email)) {
+                    $this->data['error'] = "An error occured on Email Checker: " . $check_email['error'];
                 }else {
                     $pass1 = $input['password'];
                     $pass2 = $input['re_password'];

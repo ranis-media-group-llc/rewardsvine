@@ -6,7 +6,7 @@ class Dashboard extends MY_Controller {
 	public function __construct ()
     {
         parent::__construct();
-        $this->auths->check(array("Admin"));
+        $this->auths->check(array("SuperAdmin"));
         $this->load->model('Users_model', 'users');
         $this->load->model('General_model', 'general');
     }

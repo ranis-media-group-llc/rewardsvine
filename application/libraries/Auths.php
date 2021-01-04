@@ -22,7 +22,11 @@ class Auths {
 		} else {
              if ($roles){
                 if(!in_array($this->CI->session->user->role, $roles)) {
+                    if($roles == 'SuperAdmin'){
+                        redirect(base_url('auth/logout'));
+                    }
                     redirect(base_url($this->CI->config->item('auth_denied')));
+
                  }
              }
             //echo "Access Denied!";
