@@ -66,8 +66,44 @@ class Users extends MY_Controller {
                 }
             }
         }
-        $this->data['title'] = "Dashboard";
+        $this->data['title'] = "Members";
         $this->load->view('superadmin/users/add', $this->data);
+    }
+
+    public function edit($id=null)
+    {
+        if(isset($id)){
+            $input = $this->input->post();
+            $this->data['member_data'] = $this->general->get_details($id,'id','rv_users');
+            if ($input) {
+               $action =  $this->uri->segment(5) == 'a' ? 'add' : 'minus';
+               if($action == 'add'){
+                   $new_points = $input['points'] + $input['points_new'];
+               }else{
+                   $new_points = $input['points'] - $input['points_new'];
+               }
+               $input['points'] = $new_points;
+               unset($input['points_new']);
+               $this->general->update($input, $id,'rv_users');
+                redirect(base_url('superadmin/users/'));
+            }
+        }else{
+            redirect(base_url('superadmin/users/'));
+        }
+        $this->data['title'] = "Edit Member";
+        $this->load->view('superadmin/users/edit', $this->data);
+    }
+
+    public function history($id=null)
+    {
+        if(isset($id)){
+            $this->data['member_data'] = $this->general->get_all_with_key($id,'rv_history','DESC','id');
+            $this->data['member_info'] = $this->general->get_details($id,'user_id','rv_users');
+        }else{
+            redirect(base_url('superadmin/users/'));
+        }
+        $this->data['title'] = "Member Points History";
+        $this->load->view('superadmin/users/history', $this->data);
     }
     public function delete()
     {

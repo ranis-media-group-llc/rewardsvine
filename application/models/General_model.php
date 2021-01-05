@@ -22,8 +22,15 @@ class General_model extends CI_Model
         }
     }
 
-    public function get_all_with_key($key,$table)
+    public function get_details($key,$field,$table)
     {
+        $query = $this->db->get_where($table, array($field => $key), 1);
+        return $query->row();
+    }
+
+    public function get_all_with_key($key,$table,$sort=null,$sort_key=null)
+    {
+        $this->db->order_by($sort_key, $sort);
         $query = $this->db->get_where($table,array('user_id' => $key));
         return $query->result();
     }

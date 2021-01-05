@@ -36,11 +36,13 @@
                                     <tr>
                                         <td >Name</td>
                                         <td >Email</td>
+                                        <td >User ID</td>
                                         <td >Date Created</td>
                                         <td >Role</td>
-                                        <td >Points</td>
                                         <td >Status</td>
+                                        <td >Points</td>
                                         <td >Actions</td>
+                                        <td ></td>
                                     </tr>
                                 </thead>
                                 <tbody>
@@ -48,27 +50,49 @@
                                         <tr>
                                             <td><?= $user->fullname; ?></td>
                                             <td><?= $user->email_address; ?></td>
+                                            <td><?= $user->user_id; ?></td>
                                             <td><?= $user->date_created; ?></td>
+
                                             <td><?= $user->role; ?></td>
-                                            <td><?= $user->points; ?></td>
+
                                             <td>
                                                 <?php
-                                                    if($user->status==0){
-                                                        echo 'Unverified';
-                                                    } else if($user->status==1){
-                                                        echo 'Banned';
-                                                    }else if($user->status==2){
-                                                        echo 'Verified';
-                                                    }else if($user->status==3){
-                                                        echo 'Suspended';
-                                                    }
+                                                if($user->status==0){
+                                                    echo 'Unverified';
+                                                } else if($user->status==1){
+                                                    echo 'Banned';
+                                                }else if($user->status==2){
+                                                    echo 'Verified';
+                                                }else if($user->status==3){
+                                                    echo 'Suspended';
+                                                }
                                                 ?>
+                                            </td>
+                                            <td>
+                                                <?= $user->points; ?>
+                                                <a href="<?= base_url('superadmin/users/edit/'.$user->id) ?>/d" data-toggle="tooltip" title="Deduct Points" type="button" style="right: 0;float: right;" class="btn btn-dark btn-xs btn_status">
+                                                    <i class="icon icon-circle-minus-o icon-fw icon-sm"></i>
+                                                </a>
+                                                <a href="<?= base_url('superadmin/users/edit/'.$user->id) ?>/a" id="<?= $user->id; ?>" data-toggle="tooltip" title="Add Points" type="button" style="right: 0;float: right;" class="btn btn-primary btn-xs btn_status">
+                                                    <i class="icon icon-circle-add-o icon-fw icon-sm"></i>
+                                                </a>
                                             </td>
                                             <td>
                                                 <button id="<?= $user->id; ?>" type="button" data-status="remove" class="btn btn-secondary btn-xs text-uppercase btn_status">Remove</button>
                                                 <button id="<?= $user->id; ?>" type="button" data-status="ban" class="btn btn-danger btn-xs text-uppercase btn_status">Ban</button>
                                                 <button id="<?= $user->id; ?>" type="button" data-status="suspend" class="btn btn-warning btn-xs text-uppercase btn_status">Suspend</button>
-                                                <button id="<?= $user->id; ?>" type="button" data-status="verify" class="btn btn-success btn-xs text-uppercase btn_status">Verify</button>
+                                                <button id="<?= $user->id; ?>" type="button" data-status="verify" class="btn btn-success btn-xs text-uppercase btn_status">
+                                                    <i class="icon icon-check icon-fw icon-sm"></i>Verify
+                                                </button>
+
+                                            </td>
+                                            <td>
+                                                <a href="<?= base_url('superadmin/users/history/'.$user->user_id) ?>" data-toggle="tooltip" title="Points History" type="button" class="btn btn-success btn-xs text-uppercase ">
+                                                    <i class="icon icon-list icon-fw icon-sm"></i>
+                                                </a>
+                                                <a href="<?= base_url('superadmin/users/history/'.$user->user_id) ?>" data-toggle="tooltip" title="Send Message" type="button" class="btn btn-success btn-xs text-uppercase ">
+                                                    <i class="icon icon-message icon-fw icon-sm"></i>
+                                                </a>
                                             </td>
                                         </tr>
                                     <?php endforeach; ?>
