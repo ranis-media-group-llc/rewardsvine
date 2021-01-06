@@ -84,7 +84,6 @@
                                                 <button id="<?= $user->id; ?>" type="button" data-status="verify" class="btn btn-success btn-xs text-uppercase btn_status">
                                                     <i class="icon icon-check icon-fw icon-sm"></i>Verify
                                                 </button>
-
                                             </td>
                                             <td>
                                                 <a href="<?= base_url('superadmin/users/history/'.$user->user_id) ?>" data-toggle="tooltip" title="Points History" type="button" class="btn btn-success btn-xs text-uppercase ">

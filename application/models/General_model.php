@@ -12,6 +12,15 @@ class General_model extends CI_Model
         }
     }
 
+    public function add_return_id($input,$table)
+    {
+        if($this->db->insert($table,$input)){
+            return $this->db->insert_id();
+        }else{
+            return false;
+        }
+    }
+
     public function update($input, $id,$table)
     {
         //$input['date_modified'] = date('Y-m-d H:i:s');;
@@ -32,6 +41,19 @@ class General_model extends CI_Model
     {
         $this->db->order_by($sort_key, $sort);
         $query = $this->db->get_where($table,array('user_id' => $key));
+        return $query->result();
+    }
+
+    public function get_all_with_keys($params = array(),$tablename){
+        $this->db->select('*');
+        $this->db->from($tablename);
+
+        if(array_key_exists("where", $params)){
+            foreach($params['where'] as $key => $val){
+                $this->db->where($key, $val);
+            }
+        }
+        $query = $this->db->get();
         return $query->result();
     }
 

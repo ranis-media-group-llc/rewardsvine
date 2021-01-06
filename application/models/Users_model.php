@@ -34,10 +34,6 @@ class Users_model extends CI_Model {
         else
             return false;
     }
-    
-    public function testing(){
-       
-    }
 
     public function checkUser($data = array()){
         $this->db->select('id');
