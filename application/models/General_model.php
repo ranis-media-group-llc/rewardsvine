@@ -31,6 +31,16 @@ class General_model extends CI_Model
         }
     }
 
+    public function update_with_key($input, $id,$table,$key)
+    {
+        //$input['date_modified'] = date('Y-m-d H:i:s');;
+        if ($this->db->update($table, $input, array($key => $id))) {
+            return true;
+        } else {
+            return false;
+        }
+    }
+
     public function get_details($key,$field,$table)
     {
         $query = $this->db->get_where($table, array($field => $key), 1);
@@ -42,6 +52,33 @@ class General_model extends CI_Model
         $this->db->order_by($sort_key, $sort);
         $query = $this->db->get_where($table,array('user_id' => $key));
         return $query->result();
+    }
+
+    public function get_details_with_join($params = array())
+    {
+        if(array_key_exists("main_table",$params) && $params['main_table'] != NULL ){
+            $this->db->from($params['main_table']);
+        }else{
+            return FALSE;
+        }
+
+        if(array_key_exists("select",$params) && $params['select'] != NULL ){
+            $this->db->select($params['select']);
+        }else{
+            $this->db->select('*');
+        }
+
+        if(array_key_exists("join",$params) && $params['join'] != NULL ){
+            $this->db->join($params['join']['table'], $params['join']['statement'],$params['join']['join_as']);
+        }
+
+        if(array_key_exists("where", $params)){
+            foreach($params['where'] as $key => $val){
+                $this->db->where($key, $val);
+            }
+        }
+        $query = $this->db->get();
+        return $query->row();
     }
 
     public function get_all_with_keys($params = array(),$tablename){

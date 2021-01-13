@@ -35,6 +35,7 @@ class Messages extends MY_Controller {
         }else{
             $input['status'] = 0;
         }
+        $input['action_taken_by'] = $_SESSION['user']->id;
         if ($this->general->update($input,$id,'rv_redeem')) {
             echo  "success";
         }

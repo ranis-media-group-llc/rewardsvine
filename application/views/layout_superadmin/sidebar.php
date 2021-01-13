@@ -24,7 +24,7 @@
                 </a>
             </li>
             <li class="dt-side-nav__item ">
-                <a href="<?= base_url('superadmin/admins')?>" class="dt-side-nav__link <?= $this->uri->segment(2) == "admins" ? 'active' : '' ?>">
+                <a href="<?= base_url('superadmin/admin')?>" class="dt-side-nav__link <?= $this->uri->segment(2) == "admin" ? 'active' : '' ?>">
                     <i class="icon icon-user icon-fw icon-lg"></i>
                     <span class="dt-side-nav__text">Admins</span>
                 </a>
