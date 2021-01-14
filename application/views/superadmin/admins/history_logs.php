@@ -42,7 +42,8 @@ $this->load->view('layout_superadmin/head');
                                     </tr>
                                     </thead>
                                     <tbody>
-                                    <?php foreach ($admins as $user) :  ?>
+                                    <?php  if (isset($admins)) :  ?>
+                                    <?php  foreach ($admins as $user) :  ?>
                                         <tr>
                                             <td><?= $user->fullname; ?></td>
                                             <td><?= $user->email_address; ?></td>
@@ -82,6 +83,7 @@ $this->load->view('layout_superadmin/head');
                                             </td>
                                         </tr>
                                     <?php endforeach; ?>
+                                    <?php endif; ?>
                                     </tbody>
                                 </table>
                             </div>

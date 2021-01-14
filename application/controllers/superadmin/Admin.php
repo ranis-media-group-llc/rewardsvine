@@ -112,7 +112,7 @@ class Admin extends MY_Controller {
     public function history($id)
     {
         $this->data['title'] = "Admin Settings";
-        $this->data['admins'] = $this->general->get_details($id,'user_id','rv_admin_settings');
-        $this->load->view('superadmin/admins/history_log', $this->data);
+        $this->data['admins'] = $this->general->get_details($id,'fk_user_id','rv_admin_settings');
+        $this->load->view('superadmin/admins/history_logs', $this->data);
     }
 }
