@@ -27,30 +27,56 @@
                     <div class="row">
                         <div class="col-md-12">
                             <div class="table-responsive">
-                                <a href="<?= base_url('superadmin/messages/add') ?>" style="right: 0;float: right;"  type="button" class="btn btn-secondary btn-xs text-uppercase btn_add pull-right">
-                                    <i class="icon icon-circle-add-o icon-fw icon-lg"></i> Add Message
-                                </a>
-                                <br><br>
                             <table class="table table-striped table-hover dt-responsive display nowrap" id="redeem_table">
                                 <thead>
                                     <tr>
-                                        <td >Title</td>
-                                        <td >Message</td>
-                                        <td >Added By</td>
-                                        <td >Status</td>
+                                        <td >User ID</td>
+                                        <td >Redeem Option</td>
+                                        <td >Redeem Amount</td>
+                                        <td >Redeem Points</td>
+                                        <td >Redeem Message</td>
                                         <td >Date</td>
+                                        <td >Status</td>
                                         <td >Action</td>
                                     </tr>
                                 </thead>
                                 <tbody>
                                     <?php foreach ($messages as  $message) :  ?>
                                         <tr>
-                                            <td><?= $message->title; ?></td>
-                                            <td><?= $message->message; ?></td>
-                                            <td><?= $message->fullname; ?></td>
-                                            <td><?= $message->status==0 ? 'Draft' : 'Published'; ?></td>
-                                            <td><?= $message->datetime; ?></td>
-                                            <td></td>
+                                            <td><?= $message->user_id; ?></td>
+                                            <td><?= $message->redeem_option; ?></td>
+                                            <td><?= $message->redeem_amt; ?></td>
+                                            <td><?= $message->redeem_points; ?></td>
+                                            <td><?= $message->redeem_message; ?></td>
+                                            <td><?= $message->redeem_date; ?></td>
+                                            <td>
+                                                <?php
+                                                    if($message->status == 0){
+                                                        echo 'Pending';
+                                                    }else if($message->status == 1){
+                                                        echo 'In Progress';
+                                                    }else if($message->status == 2){
+                                                        echo 'Rejected';
+                                                    }else if($message->status == 3){
+                                                        echo 'Completed';
+                                                    }
+                                                ?>
+                                            </td>
+                                            <td>
+                                                <?php
+                                                    if($message->status == 0){
+                                                        ?>
+                                                        <button id="<?= $message->id; ?>" type="submit" class="btn btn-secondary btn-xs text-uppercase btn_accept">Accept</button>
+                                                        <button id="<?= $message->id; ?>" type="submit" class="btn btn-danger btn-xs text-uppercase btn_reject">Reject</button>
+                                                        <?php
+                                                    }else if($message->status == 1){
+                                                        ?>
+                                                            <button id="<?= $message->id; ?>" type="submit" class="btn btn-success btn-xs text-uppercase btn_complete">Mark As Complete</button>
+                                                        <?php
+                                                    }
+
+                                                ?>
+                                            </td>
                                         </tr>
                                     <?php endforeach; ?>
                                 </tbody>

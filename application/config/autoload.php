@@ -134,4 +134,5 @@ $autoload['language'] = array();
 */
 $autoload['model'] = array(
     'Users_model' => 'users',
+    'General_model' => 'general_model',
 );

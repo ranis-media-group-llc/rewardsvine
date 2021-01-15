@@ -13,28 +13,38 @@
             <!-- Menu Item -->
             <li class="dt-side-nav__item">
                 <a href="<?= base_url('admin/dashboard')?>" class="dt-side-nav__link <?= $this->uri->segment(2) == "dashboard" ? 'active' : '' ?>">
-                    <i class="icon icon-metrics icon-fw icon-lg"></i>
+                    <i class="icon icon-dashboard icon-fw icon-lg"></i>
                     <span class="dt-side-nav__text">Dashboard</span>
                 </a>
             </li>
             <li class="dt-side-nav__item ">
                 <a href="<?= base_url('admin/users')?>" class="dt-side-nav__link <?= $this->uri->segment(2) == "users" ? 'active' : '' ?>">
-                    <i class="icon icon-metrics icon-fw icon-lg"></i>
+                    <i class="icon icon-users icon-fw icon-lg"></i>
                     <span class="dt-side-nav__text">Users</span>
                 </a>
             </li>
             <li class="dt-side-nav__item">
                 <a href="<?= base_url('admin/history')?>" class="dt-side-nav__link <?= $this->uri->segment(2) == "history" ? 'active' : '' ?>">
-                    <i class="icon icon-metrics icon-fw icon-lg"></i>
+                    <i class="icon icon-list-advance icon-fw icon-lg"></i>
                     <span class="dt-side-nav__text">History</span>
                 </a>
             </li>
+            <?php if($admin_settings->is_approval == 1) : ?>
             <li class="dt-side-nav__item">
-                <a href="<?= base_url('admin/messages')?>" class="dt-side-nav__link <?= $this->uri->segment(2) == "messages" ? 'active' : '' ?>">
-                    <i class="icon icon-layout icon-fw icon-lg"></i>
+                <a href="<?= base_url('admin/redeem')?>" class="dt-side-nav__link <?= $this->uri->segment(2) == "redeem" ? 'active' : '' ?>">
+                    <i class="icon icon-revenue icon-fw icon-lg"></i>
                     <span class="dt-side-nav__text">Redeem Messages</span>
                 </a>
             </li>
+            <?php endif; ?>
+            <?php if($admin_settings->is_send_notif == 1) : ?>
+            <li class="dt-side-nav__item">
+                <a href="<?= base_url('admin/messages')?>" class="dt-side-nav__link <?= $this->uri->segment(2) == "messages" ? 'active' : '' ?>">
+                    <i class="icon icon-message icon-fw icon-lg"></i>
+                    <span class="dt-side-nav__text">Messages</span>
+                </a>
+            </li>
+            <?php endif; ?>
             <!-- /menu item -->
         </ul>
         <!-- /sidebar navigation -->

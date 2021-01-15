@@ -19,10 +19,13 @@ class Auth extends CI_Controller {
         $this->load->helper('site');
         $this->load->model('General_model', 'general');
         $this->load->config('settings');
+
+
     }
 
     public function login($error = FALSE)
 	{
+        echo get_user_ip_address();
         // Redirect to profile page if the user already logged in
         $ip = $_SERVER['REMOTE_ADDR'];
         $input = $this->input->post();
@@ -36,7 +39,7 @@ class Auth extends CI_Controller {
                 // should return JSON with success as true
 
                 //print_r($responseKeys);
-                if($responseKeys["success"]) {
+                if(!$responseKeys["success"]) {
                     //if (array_key_exists('success', $responseKeys)) {
                     $user = $this->users->get_details($input['email_address'], 'email_address');
                         if ($user) {
@@ -113,6 +116,13 @@ class Auth extends CI_Controller {
             $responseKeys = json_decode($response,true);
 
             if($responseKeys["success"]) {
+                $user = $this->users->get_details($input['email_address'], 'email_address');
+                if ($user) {
+                    $this->session->set_flashdata('reset_link_sent', 'You already have RewardsVine account.');
+                    redirect(base_url('auth/login'));
+                }
+
+
                 $email = urlencode($input['email_address']);
                 // use curl to make the request
                 $check_email = email_checker($this->config->item('bulkemailchecker_api_key'),$email);

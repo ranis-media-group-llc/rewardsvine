@@ -9,7 +9,6 @@
                 <span class="dt-side-nav__text">NAVIGATIONS</span>
             </li>
             <!-- /menu header -->
-
             <!-- Menu Item -->
             <li class="dt-side-nav__item">
                 <a href="<?= base_url('superadmin/dashboard')?>" class="dt-side-nav__link <?= $this->uri->segment(2) == "dashboard" ? 'active' : '' ?>">
@@ -41,7 +40,6 @@
                     <span class="dt-side-nav__text">Redeem Messages</span>
                 </a>
             </li>
-
             <li class="dt-side-nav__item">
                 <a href="<?= base_url('superadmin/messages')?>" class="dt-side-nav__link <?= $this->uri->segment(2) == "messages" ? 'active' : '' ?>">
                     <i class="icon icon-message icon-fw icon-lg"></i>

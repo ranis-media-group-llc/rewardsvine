@@ -19,8 +19,11 @@ class MY_Controller extends CI_Controller {
 
         if(isset($_SESSION['user'])){
             $this->data['users_data'] = $this->users->get_details($_SESSION['user']->user_id,'user_id');
-            $data =  $_SESSION['user'];
-            $id = $data->email_address;
+            if($_SESSION['user']->role == 'Admin'){
+                $this->data['admin_settings'] = $this->general_model->get_details($_SESSION['user']->id,'fk_user_id','rv_admin_settings');
+            }
+            //$data =  $_SESSION['user'];
+            //$id = $data->email_address;
         }else{
             redirect(base_url('auth/login'));
         }
