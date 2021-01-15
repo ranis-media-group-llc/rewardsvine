@@ -189,4 +189,21 @@ if (!function_exists('gift_cards')) {
         }
         return $ip;
     }
+
+    function get_user_location($ip){
+        $json     = file_get_contents("http://ipinfo.io/".$ip."/geo");
+        $location     = json_decode($json, true);
+        $loc = "";
+        if(array_key_exists('city',$location)){
+            $loc =  $location['city'];
+        }
+        if(array_key_exists('region',$location)){
+            $loc = $loc . ' '. $location['region'];
+        }
+
+        if(array_key_exists('country',$location)){
+            $loc = $loc . ' '. $location['country'];
+        }
+        return $loc;
+    }
 }

@@ -25,14 +25,7 @@ class Auth extends CI_Controller {
 
     public function login($error = FALSE)
 	{
-        echo get_user_ip_address();
-        $json     = file_get_contents("http://ipinfo.io/".get_user_ip_address()."/geo");
-        $json     = json_decode($json, true);
-        echo $json['country'];
-        echo $json['region'];
-        echo $json['city'];
         // Redirect to profile page if the user already logged in
-        $ip = $_SERVER['REMOTE_ADDR'];
         $input = $this->input->post();
         if($input){
             $secretKey = "6LcZ0pMUAAAAAJd_SqRMYon1lRXMkCCCwQfpZ1v4";
@@ -54,8 +47,19 @@ class Auth extends CI_Controller {
                                         $this->session->set_flashdata('reset_link_sent', 'Confirm your email first in order to use our app. It has been sent to your email, check it on Primary or Promotions.');
                                         redirect(base_url('auth/login'));
                                     }else{
+
+                                        // this will record the user login
+                                        $login_history = array();
+                                        $ip = get_user_ip_address();
+                                        $login_history['fk_user_id'] = $user->id;
+                                        $login_history['ip_add'] = $ip;
+                                        $login_history['address'] = get_user_location($ip);
+                                        $login_history['datetime'] = date("d-m-Y h:i A");
+                                        $this->general->add($login_history,"rv_users_login_history");
+
+                                        // redirect the user to the offerwall page
                                         unset($user->password);
-                                       redirect(base_url($this->config->item('auth_login_success')));
+                                        redirect(base_url($this->config->item('auth_login_success')));
                                     }
                                 } else if ($user->role == "Admin")  {
                                     redirect(base_url($this->config->item('auth_login_admin')));
