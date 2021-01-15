@@ -26,6 +26,11 @@ class Auth extends CI_Controller {
     public function login($error = FALSE)
 	{
         echo get_user_ip_address();
+        $json     = file_get_contents("http://ipinfo.io/".get_user_ip_address()."/geo");
+        $json     = json_decode($json, true);
+        echo $json['country'];
+        echo $json['region'];
+        echo $json['city'];
         // Redirect to profile page if the user already logged in
         $ip = $_SERVER['REMOTE_ADDR'];
         $input = $this->input->post();
@@ -37,7 +42,6 @@ class Auth extends CI_Controller {
                 $response = file_get_contents($url);
                 $responseKeys = json_decode($response,true);
                 // should return JSON with success as true
-
                 //print_r($responseKeys);
                 if(!$responseKeys["success"]) {
                     //if (array_key_exists('success', $responseKeys)) {
