@@ -54,7 +54,7 @@ class General_model extends CI_Model
         return $query->result();
     }
 
-    public function get_details_with_join($params = array())
+    public function get_details_with_join($params = array(),$result=TRUE)
     {
         if(array_key_exists("main_table",$params) && $params['main_table'] != NULL ){
             $this->db->from($params['main_table']);
@@ -78,7 +78,11 @@ class General_model extends CI_Model
             }
         }
         $query = $this->db->get();
-        return $query->row();
+        if($result){
+            return $query->result();
+        }else{
+            return $query->row();
+        }
     }
 
     public function get_all_with_keys($params = array(),$tablename){

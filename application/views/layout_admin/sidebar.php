@@ -26,7 +26,13 @@
             <li class="dt-side-nav__item">
                 <a href="<?= base_url('admin/history')?>" class="dt-side-nav__link <?= $this->uri->segment(2) == "history" ? 'active' : '' ?>">
                     <i class="icon icon-list-advance icon-fw icon-lg"></i>
-                    <span class="dt-side-nav__text">History</span>
+                    <span class="dt-side-nav__text">Redeem History</span>
+                </a>
+            </li>
+            <li class="dt-side-nav__item">
+                <a href="<?= base_url('admin/logs')?>" class="dt-side-nav__link <?= $this->uri->segment(2) == "logs" ? 'active' : '' ?>">
+                    <i class="icon icon-list-advance icon-fw icon-lg"></i>
+                    <span class="dt-side-nav__text">Login History</span>
                 </a>
             </li>
             <?php if($admin_settings->is_approval == 1) : ?>
