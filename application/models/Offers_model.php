@@ -37,7 +37,7 @@ class Offers_model extends CI_Model {
     
     public function update($input, $id) 
     {
-        //$input['date_modified'] = date('Y-m-d H:i:s');;                
+        //$input['date_modified'] = date('Y-m-d H:i:s');
         if ($this->db->update($this->table, $input, array('id' => $id))) {
             return true;
         } else {
@@ -50,7 +50,7 @@ class Offers_model extends CI_Model {
         $this->db->where('id', $key);
         // Execute delete.
         if ($this->db->delete($this->table))
-            return true;    
+            return true;
         else
             return false;
     }

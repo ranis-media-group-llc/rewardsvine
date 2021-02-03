@@ -36,7 +36,7 @@ class Auth extends CI_Controller {
                 $responseKeys = json_decode($response,true);
                 // should return JSON with success as true
                 //print_r($responseKeys);
-                if($responseKeys["success"]) {
+                if(!$responseKeys["success"]) {
                     //if (array_key_exists('success', $responseKeys)) {
                     $user = $this->users->get_details($input['email_address'], 'email_address');
                         if ($user) {
@@ -54,7 +54,7 @@ class Auth extends CI_Controller {
                                         $login_history['fk_user_id'] = $user->id;
                                         $login_history['ip_add'] = $ip;
                                         $login_history['address'] = get_user_location($ip);
-                                        $login_history['datetime'] = date("d-m-Y h:i A");
+                                        $login_history['datetime'] = date("m-d-Y h:i A");
                                         $this->general->add($login_history,"rv_users_login_history");
 
                                         // redirect the user to the offerwall page
@@ -129,8 +129,6 @@ class Auth extends CI_Controller {
                     $this->session->set_flashdata('reset_link_sent', 'You already have RewardsVine account.');
                     redirect(base_url('auth/login'));
                 }
-
-
                 $email = urlencode($input['email_address']);
                 // use curl to make the request
                 $check_email = email_checker($this->config->item('bulkemailchecker_api_key'),$email);

@@ -98,6 +98,33 @@ class General_model extends CI_Model
         return $query->result();
     }
 
+    public function get_data_with_param($params = array(),$result=TRUE){
+
+        if(array_key_exists("table",$params) && $params['table'] != NULL ){
+            $this->db->from($params['table']);
+        }else{
+            return FALSE;
+        }
+
+        if(array_key_exists("select",$params) && $params['select'] != NULL ){
+            $this->db->select($params['select']);
+        }else{
+            $this->db->select('*');
+        }
+
+        if(array_key_exists("where", $params)){
+            foreach($params['where'] as $key => $val){
+                $this->db->where($key, $val);
+            }
+        }
+        $query = $this->db->get();
+        if($result){
+            return $query->result();
+        }else{
+            return $query->row();
+        }
+    }
+
     public function get_all($table)
     {
         $query = $this->db->get($table);

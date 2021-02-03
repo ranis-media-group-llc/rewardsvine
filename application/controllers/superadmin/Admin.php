@@ -31,52 +31,49 @@ class Admin extends MY_Controller {
         if ($input) {
             $email = urlencode($input['email_address']);
             // use curl to make the request
-                $pass1 = $input['password'];
-                $pass2 = $input['re_password'];
-                $this->load->helper('string');
-                $input['password'] = $this->bcrypt->hash_password($input['password']);
-                unset($input['re_password']);
-                unset($input['g-recaptcha-response']);
-                $input['date_created'] = date("d-m-Y h:i A");
-                $input['points'] = 0;
-                $input['user_id'] = random_string('numeric', 6);
-                $input['role'] = "Admin";
+            $pass1 = $input['password'];
+            $pass2 = $input['re_password'];
+            $this->load->helper('string');
+            $input['password'] = $this->bcrypt->hash_password($input['password']);
+            unset($input['re_password']);
+            unset($input['g-recaptcha-response']);
+            $input['date_created'] = date("d-m-Y h:i A");
+            $input['points'] = 0;
+            $input['user_id'] = random_string('numeric', 6);
+            $input['role'] = "Admin";
+            if ($pass1 != $pass2) {
+                $this->data['error'] = "Password didn't match.";
+            } else {
+                if ($this->users->register($input)) {
+                    $confirm_code_token = hash_code();
+                    $input['confirm_token'] = $confirm_code_token;
+                    $post = [
+                        'test_email' => $input['email_address'],
+                        'campaign_id' => $this->config->item('confirm_email_camp_id'),
+                        'display_errors'   => 0,
+                        'password_reset_link'   => $_SERVER['SERVER_NAME'].'/auth/confirm_email/?r='.$confirm_code_token.'&email='.$input['email_address'],
+                    ];
+                    //$send_reset_pass_mail = mail_send($post);
+                    $send_reset_pass_mail = "ok,";
+                    if ($send_reset_pass_mail == "ok,") {
+                        $user = $this->users->get_details($input['email_address'], 'email_address');
 
-                if ($pass1 != $pass2) {
-                    $this->data['error'] = "Password didn't match.";
-                } else {
-                    if ($this->users->register($input)) {
+                        // add settings setup for this admin
+                        $input_admin_settings = array();
+                        $input_admin_settings['fk_user_id'] = $user->id;
+                        $input_admin_settings['is_approval'] = 0;
+                        $input_admin_settings['is_send_notif'] = 0;
+                        $this->general->add($input_admin_settings,'rv_admin_settings');
 
-                        $confirm_code_token = hash_code();
-                        $input['confirm_token'] = $confirm_code_token;
-                        $post = [
-                            'test_email' => $input['email_address'],
-                            'campaign_id' => $this->config->item('confirm_email_camp_id'),
-                            'display_errors'   => 0,
-                            'password_reset_link'   => $_SERVER['SERVER_NAME'].'/auth/confirm_email/?r='.$confirm_code_token.'&email='.$input['email_address'],
-                        ];
-                        //$send_reset_pass_mail = mail_send($post);
-                        $send_reset_pass_mail = "ok,";
-                        if ($send_reset_pass_mail == "ok,") {
-                            $user = $this->users->get_details($input['email_address'], 'email_address');
-
-                            // add settings setup for this admin
-                            $input_admin_settings = array();
-                            $input_admin_settings['fk_user_id'] = $user->id;
-                            $input_admin_settings['is_approval'] = 0;
-                            $input_admin_settings['is_send_notif'] = 0;
-                            $this->general->add($input_admin_settings,'rv_admin_settings');
-
-                            // update user for email confirmation token
-                            if ($this->general->update($input,$user->id,'rv_users')) {
-                                redirect(base_url('superadmin/admin/'));
-                            }
-                        }else{
-                            $this->data['error'] = "Can't send to your email.";
+                        // update user for email confirmation token
+                        if ($this->general->update($input,$user->id,'rv_users')) {
+                            redirect(base_url('superadmin/admin/'));
                         }
+                    } else {
+                        $this->data['error'] = "Can't send to your email.";
                     }
                 }
-
+            }
         }
         $this->data['title'] = "Rv - Admins";
         $this->load->view('superadmin/admins/add', $this->data);

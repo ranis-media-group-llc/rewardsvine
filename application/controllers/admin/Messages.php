@@ -30,7 +30,6 @@ class Messages extends MY_Controller {
             unset($input['users_lists']);
             $input['datetime'] = date("d-m-Y h:i A");
             $input['user_id'] = $_SESSION['user']->id;
-
             $message_id = $this->general->add_return_id($input,"rv_messages");
             if($message_id != NULL){
                 if($send_to == 'all'){
@@ -47,7 +46,6 @@ class Messages extends MY_Controller {
                         $message_send['user_id'] = $member->user_id;
                         $message_send['sent'] = $input['status'];
                         $message_send['view'] = 0;
-
                         if($this->general->add($message_send,"rv_messages_send")){
                             unset($message_send);
                         }

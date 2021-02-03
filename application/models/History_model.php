@@ -25,12 +25,11 @@ class History_model extends CI_Model {
     {
         if($this->db->insert($this->table,$input)) {
            return true;
-            
         } else {
             return false;
         }
     }
-     public function delete($key)
+    public function delete($key)
     {
         $this->db->where('id', $key);
         // Execute delete.

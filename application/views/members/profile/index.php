@@ -51,9 +51,9 @@
                                                             <!-- Info -->
                                                             <div class="dt-avatar-info">
                                                                 <span class="dt-avatar-name display-4 mb-2 font-weight-light">
-                                                                    <?= $_SESSION['user']->fullname ?>
+                                                                    <?= $_SESSION['user']->fullname; ?>
                                                                 </span>
-                                                                <span class="f-16">USA</span>
+                                                                <span class="f-16"><?= $_SESSION['user']->country; ?></span>
                                                             </div>
                                                             <!-- /info -->
                                                         </div>
@@ -88,36 +88,26 @@
 
                                                     <!-- Profile Banner Bottom -->
                                                     <div class="profile__banner-navigation">
-
-
-
                                                         <!-- Dropdown -->
                                                         <div class="dropdown pl-3 mt-2 ml-auto">
-
                                                             <!-- Dropdown Button -->
                                                             <a href="#" class="dropdown-toggle no-arrow text-white" data-toggle="dropdown"
                                                                aria-haspopup="true" aria-expanded="false">
-                                                                <i class="icon icon-settings icon-xl mr-2"></i><span
-                                                                        class="d-none d-sm-inline-block">Settings</span>
+                                                                <i class="icon icon-settings icon-xl mr-2"></i><span class="d-none d-sm-inline-block">Settings</span>
                                                             </a>
                                                             <!-- /dropdown button -->
-
                                                             <!-- Dropdown Menu -->
                                                             <div class="dropdown-menu dropdown-menu-right">
-                                                                <a class="dropdown-item" href="javascript:void(0)">Action</a>
-                                                                <a class="dropdown-item" href="javascript:void(0)">Another action</a>
-                                                                <a class="dropdown-item" href="javascript:void(0)">Something else here</a>
+                                                                <a class="dropdown-item" href="<?= base_url('profile/edit'); ?>">Edit Profile</a>
                                                                 <div class="dropdown-divider"></div>
-                                                                <a class="dropdown-item" href="javascript:void(0)">Separated link</a>
+                                                                <a class="dropdown-item" href="<?= base_url('profile/password'); ?>">Change Password</a>
+                                                                <div class="dropdown-divider"></div>
                                                             </div>
                                                             <!-- /dropdown menu -->
-
                                                         </div>
                                                         <!-- /dropdown -->
-
                                                     </div>
                                                     <!-- /profile banner bottom -->
-
                                                 </div>
                                                 <!-- /profile banner -->
                                                     <!-- Grid Item -->

@@ -27,7 +27,7 @@
                     <div class="row">
                         <div class="col-md-12">
                             <div class="table-responsive">
-                                <a href="<?= base_url('superadmin/messages/add') ?>" style="right: 0;float: right;"  type="button" class="btn btn-secondary btn-xs text-uppercase btn_add pull-right">
+                                <a href="<?= base_url('admin/messages/add') ?>" style="right: 0;float: right;"  type="button" class="btn btn-secondary btn-xs text-uppercase btn_add pull-right">
                                     <i class="icon icon-circle-add-o icon-fw icon-lg"></i> Add Message
                                 </a>
                                 <br><br>

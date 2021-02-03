@@ -81,11 +81,10 @@
                                     <span class="f-12">Member</span>
                                 </span>
                             </div>
-                            <a class="dropdown-item" href="javascript:void(0)"> <i class="icon icon-user icon-fw mr-2 mr-sm-1"></i>Account
+                            <a class="dropdown-item" href="<?= base_url('profile/'); ?>"> <i class="icon icon-user icon-fw mr-2 mr-sm-1"></i>Account
                             </a>
-                            <a class="dropdown-item" href="javascript:void(0)">
-                                <i class="icon icon-settings icon-fw mr-2 mr-sm-1"></i>
-                                Setting
+                            <a class="dropdown-item" href="<?= base_url('profile/edit'); ?>">
+                                <i class="icon icon-settings icon-fw mr-2 mr-sm-1"></i> Change Profile
                             </a>
                             <a class="dropdown-item" href="<?= base_url('auth/logout') ?>"> <i class="icon icon-editors icon-fw mr-2 mr-sm-1"></i>
                                 Logout
@@ -97,10 +96,8 @@
                 <!-- /header menu -->
             </div>
             <!-- Header Menu Wrapper -->
-
         </div>
         <!-- /header toolbar -->
-
     </div>
     <!-- /header container -->
 </header>
