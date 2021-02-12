@@ -27,6 +27,7 @@ class Profile extends MY_Controller {
     {
         $input = $this->input->post();
         if ($input) {
+
         }
         $this->data['title'] = 'RewardsVine - Reset Password';
         $this->load->view('members/profile/password',$this->data);

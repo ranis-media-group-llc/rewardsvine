@@ -211,4 +211,17 @@ if (!function_exists('gift_cards')) {
         }
         return $loc;
     }
+
+    function check_proxy($ip){
+        $url2 = 'http://check.getipintel.net/check.php?ip='.$ip.'&contact=';
+        $ch = curl_init($url2);
+        curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
+        curl_setopt($ch, CURLOPT_CONNECTTIMEOUT, 15);
+        curl_setopt($ch, CURLOPT_TIMEOUT, 15);
+        $response = curl_exec($ch);
+        curl_close($ch);
+        // decode the json response
+        $json = json_decode($response, true);
+        return $json;
+    }
 }

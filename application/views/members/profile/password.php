@@ -45,15 +45,15 @@ $this->load->view('layout/head');
                                                     <form method="post">
                                                         <div class="form-group">
                                                             <label class="" for="user-name">Old Password</label>
-                                                            <input type="text" class="form-control" name="title" required>
+                                                            <input type="text" class="form-control" name="old_password" required>
                                                         </div>
                                                         <div class="form-group">
                                                             <label class="" for="email-1">New Password</label>
-                                                            <input type="text" class="form-control" name="title" required>
+                                                            <input type="text" class="form-control" name="new_password" required>
                                                         </div>
                                                         <div class="form-group">
                                                             <label class="" for="email-1">Enter New Password</label>
-                                                            <input type="text" class="form-control" name="title" required>
+                                                            <input type="text" class="form-control" name="renew_password" required>
                                                         </div>
                                                         <div class="form-group">
                                                             <a href="<?= base_url('profile/'); ?>" class="btn btn-primary text-uppercase">

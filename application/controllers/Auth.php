@@ -22,9 +22,20 @@ class Auth extends CI_Controller {
 
 
     }
+    public function proxy(){
+        $this->data['title'] = "RewardsVine";
+        $this->load->view('auth/proxy', $this->data);
+    }
+
 
     public function login($error = FALSE)
 	{
+        $check_proxy = check_proxy(get_user_ip_address());
+
+	    if($check_proxy > 0.95){
+            redirect(base_url('auth/proxy'));
+        }
+
         // Redirect to profile page if the user already logged in
         $input = $this->input->post();
         if($input){
@@ -115,6 +126,11 @@ class Auth extends CI_Controller {
 
     public function signup($error = FALSE)
 	{
+        $check_proxy = check_proxy(get_user_ip_address());
+
+        if($check_proxy > 0.95){
+            redirect(base_url('auth/proxy'));
+        }
         $input = $this->input->post();
         if($input){
             $secretKey = "6LcZ0pMUAAAAAJd_SqRMYon1lRXMkCCCwQfpZ1v4";
@@ -226,6 +242,11 @@ class Auth extends CI_Controller {
 
     public function reset_password()
     {
+        $check_proxy = check_proxy(get_user_ip_address());
+
+        if($check_proxy > 0.95){
+            redirect(base_url('auth/proxy'));
+        }
         $input = $this->input->post();
         if($input){
             if($input['password'] == $input['re_password']){
