@@ -35,7 +35,7 @@
                     <span class="dt-side-nav__text">Login History</span>
                 </a>
             </li>
-            <?php if($admin_settings->is_approval == 1) : ?>
+            <?php if(isset($admin_settings) && $admin_settings->is_approval == 1) : ?>
             <li class="dt-side-nav__item">
                 <a href="<?= base_url('admin/redeem')?>" class="dt-side-nav__link <?= $this->uri->segment(2) == "redeem" ? 'active' : '' ?>">
                     <i class="icon icon-revenue icon-fw icon-lg"></i>
@@ -43,7 +43,7 @@
                 </a>
             </li>
             <?php endif; ?>
-            <?php if($admin_settings->is_send_notif == 1) : ?>
+            <?php if(isset($admin_settings) && $admin_settings->is_send_notif == 1) : ?>
             <li class="dt-side-nav__item">
                 <a href="<?= base_url('admin/messages')?>" class="dt-side-nav__link <?= $this->uri->segment(2) == "messages" ? 'active' : '' ?>">
                     <i class="icon icon-message icon-fw icon-lg"></i>

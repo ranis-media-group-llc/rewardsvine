@@ -62,17 +62,13 @@
                 <div class="dt-login__content">
                     <div class="dt-login__content-inner">
                         <div class="col-md-12 ">
-
                         </div>
                         <div class="login-or">
                             <hr class="hr-or">
-
                             <div class="alert alert-danger alert-dismissible" role="alert">
-
                                 <strong>VPN is strongly probihited!</strong>
                             </div>
                         </div>
-
                     </div>
                 </div>
             </div>
