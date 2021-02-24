@@ -40,7 +40,36 @@
                                         <br><br>
                                         <div class="tab-content">
                                             <div class="col-md-12">
-                                                <center><h1>Coming Soon!</h1></center>
+                                                    <div class="row">
+                                                        <div class="col-md-10">
+                                                            <input type="text" name="job_tag" class="form-control" value="<?= base_url().'auth/signup?i='. $_SESSION['user']->user_id; ?>" id="job_tags_right" readonly>
+                                                        </div>
+                                                        <div class="col-md-2">
+                                                            <button type="button" class="btn btn-sm btn-primary">
+                                                                <span class="icon icon-task-manager icon-fw icon-lg"  style=""></span> Copy</button>
+                                                        </div>
+                                                    </div>
+                                                <br><br>
+                                                <div class="table-responsive">
+                                                    <table id="referral_table" class="table table-hover table-bordered table-striped">
+                                                        <thead>
+                                                        <tr>
+                                                            <th>Name</th>
+                                                            <th>DateTime</th>
+                                                            <th>Points</th>
+                                                        </tr>
+                                                        </thead>
+                                                        <tbody>
+                                                            <?php foreach($referrals as $his) : ?>
+                                                                <tr>
+                                                                    <td><?= $his->offer_id; ?></td>
+                                                                    <td><?= $his->offer_name; ?></td>
+                                                                    <td><?= $his->points_added; ?></td>
+                                                                </tr>
+                                                            <?php endforeach; ?>
+                                                        </tbody>
+                                                    </table>
+                                                </div>
                                             </div>
                                         </div>
                                     </div>
@@ -68,4 +97,15 @@
 <?php
 $this->load->view('layout/foot');
 ?>
+<script>
+    $(document).ready( function () {
+        $('#referral_table').DataTable({
+            "responsive" : true,
+            "pageLength": 10,
+            "order" : [],
+            "searching" : false,
+
+        });
+    } );
+</script>
 

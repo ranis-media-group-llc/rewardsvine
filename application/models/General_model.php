@@ -117,6 +117,15 @@ class General_model extends CI_Model
                 $this->db->where($key, $val);
             }
         }
+
+        if(array_key_exists("order",$params)){
+            if(isset($params['order']['ordering'])){
+                $this->db->order_by($params['order']['order_by'], $params['order']['ordering']);
+            }else{
+                $this->db->order_by($params['order']['order_by'], "DESC");
+            }
+        }
+
         $query = $this->db->get();
         if($result){
             return $query->result();
