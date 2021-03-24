@@ -42,7 +42,7 @@
                                             <div class="col-md-12">
                                                     <div class="row">
                                                         <div class="col-md-10">
-                                                            <input type="text" name="job_tag" class="form-control" value="<?= base_url().'auth/signup?i='. $_SESSION['user']->user_id; ?>" id="job_tags_right" readonly>
+                                                            <input type="text" name="job_tag" class="form-control" value="<?= 'https://members.rewardsvine.com/auth/signup?i='. $_SESSION['user']->user_id; ?>" id="job_tags_right" readonly>
                                                         </div>
                                                         <div class="col-md-2">
                                                             <button type="button" class="btn btn-sm btn-primary">

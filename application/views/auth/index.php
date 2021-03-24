@@ -49,7 +49,7 @@
                         //console.log( googleUser.getBasicProfile().getN);
                         check_user(user_data);
                     }, function(error) {
-                        alert(JSON.stringify(error, undefined, 2));
+                        // alert(JSON.stringify(error, undefined, 2));
                 });
             }
         </script>
@@ -173,7 +173,7 @@
                                                         </div>
                                                     </div>
                                                 <div id="name"></div>
-                                                <script>startApp();</script>
+
                                                 </center>
                                             </div>
                                         </div>

@@ -71,10 +71,10 @@ $this->load->view('layout/head');
                                                         ?>
                                                     </select>
                                                 </div>
-                                                <div class="form-group">
+                                                <!--<div class="form-group">
                                                     <label for="offerwallLink">Message <small>(You can state here your account number,etc.)</small></label>
                                                     <textarea type="text" name="redeem_message" class="form-control"></textarea>
-                                                </div>
+                                                </div>-->
                                                 <div class="form-group">
                                                     <label for="offerwallName">Enter your password</label><span style="color: red;"> *</span>
                                                     <input type="password" name="user_password" class="form-control" required>

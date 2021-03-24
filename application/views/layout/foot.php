@@ -5,5 +5,7 @@
 		<script src="//cdn.datatables.net/1.10.22/js/jquery.dataTables.min.js"></script>
         <script src="https://cdn.jsdelivr.net/npm/sweetalert2@9"></script>
 		<script src="/assets/js/intranet/script.js"></script>
+
+        <script src="/assets/js/default/script.js"></script>
 	</body>
 </html>

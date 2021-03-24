@@ -41,7 +41,7 @@
                                         <div class="tab-content">
                                             <div class="col-md-12">
                                                 <div class="row">
-                                                        <div class="col-xl-6">
+                                                    <div class="col-xl-6">
                                                             <div class="col-xl-12">
                                                                 <a href="/offerwall/view/adscend" >
                                                                     <div class="dt-card dt-social-card animate-slide border border-w-2 border-dark">
@@ -200,6 +200,407 @@
                                                                 </div>
                                                             </article>--->
                                                         </div>
+
+                                                    <div class="col-xl-6">
+
+                                                        <div class="w-100 ps-custom-scrollbar">
+                                                            <!-- List -->
+                                                            <ul class="dt-list dt-list-xxl dt-list-bordered">
+                                                                <!-- List Item -->
+                                                                <li class="dt-list__item text-center col">
+                                                                    <div class="dt-avatar-wrapper flex-column">
+                                                                        <!-- Image -->
+                                                                        <img src="https://via.placeholder.com/150x150" alt="Noah Owens"
+                                                                             class="dt-avatar mb-4 size-80">
+                                                                        <!-- /image -->
+                                                                        <!-- Content -->
+                                                                        <div class="dt-avatar-info">
+                                                                            <span class="dt-avatar-name mb-1 text-nowrap">Noah Owens</span>
+                                                                            <!-- List -->
+                                                                            <ul class="dt-list dt-list-bordered dt-list-cm-0 f-12 flex-nowrap">
+                                                                                <!-- List Item -->
+                                                                                <li class="dt-list__item">
+                                                                                    <div class="d-inline-flex align-items-center">
+                                                                                        <i class="icon icon-dollar mr-2 text-yellow"></i>
+                                                                                        <span>5.0</span>
+                                                                                    </div>
+                                                                                </li>
+                                                                                <!-- /list item -->
+                                                                                <!-- List Item -->
+                                                                                <li class="dt-list__item">
+                                                                                    <span class="d-inline-block text-nowrap">21 Points</span>
+                                                                                </li>
+                                                                                <!-- /list item -->
+                                                                            </ul>
+                                                                            <!-- /list -->
+                                                                        </div>
+                                                                        <!-- /content -->
+                                                                    </div>
+                                                                </li>
+                                                                <!-- /list item -->
+                                                                <!-- List Item -->
+                                                                <li class="dt-list__item text-center col">
+                                                                    <div class="dt-avatar-wrapper flex-column">
+                                                                        <!-- Image -->
+                                                                        <img src="https://via.placeholder.com/150x150"
+                                                                             alt="Ellen Manning" class="dt-avatar mb-4 size-80">
+                                                                        <!-- /image -->
+                                                                        <!-- Content -->
+                                                                        <div class="dt-avatar-info">
+                                                                            <span class="dt-avatar-name mb-1 text-nowrap">Ellen Manning</span>
+                                                                            <!-- List -->
+                                                                            <ul class="dt-list dt-list-bordered dt-list-cm-0 f-12 flex-nowrap">
+                                                                                <!-- List Item -->
+                                                                                <li class="dt-list__item">
+                                                                                    <div class="d-inline-flex align-items-center">
+                                                                                        <i class="icon icon-dollar mr-2 text-yellow"></i>
+                                                                                        <span>5.0</span>
+                                                                                    </div>
+                                                                                </li>
+                                                                                <!-- /list item -->
+                                                                                <!-- List Item -->
+                                                                                <li class="dt-list__item">
+                                                                                    <span class="d-inline-block text-nowrap">21 Points</span>
+                                                                                </li>
+                                                                                <!-- /list item -->
+                                                                            </ul>
+                                                                            <!-- /list -->
+                                                                        </div>
+                                                                        <!-- /content -->
+                                                                    </div>
+                                                                </li>
+                                                                <!-- /list item -->
+                                                                <!-- List Item -->
+                                                                <li class="dt-list__item text-center col">
+                                                                    <div class="dt-avatar-wrapper flex-column">
+                                                                        <!-- Image -->
+                                                                        <img src="https://via.placeholder.com/150x150" alt="Angel Jones"
+                                                                             class="dt-avatar mb-4 size-80">
+                                                                        <!-- /image -->
+                                                                        <!-- Content -->
+                                                                        <div class="dt-avatar-info">
+                                                                            <span class="dt-avatar-name mb-1 text-nowrap">Angel Jones</span>
+                                                                            <!-- List -->
+                                                                            <ul class="dt-list dt-list-bordered dt-list-cm-0 f-12 flex-nowrap">
+                                                                                <!-- List Item -->
+                                                                                <li class="dt-list__item">
+                                                                                    <div class="d-inline-flex align-items-center">
+                                                                                        <i class="icon icon-dollar mr-2 text-yellow"></i>
+                                                                                        <span>5.0</span>
+                                                                                    </div>
+                                                                                </li>
+                                                                                <!-- /list item -->
+                                                                                <!-- List Item -->
+                                                                                <li class="dt-list__item">
+                                                                                    <span class="d-inline-block text-nowrap">21 Points</span>
+                                                                                </li>
+                                                                                <!-- /list item -->
+                                                                            </ul>
+                                                                            <!-- /list -->
+                                                                        </div>
+                                                                        <!-- /content -->
+                                                                    </div>
+                                                                </li>
+                                                                <!-- /list item -->
+                                                                <!-- List Item -->
+                                                                <li class="dt-list__item text-center col">
+                                                                    <div class="dt-avatar-wrapper flex-column">
+                                                                        <!-- Image -->
+                                                                        <img src="https://via.placeholder.com/150x150" alt="Mila Alba"
+                                                                             class="dt-avatar mb-4 size-80">
+                                                                        <!-- /image -->
+                                                                        <!-- Content -->
+                                                                        <div class="dt-avatar-info">
+                                                                            <span class="dt-avatar-name mb-1 text-nowrap">Dollie Norton</span>
+                                                                            <!-- List -->
+                                                                            <ul class="dt-list dt-list-bordered dt-list-cm-0 f-12 flex-nowrap">
+                                                                                <!-- List Item -->
+                                                                                <li class="dt-list__item">
+                                                                                    <div class="d-inline-flex align-items-center">
+                                                                                        <i class="icon icon-dollar mr-2 text-yellow"></i>
+                                                                                        <span>5.0</span>
+                                                                                    </div>
+                                                                                </li>
+                                                                                <!-- /list item -->
+                                                                                <!-- List Item -->
+                                                                                <li class="dt-list__item">
+                                                                                    <span class="d-inline-block text-nowrap">21 Points</span>
+                                                                                </li>
+                                                                                <!-- /list item -->
+                                                                            </ul>
+                                                                            <!-- /list -->
+                                                                        </div>
+                                                                        <!-- /content -->
+                                                                    </div>
+                                                                </li>
+                                                                <!-- /list item -->
+                                                                <!-- List Item -->
+                                                                <li class="dt-list__item text-center col">
+                                                                    <div class="dt-avatar-wrapper flex-column">
+                                                                        <!-- Image -->
+                                                                        <img src="https://via.placeholder.com/150x150"
+                                                                             alt="Joshua Brian"
+                                                                             class="dt-avatar mb-4 size-80">
+                                                                        <!-- /image -->
+                                                                        <!-- Content -->
+                                                                        <div class="dt-avatar-info">
+                                                                            <span class="dt-avatar-name mb-1 text-nowrap">Joshua Brian</span>
+                                                                            <!-- List -->
+                                                                            <ul class="dt-list dt-list-bordered dt-list-cm-0 f-12 flex-nowrap">
+                                                                                <!-- List Item -->
+                                                                                <li class="dt-list__item">
+                                                                                    <div class="d-inline-flex align-items-center">
+                                                                                        <i class="icon icon-dollar mr-2 text-yellow"></i>
+                                                                                        <span>5.0</span>
+                                                                                    </div>
+                                                                                </li>
+                                                                                <!-- /list item -->
+                                                                                <!-- List Item -->
+                                                                                <li class="dt-list__item">
+                                                                                    <span class="d-inline-block text-nowrap">21 Points</span>
+                                                                                </li>
+                                                                                <!-- /list item -->
+                                                                            </ul>
+                                                                            <!-- /list -->
+                                                                        </div>
+                                                                        <!-- /content -->
+                                                                    </div>
+                                                                </li>
+                                                            </ul>
+                                                            <!-- /list -->
+                                                        </div>
+                                                        <!-- Card -->
+                                                        <div class="dt-card mt-5">
+
+                                                            <!-- Card Header -->
+                                                            <div class="dt-card__header">
+
+                                                                <!-- Card Heading -->
+                                                                <div class="dt-card__heading">
+                                                                    <h3 class="dt-card__title">Recent Activities</h3>
+                                                                </div>
+                                                                <!-- /card heading -->
+
+                                                            </div>
+                                                            <!-- /card header -->
+
+                                                            <!-- Card Body -->
+                                                            <div class="dt-card__body px-0">
+
+                                                                <!-- Widget -->
+                                                                <div class="dt-widget dt-widget-hover">
+                                                                    <h6 class="dt-widget__heading">Today</h6>
+                                                                    <!-- Widget Item -->
+                                                                    <div class="dt-widget__item">
+
+                                                                        <!-- Widget Image -->
+                                                                        <div class="dt-widget__img">
+                                                                            <!-- Avatar -->
+                                                                            <img class="dt-avatar size-35 rounded"
+                                                                                 src="https://via.placeholder.com/150x150" alt="User">
+                                                                            <!-- /avatar -->
+                                                                        </div>
+                                                                        <!-- /widget image -->
+
+                                                                        <!-- Widget Info -->
+                                                                        <div class="dt-widget__info">
+                                                                            <a href="javascript:void(0)" class="dt-widget__title">Mila Alba left a 5
+                                                                                star review on Albama’s
+                                                                                House</a>
+                                                                        </div>
+                                                                        <!-- /widget info -->
+
+                                                                    </div>
+                                                                    <!-- /widgets item -->
+
+                                                                    <!-- Widget Item -->
+                                                                    <div class="dt-widget__item">
+
+                                                                        <!-- Widget Image -->
+                                                                        <div class="dt-widget__img">
+                                                                            <!-- Avatar -->
+                                                                            <img class="dt-avatar size-35 rounded"
+                                                                                 src="https://via.placeholder.com/150x150" alt="User">
+                                                                            <!-- /avatar -->
+                                                                        </div>
+                                                                        <!-- /widget image -->
+
+                                                                        <!-- Widget Info -->
+                                                                        <div class="dt-widget__info">
+                                                                            <a href="javascript:void(0)" class="dt-widget__title">Callback request
+                                                                                from Bob Builder for the
+                                                                                property Dimitri House</a>
+                                                                        </div>
+                                                                        <!-- /widget info -->
+
+                                                                    </div>
+                                                                    <!-- /widgets item -->
+
+                                                                    <!-- Widget Item -->
+                                                                    <div class="dt-widget__item">
+
+                                                                        <!-- Widget Image -->
+                                                                        <div class="dt-widget__img">
+                                                                            <!-- Avatar -->
+                                                                            <img class="dt-avatar size-35 rounded"
+                                                                                 src="https://via.placeholder.com/150x150"
+                                                                                 alt="User">
+                                                                            <!-- /avatar -->
+                                                                        </div>
+                                                                        <!-- /widget image -->
+
+                                                                        <!-- Widget Info -->
+                                                                        <div class="dt-widget__info">
+                                                                            <a href="javascript:void(0)" class="dt-widget__title">Congratulations to
+                                                                                Tom Moody for joining 10+
+                                                                                club</a>
+                                                                        </div>
+                                                                        <!-- /widget info -->
+
+                                                                    </div>
+                                                                    <!-- /widgets item -->
+
+                                                                    <!-- Widget Item -->
+                                                                    <div class="dt-widget__item">
+
+                                                                        <!-- Widget Image -->
+                                                                        <div class="dt-widget__img">
+                                                                            <!-- Avatar -->
+                                                                            <span class="dt-avatar size-35 rounded bg-light-blue text-white">NB</span>
+                                                                            <!-- /avatar -->
+                                                                        </div>
+                                                                        <!-- /widget image -->
+
+                                                                        <!-- Widget Info -->
+                                                                        <div class="dt-widget__info">
+                                                                            <a href="javascript:void(0)" class="dt-widget__title">Norman Dolphi is
+                                                                                looking for a house in New
+                                                                                Jersy, USA</a>
+                                                                        </div>
+                                                                        <!-- /widget info -->
+
+                                                                    </div>
+                                                                    <!-- /widgets item -->
+                                                                </div>
+                                                                <!-- /widget -->
+
+                                                                <!-- Widget -->
+                                                                <div class="dt-widget dt-widget-hover">
+                                                                    <h6 class="dt-widget__heading">Yesterday</h6>
+
+                                                                    <!-- Widget Item -->
+                                                                    <div class="dt-widget__item">
+
+                                                                        <!-- Widget Image -->
+                                                                        <div class="dt-widget__img">
+                                                                            <!-- Avatar -->
+                                                                            <span class="dt-avatar size-35 rounded bg-light-green text-white">KJ</span>
+                                                                            <!-- /avatar -->
+                                                                        </div>
+                                                                        <!-- /widget image -->
+
+                                                                        <!-- Widget Info -->
+                                                                        <div class="dt-widget__info">
+                                                                            <a href="javascript:void(0)" class="dt-widget__title">
+                                                                                Agent Kily Johns has added 7 new photos to the property Albama’s
+                                                                                House
+                                                                            </a>
+                                                                        </div>
+                                                                        <!-- /widget info -->
+
+                                                                    </div>
+                                                                    <!-- /widgets item -->
+
+                                                                    <!-- Widget Item -->
+                                                                    <div class="dt-widget__item">
+
+                                                                        <!-- Widget Image -->
+                                                                        <div class="dt-widget__img">
+                                                                            <!-- Avatar -->
+                                                                            <img class="dt-avatar size-35 rounded"
+                                                                                 src="https://via.placeholder.com/150x150" alt="User">
+                                                                            <!-- /avatar -->
+                                                                        </div>
+                                                                        <!-- /widget image -->
+
+                                                                        <!-- Widget Info -->
+                                                                        <div class="dt-widget__info">
+                                                                            <a href="javascript:void(0)" class="dt-widget__title">
+                                                                                Welcome to a new agent Tom Moody in
+                                                                                the Company
+                                                                            </a>
+                                                                            <ul class="dt-team-list mt-2">
+                                                                                <li>
+                                                                                    <!-- Avatar -->
+                                                                                    <a class="dt-avatar size-35 min-w-55 rounded"
+                                                                                       href="javascript:void(0)">
+                                                                                        <img class="img-fluid" src="https://via.placeholder.com/640x420"
+                                                                                             alt="Beach">
+                                                                                    </a>
+                                                                                    <!-- /avatar -->
+                                                                                </li>
+                                                                                <li>
+                                                                                    <!-- Avatar -->
+                                                                                    <a class="dt-avatar size-35 min-w-55 rounded"
+                                                                                       href="javascript:void(0)">
+                                                                                        <img class="img-fluid" src="https://via.placeholder.com/640x420"
+                                                                                             alt="Sunset">
+                                                                                    </a>
+                                                                                    <!-- /avatar -->
+                                                                                </li>
+                                                                                <li>
+                                                                                    <!-- Avatar -->
+                                                                                    <a class="border py-2 px-4 rounded text-light-gray d-inline-block"
+                                                                                       href="javascript:void(0)">
+                                                                                        +5 More
+                                                                                    </a>
+                                                                                    <!-- /avatar -->
+                                                                                </li>
+                                                                            </ul>
+                                                                        </div>
+                                                                        <!-- /widget info -->
+
+                                                                    </div>
+                                                                    <!-- /widgets item -->
+
+                                                                    <!-- Widget Item -->
+                                                                    <div class="dt-widget__item">
+
+                                                                        <!-- Widget Image -->
+                                                                        <div class="dt-widget__img">
+                                                                            <!-- Avatar -->
+                                                                            <span class="dt-avatar size-35 rounded bg-orange text-white">OS</span>
+                                                                            <!-- /avatar -->
+                                                                        </div>
+                                                                        <!-- /widget image -->
+
+                                                                        <!-- Widget Info -->
+                                                                        <div class="dt-widget__info">
+                                                                            <a href="javascript:void(0)" class="dt-widget__title">
+                                                                                Oliver Shorter is looking for an office
+                                                                                space in Colorado, USA
+                                                                            </a>
+                                                                        </div>
+                                                                        <!-- /widget info -->
+
+                                                                    </div>
+                                                                    <!-- /widgets item -->
+                                                                </div>
+                                                                <!-- /widget -->
+
+                                                                <!-- Widget Link -->
+                                                                <div class="dt-widget-link">
+                                                                    <a href="javascript:void(0)" class="text-uppercase font-weight-500">Load
+                                                                        More</a>
+                                                                </div>
+                                                                <!-- /widget link -->
+
+                                                            </div>
+                                                            <!-- /card body -->
+
+                                                        </div>
+                                                        <!-- /card -->
+                                                    </div>
                                                 </div>
                                             </div>
                                         </div>

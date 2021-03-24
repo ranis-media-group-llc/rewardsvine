@@ -25,12 +25,12 @@
                     <span class="dt-side-nav__text">Surveys</span>
                 </a>
             </li>
-            <li class="dt-side-nav__item">
+            <!--<li class="dt-side-nav__item">
                 <a href="/videos" class="dt-side-nav__link <?= $this->uri->segment(1) == "videos" ? 'active' : '' ?>" >
                     <i class="icon icon-layout icon-fw icon-lg"></i>
                     <span class="dt-side-nav__text">Videos</span>
                 </a>
-            </li>
+            </li>-->
             <li class="dt-side-nav__item">
                 <a href="/offers" class="dt-side-nav__link <?= $this->uri->segment(1) == "offers" ? 'active' : '' ?>">
                     <i class="icon icon-layout icon-fw icon-lg"></i>

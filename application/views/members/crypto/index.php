@@ -51,19 +51,23 @@
                                                     <div class="form-group">
                                                         <label for="offerwallName">Amount</label>
                                                         <select class="form-control" data-style="btn-white" name="redeem_amt">
-                                                            <option value="5-1500">$5 = 1500 points - Bitcoin (Coinbase)</option>
-                                                            <option value="5-1800">$5 = 1800 points - Bitcoin (Non - coinbase)</option>
-                                                            <option value="10-2800">$10 = 2800 points - Bitcoin (Coinbase)</option>
-                                                            <option value="10-3000">$10 = 3000 points - Bitcoin (Non - coinbase)</option>
-                                                            <option value="25-6500">$25 = 6500 points - Bitcoin (Coinbase)</option>
-                                                            <option value="25-7000">$25 = 7000 points - Bitcoin (Non - coinbase)</option>
-                                                            <option value="50-13500">$50 = 13500 points - Bitcoin (Coinbase)</option>
-                                                            <option value="50-13500">$50 = 13500 points - Bitcoin (Non - coinbase)</option>
+                                                            <option value="5-1500">$5 = 1500 points </option>
+                                                            <option value="5-1800">$5 = 1800 points</option>
+                                                            <option value="10-2800">$10 = 2800 points </option>
+                                                            <option value="10-3000">$10 = 3000 points </option>
+                                                            <option value="25-6500">$25 = 6500 points </option>
+                                                            <option value="25-7000">$25 = 7000 points</option>
+                                                            <option value="50-13500">$50 = 13500 points</option>
+                                                            <option value="50-13500">$50 = 13500 points</option>
                                                         </select>
                                                     </div>
-                                                    <div class="form-group">
+                                                    <!--<div class="form-group">
                                                         <label for="offerwallLink">Message <small>(You can state here your account number,etc.)</small></label>
                                                         <textarea type="text" name="redeem_message" class="form-control"></textarea>
+                                                    </div>-->
+                                                    <div class="form-group">
+                                                        <label for="offerwallName">Enter your password</label><span style="color: red;"> *</span>
+                                                        <input type="password" name="user_password" class="form-control" required>
                                                     </div>
                                                     <button type="submit" class="btn btn-secondary btn-xs text-uppercase">Send</button>
                                                     <br><br><br>

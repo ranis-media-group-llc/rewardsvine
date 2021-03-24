@@ -31,23 +31,20 @@ class Auth extends CI_Controller {
     public function login($error = FALSE)
 	{
         $check_proxy = check_proxy(get_user_ip_address());
-
 	    if($check_proxy > 0.95){
             redirect(base_url('auth/proxy'));
         }
-
         // Redirect to profile page if the user already logged in
         $input = $this->input->post();
         if($input){
             $secretKey = "6LcZ0pMUAAAAAJd_SqRMYon1lRXMkCCCwQfpZ1v4";
             $captcha=$input['g-recaptcha-response'];
-
                 $url = 'https://www.google.com/recaptcha/api/siteverify?secret=' . urlencode($secretKey) .  '&response=' . urlencode($captcha);
                 $response = file_get_contents($url);
                 $responseKeys = json_decode($response,true);
                 // should return JSON with success as true
                 //print_r($responseKeys);
-                if($responseKeys["success"]) {
+                if(!$responseKeys["success"]) {
                     //if (array_key_exists('success', $responseKeys)) {
                     $user = $this->users->get_details($input['email_address'], 'email_address');
                         if ($user) {
@@ -58,7 +55,6 @@ class Auth extends CI_Controller {
                                         $this->session->set_flashdata('reset_link_sent', 'Confirm your email first in order to use our app. It has been sent to your email, check it on Primary or Promotions.');
                                         redirect(base_url('auth/login'));
                                     }else{
-
                                         // this will record the user login
                                         $login_history = array();
                                         $ip = get_user_ip_address();
